@@ -1,0 +1,305 @@
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #333;
+    /* --header-bg: #333;
+    --header-text: white; */
+    --header-bg: rgba(240, 240, 240, 0.7);
+    --header-text: black;
+    --sidebar-bg: #f1f1f1;
+    --sidebar-text: #000;
+    --card-bg: white;
+    --card-shadow: rgba(0, 0, 0, 0.1);
+    --card-hover-bg: #e0e0e0;
+    /* --footer-bg: #333;
+    --footer-text: #929292; */
+    --footer-bg: rgb(240, 240, 240);
+    --footer-text: #929292;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #f0f0f0;
+        --header-bg: rgba(26, 26, 26, 0.7);
+        --header-text: #f0f0f0;
+        --sidebar-bg: #2a2a2a;
+        --sidebar-text: #f0f0f0;
+        --card-bg: #2a2a2a;
+        --card-shadow: rgba(160, 160, 160, 0.1);
+        --card-hover-bg: #3a3a3a;
+        /* --footer-bg: #2a2a2a; */
+        --footer-bg: #1a1a1a;
+        --footer-text: #929292;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: -1;
+    -webkit-backdrop-filter: blur(0);
+	backdrop-filter: blur(0);
+    transition: all 0.3s cubic-bezier(.26,.55,.07,.98);
+}
+
+#overlay.showNavigationBar {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+    z-index: 10;
+}
+
+.bodyContent {
+    transition: all 0.3s cubic-bezier(.26,.55,.07,.98);
+}
+
+.bodyContent.showNavigationBar {
+    z-index: inherit - 1;
+}
+
+header {
+    padding: 0;
+    position: relative;
+    height: 250px;
+    background-color: var(--header-bg);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    transition: all 0.15s ease;
+    z-index: 1;
+    -webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+    box-shadow: 0 2px 5px var(--card-shadow);
+}
+
+.sliver-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('cover.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: var(--header-bg);
+    filter: brightness(0.3);
+    z-index: -1;
+    transition: all 0.15s ease;
+}
+
+header.sticky {
+    top: -200px;
+    color: var(--header-text);
+    display: flex;
+    position: sticky;
+}
+
+header.sticky .sliver-bg {
+    height: 70%;
+    opacity: 0; /* 背景圖片在 sticky 時淡出 */
+}
+
+.sliver-title {
+    color: white;
+    font-size: 2rem;
+    transition: all 0.15s ease;
+    margin: 0;
+    padding: 20px;
+    align-content: center;
+}
+
+header.sticky .sliver-title {
+    font-size: 1.25rem;
+    height: 50px;
+    padding: 0;
+    color: var(--header-text);
+}
+
+#menu-toggle-container {
+    left: 0;
+    top: 0;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    position: fixed;
+    background: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 2;
+    transition: all 0.15s ease;
+}
+
+#menu-toggle {
+    align-self: center;
+    justify-self: center;
+    position: relative;
+    color: white;
+    transition: all 0.15s ease;
+}
+#menu-toggle.sticky {
+    color: var(--header-text);
+}
+
+#sidebar {
+    background-color: var(--sidebar-bg);
+    padding: 1rem;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    left: -250px;
+    top: 0;
+    transition: all 0.3s cubic-bezier(.26,.55,.07,.98);
+    z-index: 1000;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+#sidebar.show {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li a {
+    display: block;
+    color: var(--sidebar-text);
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+#sidebar ul li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+@keyframes main {
+	0% {opacity: 0; top: 20px}
+	100% {opacity: 1; top: 0px}
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.cover-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    animation-name: main;
+    animation-duration: 0.5s;
+}
+
+h1, h2 {
+    animation-name: main;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.activity-intro {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    animation-name: main;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.departments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    animation-name: main;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.department {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px var(--card-shadow);
+    padding: 1.5rem;
+    border-radius: 10px;
+    animation-name: main;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.timeline {
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px var(--card-shadow);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    animation-name: main;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 2rem;
+    row-gap: 1rem;
+    align-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    box-shadow: 0 2px 5px var(--card-shadow);
+    padding: 1.5rem;
+    border-radius: 10px;
+    animation-name: main;
+    animation-duration: 0.5s;
+    position: relative;
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    #menu-toggle {
+        cursor: pointer;
+    }
+}
+
+.fa-instagram {
+    /*color: #E1306C;*/ /* Instagram's brand color */
+    color: #929292;
+}
+
+.contactDetail {
+    color: #929292;
+    align-items: center;
+    align-content: center;
+}
