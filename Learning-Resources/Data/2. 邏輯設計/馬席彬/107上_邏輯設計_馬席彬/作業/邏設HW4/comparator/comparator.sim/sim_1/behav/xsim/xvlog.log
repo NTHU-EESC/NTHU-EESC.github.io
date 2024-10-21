@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bowen/Desktop/清華大一上學習資料/邏輯設計-馬席彬/作業/邏設HW4/comparator/comparator.srcs/sources_1/new/compare.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module compare
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bowen/Desktop/清華大一上學習資料/邏輯設計-馬席彬/作業/邏設HW4/comparator/comparator.srcs/sim_1/new/comparesim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module comparesim
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/bowen/Desktop/清華大一上學習資料/邏輯設計-馬席彬/作業/邏設HW4/comparator/comparator.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
