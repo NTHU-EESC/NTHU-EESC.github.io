@@ -1,0 +1,31 @@
+// EE231002 Lab13. Text Decoding
+// 109061158, 簡佳吟
+// Date: 2020/12/28
+
+#include <stdio.h>
+#include <stdlib.h>
+#define N 61
+
+int main(void)
+{	
+		
+	char ch;
+	char code[N + 1];
+	int i = 0;
+
+		while ((ch = getchar()) != '\n') {
+			code[i++] = ch;
+		}
+		code[i] = '\0';
+		printf("%s\n", code);
+
+
+	return 0;
+}
+
+
+
+
+
+
+

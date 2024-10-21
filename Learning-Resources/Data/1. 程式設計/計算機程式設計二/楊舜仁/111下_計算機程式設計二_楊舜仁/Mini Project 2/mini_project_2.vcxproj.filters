@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="來源檔案">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="標頭檔">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="資源檔">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="ViewController.m">
+      <Filter>來源檔案</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Allegro5Exception.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioHelper.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="DirtyEffect.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="ExplosionEffect.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Group.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="IControl.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Image.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageButton.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="IObject.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="IScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Label.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="LOG.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="LoseScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Plane.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="PlugGunTurret.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="RedNormalEnemy.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Resources.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="SettingScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Slider.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="StageSelectScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="StartScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Turret.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="TurretButton.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="WinScene.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="WoodBullet.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="DiceEnemy.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineGunTurret.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="MachineBullet.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="ShootEffect.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="CoronaVirusTurret.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="CoronaVirusBullet.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Bomb.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="Miner.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+    <ClCompile Include="ChickenTurret.cpp">
+      <Filter>來源檔案</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Allegro5Exception.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioHelper.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="DirtyEffect.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="ExplosionEffect.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Group.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="IControl.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Image.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageButton.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="IObject.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Label.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="LOG.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="LoseScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="PlugGunTurret.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="RedNormalEnemy.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="SettingScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Slider.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="StageSelectScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="StartScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Turret.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="TurretButton.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="ViewController.h">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="WinScene.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="WoodBullet.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="DiceEnemy.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineGunTurret.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="MachineBullet.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="ShootEffect.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="CoronaVirusTurret.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="CoronaVirusBullet.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Bomb.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="Miner.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+    <ClInclude Include="ChickenTurret.hpp">
+      <Filter>來源檔案</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="log.txt">
+      <Filter>來源檔案</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
