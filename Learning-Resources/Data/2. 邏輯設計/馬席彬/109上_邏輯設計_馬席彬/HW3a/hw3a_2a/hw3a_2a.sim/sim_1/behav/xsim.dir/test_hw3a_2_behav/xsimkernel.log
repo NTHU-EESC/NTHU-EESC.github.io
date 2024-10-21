@@ -1,0 +1,7 @@
+Running: xsim.dir/test_hw3a_2_behav/xsimk.exe -simmode gui -wdb test_hw3a_2_behav.wdb -simrunnum 0 -socket 9198
+Design successfully loaded
+Design Loading Memory Usage: 8720 KB (Peak: 8720 KB)
+Design Loading CPU Usage: 93 ms
+Simulation completed
+Simulation Memory Usage: 9264 KB (Peak: 9264 KB)
+Simulation CPU Usage: 93 ms
