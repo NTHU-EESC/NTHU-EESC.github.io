@@ -23,30 +23,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             overlay.classList.remove('showNavigationBar');
         }
     });
-
-    // 為側邊欄的鏈接添加點擊事件
-    // const sidebarLinks = document.querySelectorAll('#sidebar ul li a');
-    // sidebarLinks.forEach(link => {
-    //     link.addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //         alert(`您點擊了 "${this.textContent}" 鏈接`);
-    //         sidebar.classList.remove('show');
-    //     });
-    // });
-
-    // 移除之前為卡片添加的點擊事件，因為我們現在使用 CSS :active 偽類
 });
 
 document.getElementById("projectsInfoCard").onclick = function() {
-    window.open("../Projects-Info/index.html", "_self");
+    window.open("./Projects-Info/", "_self");
 }
 
 document.getElementById("learningResourcesCard").onclick = function() {
-    window.open("../Learning-Resources/index.html", "_self");
+    window.open("./Learning-Resources/", "_self");
 }
 
 document.getElementById("eecampCard").onclick = function() {
-    window.open("../EECamp/index.html", "_self");
+    window.open("./EECamp/", "_self");
 }
 
 document.getElementById("eeccCard").onclick = function() {
