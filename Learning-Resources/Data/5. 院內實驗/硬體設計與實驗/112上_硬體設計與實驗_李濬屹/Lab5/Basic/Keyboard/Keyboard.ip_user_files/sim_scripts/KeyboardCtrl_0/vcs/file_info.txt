@@ -1,0 +1,4 @@
+Ps2Interface.v,verilog,xil_defaultlib,../../../../Keyboard.gen/sources_1/ip/KeyboardCtrl_0/src/Ps2Interface.v,
+KeyboardCtrl.v,verilog,xil_defaultlib,../../../../Keyboard.gen/sources_1/ip/KeyboardCtrl_0/src/KeyboardCtrl.v,
+KeyboardCtrl_0.v,verilog,xil_defaultlib,../../../../Keyboard.gen/sources_1/ip/KeyboardCtrl_0/sim/KeyboardCtrl_0.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
