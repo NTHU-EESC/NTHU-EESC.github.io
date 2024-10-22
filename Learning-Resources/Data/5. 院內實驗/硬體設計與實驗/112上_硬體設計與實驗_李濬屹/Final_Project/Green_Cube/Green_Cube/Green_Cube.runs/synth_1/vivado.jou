@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sat Jan 13 13:29:03 2024
+# Process ID: 2588
+# Current directory: D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1
+# Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file: D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.vds
+# Journal file: D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source Top.tcl -notrace
