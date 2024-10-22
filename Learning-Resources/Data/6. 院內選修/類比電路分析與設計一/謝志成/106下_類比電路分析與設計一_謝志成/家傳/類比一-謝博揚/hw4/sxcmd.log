@@ -1,0 +1,11 @@
+### CustomExplorer log file, revision C-2009.09 (build 0909) ###
+### created at 21:15:52 on Thu May 26 2016 (Linux AMD64) ###
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+# (0) fsb dialog open
+# (0) fsb dialog close
+sx_open_sim_file_read "/home/u102/u102061112/AIC/AIC_HW/hw4/2a.ac0"
+# (0) fsb.00¬ lvdck
+sx_log "disp_sig 1 A P=null file=0 S='' W='v(vout)'' "

@@ -1,0 +1,590 @@
+ ****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+  Copyright (c) 1986 - 2018 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw2_3a.sp                                                         
+  Command line options: /usr/cad/synopsys/hspice/2016.06-sp2/hspice/linux64/hspice -i hw2_3a.sp -o hw2_3c.lis
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   u105060012           HOSTNAME: ws40 
+ lic: HOSTID: "6eae8b50b631"       PID:      3190 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lscic.cic.org.tw 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-may-2019/2018.09 
+ lic: 43(in_use)/150(total) FLOATING license(s) on SERVER 26585@lscic.cic.org.tw 
+ lic:   
+  **info** (hw2_3a.sp:19) DC voltage reset to initial transient source value in source 0:vina. new dc=0.0000D+00
+ 
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+ ******  
+ hw2_3a
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:ina     =   0.      0:inb     =   0.      0:inc     =   0.     
+ +0:out     =   1.8000  0:p1      =   1.8000  0:p2      =   1.8000 
+ +0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vina     0:vinb     0:vinc    
+  volts      1.8000     0.         0.         0.     
+  current  -32.4084p    0.         0.         0.     
+  power     58.3352p    0.         0.         0.     
+
+     total voltage source power dissipation=   58.3352p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:mpa      0:mpb      0:mpc      0:mna      0:mnb      0:mnc     
+ model    0:p_18.1   0:p_18.1   0:p_18.1   0:n_18.1   0:n_18.1   0:n_18.1  
+ region       Linear     Linear     Linear     Cutoff     Cutoff     Cutoff
+  id       -32.4058p  -32.4102p  -32.4028p    7.1975p    7.1975p    7.1975p
+  ibs      3.006e-27  3.006e-27  3.006e-27 -2.077e-27 -2.077e-27 -2.077e-27
+  ibd      3.935e-24  3.936e-24  3.935e-24 -359.5248a -359.5248a -359.5248a
+  vgs       -1.8000    -1.8000    -1.8000     0.         0.         0.     
+  vds       -1.6851n   -1.6853n   -1.6850n    1.8000     1.8000     1.8000 
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -520.1819m -520.1819m -520.1819m  473.0957m  473.0957m  473.0957m
+  vdsat   -937.9273m -937.9273m -937.9273m   51.7145m   51.7145m   51.7145m
+  vod       -1.2798    -1.2798    -1.2798  -473.0957m -473.0957m -473.0957m
+  beta      21.5022m   21.5022m   21.5022m    3.2050m    3.2050m    3.2050m
+  gam eff  557.0847m  557.0847m  557.0847m  507.4459m  507.4459m  507.4459m
+  gm        13.8065p   13.8084p   13.8052p  241.6744p  241.6744p  241.6744p
+  gds       19.2600m   19.2600m   19.2600m    4.9720p    4.9720p    4.9720p
+  gmb        7.5397p    7.5407p    7.5390p   36.8321p   36.8321p   36.8321p
+  cdtot    163.6037f  163.6037f  163.6037f    2.1626f    2.1626f    2.1626f
+  cgtot    119.6488f  119.6488f  119.6488f    2.0996f    2.0996f    2.0996f
+  cstot    155.1097f  155.1097f  155.1097f    2.9436f    2.9436f    2.9436f
+  cbtot    128.9471f  128.9471f  128.9471f    4.4100f    4.4100f    4.4100f
+  cgs       60.8078f   60.8078f   60.8078f  698.9610a  698.9610a  698.9610a
+  cgd       58.6499f   58.6499f   58.6499f  698.9400a  698.9400a  698.9400a
+
+
+
+ ******
+ hw2_3a
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+  **warning** (hw2_3a.sp:25) .MEASURE  tpdf never reached the trigger value, Measurement failed! 
+   tpdf= failed                          trig= not found
+   tpdr= failed                          trig= not found
+
+          ***** job concluded
+ ******  
+ hw2_3a
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+ cpu MHz	: 2001.000
+  
+ OS:
+ Linux version 2.6.18-371.9.1.el5 (mockbuild@builder17.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Tue Jun 10 17:49:56 EDT 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    12
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      20 # elements   =      11
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       6 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           4
+  transient          0.01         451         283         112 rev=         9
+  readin             0.02
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        197.27 megabytes
+           total cpu time            0.03 seconds
+           total elapsed time        1.58 seconds
+           job started at     15:01:42 11/01/2018
+           job ended   at     15:01:43 11/01/2018
+
+
+
+  **warning** .prot and .unpr not matched,  unencrypted information may be enclosed.
+
+  **info** (hw2_3a.sp:19) DC voltage reset to initial transient source value in source 0:vina. new dc=0.0000D+00
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ hw2_3a
+
+ ****** operating point information tnom=  25.000 temp= -40.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:ina     =   0.      0:inb     =   0.      0:inc     =   0.     
+ +0:out     =   1.8000  0:p1      =   1.8000  0:p2      =   1.8000 
+ +0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vina     0:vinb     0:vinc    
+  volts      1.8000     0.         0.         0.     
+  current  -11.4871p    0.         0.         0.     
+  power     20.6769p    0.         0.         0.     
+
+     total voltage source power dissipation=   20.6769p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:mpa      0:mpb      0:mpc      0:mna      0:mnb      0:mnc     
+ model    0:p_18.1   0:p_18.1   0:p_18.1   0:n_18.1   0:n_18.1   0:n_18.1  
+ region       Linear     Linear     Linear     Cutoff     Cutoff     Cutoff
+  id       -11.4779p  -11.4839p  -11.4901p  228.5340f  228.5340f  228.5340f
+  ibs        0.         0.         0.         0.         0.         0.     
+  ibd        0.         0.         0.      -4.334e-22 -4.334e-22 -4.334e-22
+  vgs       -1.8000    -1.8000    -1.8000     0.         0.         0.     
+  vds     -484.8839p -485.1342p -485.3968p    1.8000     1.8000     1.8000 
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -549.3584m -549.3584m -549.3584m  483.9316m  483.9316m  483.9316m
+  vdsat   -875.4074m -875.4074m -875.4074m   40.4535m   40.4535m   40.4535m
+  vod       -1.2506    -1.2506    -1.2506  -483.9316m -483.9316m -483.9316m
+  beta      29.9730m   29.9730m   29.9730m    5.4747m    5.4747m    5.4747m
+  gam eff  557.0847m  557.0847m  557.0847m  507.4459m  507.4459m  507.4459m
+  gm         3.8173p    3.8192p    3.8213p    9.7880p    9.7880p    9.7880p
+  gds       23.7161m   23.7161m   23.7161m  211.8897f  211.8897f  211.8897f
+  gmb        2.4902p    2.4914p    2.4928p    1.3523p    1.3523p    1.3523p
+  cdtot    156.6636f  156.6636f  156.6636f    2.0177f    2.0177f    2.0177f
+  cgtot    124.2502f  124.2502f  124.2502f    2.1915f    2.1915f    2.1915f
+  cstot    148.4722f  148.4722f  148.4722f    2.6503f    2.6503f    2.6503f
+  cbtot    110.6514f  110.6514f  110.6514f    3.8656f    3.8656f    3.8656f
+  cgs       63.0594f   63.0594f   63.0594f  748.4974a  748.4974a  748.4974a
+  cgd       60.8535f   60.8535f   60.8535f  748.4776a  748.4776a  748.4776a
+
+
+
+ ******
+ hw2_3a
+
+ ****** transient analysis tnom=  25.000 temp= -40.000 ******
+  **warning** (hw2_3a.sp:25) .MEASURE  tpdf never reached the trigger value, Measurement failed! 
+   tpdf= failed                          trig= not found
+   tpdr= failed                          trig= not found
+
+          ***** job concluded
+ ******  
+ hw2_3a
+
+ ****** job statistics summary tnom=  25.000 temp= -40.000 ******
+
+  ******  Circuit Statistics  ******
+  # nodes       =      20 # elements   =      11
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       6 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           4
+  transient          0.01         451         291         116 rev=         9
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        197.36 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.02 seconds
+           job started at     15:01:42 11/01/2018
+           job ended   at     15:01:43 11/01/2018
+
+
+
+  **warning** .prot and .unpr not matched,  unencrypted information may be enclosed.
+
+  **info** (hw2_3a.sp:19) DC voltage reset to initial transient source value in source 0:vina. new dc=0.0000D+00
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ hw2_3a
+
+ ****** operating point information tnom=  25.000 temp= 125.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:ina     =   0.      0:inb     =   0.      0:inc     =   0.     
+ +0:out     =   1.8000  0:p1      =   1.8000  0:p2      =   1.8000 
+ +0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vina     0:vinb     0:vinc    
+  volts      1.8000     0.         0.         0.     
+  current -528.9808p    0.         0.         0.     
+  power    952.1655p    0.         0.         0.     
+
+     total voltage source power dissipation=  952.1655p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:mpa      0:mpb      0:mpc      0:mna      0:mnb      0:mnc     
+ model    0:p_18.1   0:p_18.1   0:p_18.1   0:n_18.1   0:n_18.1   0:n_18.1  
+ region       Linear     Linear     Linear     Cutoff     Cutoff     Cutoff
+  id      -528.9735p -528.9662p -528.9597p   63.1946p   63.1946p   63.1946p
+  ibs      1.505e-20  1.505e-20  1.505e-20 -4.621e-21 -4.621e-21 -4.621e-21
+  ibd       40.4045a   40.4039a   40.4034a -109.5260p -109.5260p -109.5260p
+  vgs       -1.8000    -1.8000    -1.8000     0.         0.         0.     
+  vds      -56.3956n  -56.3949n  -56.3942n    1.8000     1.8000     1.8000 
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -457.9197m -457.9197m -457.9197m  420.6453m  420.6453m  420.6453m
+  vdsat     -1.0890    -1.0890    -1.0890    58.6018m   58.6018m   58.6018m
+  vod       -1.3421    -1.3421    -1.3421  -420.6453m -420.6453m -420.6453m
+  beta       8.2338m    8.2338m    8.2338m  813.9900u  813.9900u  813.9900u
+  gam eff  557.0847m  557.0847m  557.0847m  507.4459m  507.4459m  507.4459m
+  gm       291.2478p  291.2438p  291.2402p    1.7018n    1.7018n    1.7018n
+  gds        9.3867m    9.3867m    9.3867m   22.7826p   22.7826p   22.7826p
+  gmb      148.7543p  148.7522p  148.7504p  382.4718p  382.4718p  382.4718p
+  cdtot    209.9408f  209.9408f  209.9408f    2.3276f    2.3276f    2.3276f
+  cgtot    139.0327f  139.0327f  139.0327f    2.5929f    2.5929f    2.5929f
+  cstot    192.3186f  192.3186f  192.3186f    3.3169f    3.3169f    3.3169f
+  cbtot    160.8029f  160.8029f  160.8029f    5.6808f    5.6808f    5.6808f
+  cgs       70.7677f   70.7677f   70.7677f  631.6250a  631.6250a  631.6250a
+  cgd       68.1511f   68.1511f   68.1511f  646.6736a  646.6736a  646.6736a
+
+
+
+ ******
+ hw2_3a
+
+ ****** transient analysis tnom=  25.000 temp= 125.000 ******
+  **warning** (hw2_3a.sp:25) .MEASURE  tpdf never reached the trigger value, Measurement failed! 
+   tpdf= failed                          trig= not found
+   tpdr= failed                          trig= not found
+
+          ***** job concluded
+ ******  
+ hw2_3a
+
+ ****** job statistics summary tnom=  25.000 temp= 125.000 ******
+
+  ******  Circuit Statistics  ******
+  # nodes       =      20 # elements   =      11
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       6 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           4
+  transient          0.01         451         274         111 rev=        11
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        197.36 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.02 seconds
+           job started at     15:01:42 11/01/2018
+           job ended   at     15:01:43 11/01/2018
+
+
+
+  **warning** .prot and .unpr not matched,  unencrypted information may be enclosed.
+
+  **info** (hw2_3a.sp:19) DC voltage reset to initial transient source value in source 0:vina. new dc=0.0000D+00
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ hw2_3a
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:ina     =   0.      0:inb     =   0.      0:inc     =   0.     
+ +0:out     =   1.8000  0:p1      =   1.8000  0:p2      =   1.8000 
+ +0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vina     0:vinb     0:vinc    
+  volts      1.8000     0.         0.         0.     
+  current  -11.4332p    0.         0.         0.     
+  power     20.5798p    0.         0.         0.     
+
+     total voltage source power dissipation=   20.5798p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:mpa      0:mpb      0:mpc      0:mna      0:mnb      0:mnc     
+ model    0:p_18.1   0:p_18.1   0:p_18.1   0:n_18.1   0:n_18.1   0:n_18.1  
+ region       Linear     Linear     Linear     Cutoff     Cutoff     Cutoff
+  id       -11.4395p  -11.4398p  -11.4332p  210.0718f  210.0718f  210.0718f
+  ibs      1.061e-27  1.061e-27  1.061e-27 -4.658e-28 -4.658e-28 -4.658e-28
+  ibd      1.232e-24  1.232e-24  1.232e-24 -356.9861a -356.9861a -356.9861a
+  vgs       -1.8000    -1.8000    -1.8000     0.         0.         0.     
+  vds     -527.5811p -527.5962p -527.2918p    1.8000     1.8000     1.8000 
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -486.5989m -486.5989m -486.5989m  500.0558m  500.0558m  500.0558m
+  vdsat   -939.9477m -939.9477m -939.9477m   43.7914m   43.7914m   43.7914m
+  vod       -1.3134    -1.3134    -1.3134  -500.0558m -500.0558m -500.0558m
+  beta      24.9429m   24.9429m   24.9429m    1.2831m    1.2831m    1.2831m
+  gam eff  557.0847m  557.0847m  557.0847m  507.4459m  507.4459m  507.4459m
+  gm         4.4459p    4.4460p    4.4434p    7.5930p    7.5930p    7.5930p
+  gds       21.7203m   21.7203m   21.7203m   95.7054f   95.7054f   95.7054f
+  gmb        2.3999p    2.3999p    2.3985p    1.6906p    1.6906p    1.6906p
+  cdtot    159.9251f  159.9251f  159.9251f    2.2499f    2.2499f    2.2499f
+  cgtot    124.2538f  124.2538f  124.2538f    2.6530f    2.6530f    2.6530f
+  cstot    151.7496f  151.7496f  151.7496f    3.0892f    3.0892f    3.0892f
+  cbtot    117.0019f  117.0019f  117.0019f    5.4356f    5.4356f    5.4356f
+  cgs       63.1499f   63.1499f   63.1499f  631.5868a  631.5868a  631.5868a
+  cgd       60.9000f   60.9000f   60.9000f  646.6740a  646.6740a  646.6740a
+
+
+
+ ******
+ hw2_3a
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+  **warning** (hw2_3a.sp:25) .MEASURE  tpdf never reached the trigger value, Measurement failed! 
+   tpdf= failed                          trig= not found
+   tpdr= failed                          trig= not found
+
+          ***** job concluded
+ ******  
+ hw2_3a
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  Circuit Statistics  ******
+  # nodes       =      20 # elements   =      11
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       6 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           4
+  transient          0.01         451         265         108 rev=         9
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        197.37 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.02 seconds
+           job started at     15:01:42 11/01/2018
+           job ended   at     15:01:43 11/01/2018
+
+
+  **info** (hw2_3a.sp:19) DC voltage reset to initial transient source value in source 0:vina. new dc=0.0000D+00
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ hw2_3a
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:ina     =   0.      0:inb     =   0.      0:inc     =   0.     
+ +0:out     =   1.8000  0:p1      =   1.8000  0:p2      =   1.8000 
+ +0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vina     0:vinb     0:vinc    
+  volts      1.8000     0.         0.         0.     
+  current  -18.3042p    0.         0.         0.     
+  power     32.9475p    0.         0.         0.     
+
+     total voltage source power dissipation=   32.9475p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:mpa      0:mpb      0:mpc      0:mna      0:mnb      0:mnc     
+ model    0:p_18.1   0:p_18.1   0:p_18.1   0:n_18.1   0:n_18.1   0:n_18.1  
+ region       Linear     Linear     Linear     Cutoff     Cutoff     Cutoff
+  id       -18.3044p  -18.3096p  -18.3033p    2.5008p    2.5008p    2.5008p
+  ibs      1.698e-27  1.699e-27  1.698e-27 -9.947e-28 -9.947e-28 -9.947e-28
+  ibd      2.110e-24  2.111e-24  2.110e-24 -358.2554a -358.2554a -358.2554a
+  vgs       -1.8000    -1.8000    -1.8000     0.         0.         0.     
+  vds     -903.6418p -903.8996p -903.5850p    1.8000     1.8000     1.8000 
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth     -504.2017m -504.2017m -504.2017m  496.3488m  496.3488m  496.3488m
+  vdsat   -936.2308m -936.2308m -936.2308m   51.1178m   51.1178m   51.1178m
+  vod       -1.2958    -1.2958    -1.2958  -496.3488m -496.3488m -496.3488m
+  beta      22.8758m   22.8758m   22.8758m    2.9279m    2.9279m    2.9279m
+  gam eff  557.0847m  557.0847m  557.0847m  507.4459m  507.4459m  507.4459m
+  gm         7.5217p    7.5239p    7.5212p   84.7379p   84.7379p   84.7379p
+  gds       20.2889m   20.2889m   20.2889m    1.6058p    1.6058p    1.6058p
+  gmb        4.1184p    4.1195p    4.1181p   13.2398p   13.2398p   13.2398p
+  cdtot    157.0339f  157.0339f  157.0339f    2.2967f    2.2967f    2.2967f
+  cgtot    119.1235f  119.1235f  119.1235f    2.1273f    2.1273f    2.1273f
+  cstot    149.1348f  149.1348f  149.1348f    3.1513f    3.1513f    3.1513f
+  cbtot    118.3669f  118.3669f  118.3669f    4.7951f    4.7951f    4.7951f
+  cgs       60.5591f   60.5591f   60.5591f  695.0795a  695.0795a  695.0795a
+  cgd       58.3807f   58.3807f   58.3807f  695.0570a  695.0570a  695.0570a
+
+
+
+ ******
+ hw2_3a
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+  **warning** (hw2_3a.sp:25) .MEASURE  tpdf never reached the trigger value, Measurement failed! 
+   tpdf= failed                          trig= not found
+   tpdr= failed                          trig= not found
+
+          ***** job concluded
+ ******  
+ hw2_3a
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  Circuit Statistics  ******
+  # nodes       =      20 # elements   =      11
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       6 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           4
+  transient          0.01         451         284         112 rev=         9
+  readin             0.00
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        197.37 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.02 seconds
+           job started at     15:01:42 11/01/2018
+           job ended   at     15:01:43 11/01/2018
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.53(s)

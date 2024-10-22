@@ -1,0 +1,212 @@
+Using: /usr/bin/time -p /usr/cad/synopsys/hspice/cur/hspice/linux/hspice Hw2_1_c.sp
+ ****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: Hw2_1_c.sp                                                        
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   u102061146           HOSTNAME: ws38 
+ lic: HOSTID: e41f1366e298         PID:      11718 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lscic 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jun-2015/2014.09 
+ lic: FLOATING license(s) on SERVER lscic 
+ lic:   
+ Init: read install configuration file: /usr/cad/synopsys/hspice/cur/hspice/meta.cfg
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ .option runlvl
+ .temp 25
+ .option post dccap=1 acout=0 acct
+ .inc 'hw2_1_c.spi'
+ ************************************************************************
+ * aucdl netlist:
+ * 
+ * library name:  hw2_1_c
+ * top cell name: common_gate
+ * view name:     schematic
+ * netlisted on:  apr  3 22:20:19 2015
+ ************************************************************************
+
+ *.bipolar
+ *.resi = 2000 
+ *.resval
+ *.capval
+ *.dioperi
+ *.dioarea
+ *.equation
+ *.scale meter
+ *.mega
+ .param
+
+
+
+ ************************************************************************
+ * library name: hw2_1_c
+ * cell name:    common_gate
+ * view name:    schematic
+ ************************************************************************
+
+ .subckt common_gate gnd vb vin vout
+ *.pininfo gnd:i vb:i vin:i vout:o
+ mm1 vout vb vin gnd n_18 w=7.826u l=525n m=1
+ .ends
+
+
+ x0 gnd vb vin vout common_gate
+
+ vg vb gnd dc=1.1346
+ vdd vdd gnd dc=1.8
+ rd vdd vout 20k
+ vi vin gnd dc=0.5 ac=1
+
+ .op
+ .ac dec 100 100 1g
+ .tf v(vout) vi
+ .probe id(mm1)
+ .end
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.1.c
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x0.                             common_gate        1.00 
+ 
+
+ **warning** could not find branch element     0:mm1             
+      branch - output ignored
+ 
+      
+  Opening plot unit= 15
+ file=Hw2_1_c.pa0                                                              
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.1.c
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vb      =   1.1346  0:vdd     =   1.8000  0:vin     = 500.0000m
+ +0:vout    = 991.9557m
+
+
+ ****  voltage sources
+
+ subckt                                   
+ element  0:vg       0:vdd      0:vi      
+  volts      1.1346     1.8000   500.0000m
+  current    0.       -40.4022u   40.4022u
+  power      0.        72.7240u  -20.2011u
+
+     total voltage source power dissipation=   52.5229u       watts
+
+
+
+ **** resistors
+
+ subckt             
+ element  0:rd      
+  r value   20.0000k
+  v drop   808.0443m
+  current   40.4022u
+  power     32.6468u
+
+
+
+ **** mosfets
+
+
+ subckt   x0        
+ element  1:mm1     
+ model    0:n_18.1  
+ region     Saturati
+  id        40.4022u
+  ibs     -312.3515a
+  ibd     -619.6576a
+  vgs      634.6000m
+  vds      491.9557m
+  vbs     -500.0000m
+  vth      524.4199m
+  vdsat    137.2827m
+  vod      110.1801m
+  beta       4.8327m
+  gam eff  519.9008m
+  gm       520.1302u
+  gds       10.2594u
+  gmb       72.4791u
+  cdtot      9.9944f
+  cgtot     29.3108f
+  cstot     33.3293f
+  cbtot     19.7953f
+  cgs       24.2702f
+  cgd        2.7848f
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vi                               =   10.0032 
+      input resistance at             vi       =    1.9994k
+      output resistance at v(vout)             =   16.5954k
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.1.c
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+  Command Line Threads Count:                      0
+  Available CPU Count:                             8
+  Actual Model Evaluation(Load) Threads Count:     1
+  Actual Solver Threads Count:                     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7  # elements   =       5
+  # resistors   =       1  # capacitors =       0  # inductors   =       0
+  # mutual_inds =       0  # vccs       =       0  # vcvs        =       0
+  # cccs        =       0  # ccvs       =       0  # volt_srcs   =       3
+  # curr_srcs   =       0  # diodes     =       0  # bjts        =       0
+  # jfets       =       0  # mosfets    =       1  # U elements  =       0
+  # T elements  =       0  # W elements =       0  # B elements  =       0
+  # S elements  =       0  # P elements =       0  # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           6
+  ac analysis        0.00         701         701
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           total memory used          201  kbytes
+           total cpu time            0.03 seconds
+           total elapsed time        0.23 seconds
+           job started at     16:56:09 04/04/2015
+           job ended   at     16:56:09 04/04/2015
+
+
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ lic: Release hspice token(s) 

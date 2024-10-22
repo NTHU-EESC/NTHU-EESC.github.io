@@ -1,0 +1,21 @@
+* File: inv.pex.spi
+* Created: Mon Oct 15 19:47:57 2018
+* Program "Calibre xRC"
+* Version "v2017.4_19.14"
+* 
+.subckt inv  IN VSS VDD OUT
+* 
+MM1 OUT IN VSS VSS N_18 L=1.8e-07 W=1e-06 AD=4.9e-13 AS=4.9e-13 PD=1.98e-06
++ PS=1.98e-06
+MM0 OUT IN VDD VDD P_18 L=1.8e-07 W=2e-06 AD=9.8e-13 AS=9.8e-13 PD=2.98e-06
++ PS=2.98e-06
+c_1 IN 0 0.441689f
+c_2 VSS 0 0.129996f
+c_3 VDD 0 0.190287f
+c_4 OUT 0 0.303969f
+*
+.include "inv.pex.spi.INV.pxi"
+*
+.ends
+*
+*

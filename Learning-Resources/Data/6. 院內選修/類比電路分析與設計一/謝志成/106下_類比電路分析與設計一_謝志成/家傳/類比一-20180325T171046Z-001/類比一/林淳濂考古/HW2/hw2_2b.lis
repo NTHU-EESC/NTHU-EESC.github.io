@@ -1,0 +1,170 @@
+Using: /usr/bin/time -p /usr/cad/synopsys/hspice/cur/hspice/linux/hspice hw2_2b.sp
+ ****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: hw2_2b.sp                                                         
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   u102061219           HOSTNAME: ws44 
+ lic: HOSTID: e41f13bf3ba4         PID:      20605 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lscic 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-may-2016/2015.06 
+ lic: FLOATING license(s) on SERVER lscic 
+ lic:   
+ Init: read install configuration file: /usr/cad/synopsys/hspice/cur/hspice/meta.cfg
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ .option runlvl
+ .option post
+
+ ***** netlist *****
+
+ m1 vout vin net1 gnd n_18 w=6.666u l=0.6u
+ rd vdd vout 180k
+ rs net1 gnd 20k
+
+ ***** source *****
+
+ vin vin gnd dc=0.5505 ac=1
+ vdd vdd gnd dc=1.8
+
+ ***** analysis *****
+
+ .op
+ .ac lin 10000 10 100meg
+ .probe ac v(vout)
+ .tf v(vout) vin
+
+ .end
+ 
+
+ 
+      
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:net1    =  99.9595m 0:vdd     =   1.8000  0:vin     = 550.5000m
+ +0:vout    = 900.3647m
+
+
+ ****  voltage sources
+
+ subckt                        
+ element  0:vin      0:vdd     
+  volts    550.5000m    1.8000 
+  current    0.        -4.9980u
+  power      0.         8.9964u
+
+     total voltage source power dissipation=    8.9964u       watts
+
+
+
+ **** resistors
+
+ subckt                        
+ element  0:rd       0:rs      
+  r value  180.0000k   20.0000k
+  v drop   899.6353m   99.9595m
+  current    4.9980u    4.9980u
+  power      4.4964u  499.5946n
+
+
+
+ **** mosfets
+
+
+ subckt             
+ element  0:m1      
+ model    0:n_18.1  
+ region     Saturati
+  id         4.9980u
+  ibs      -54.2675a
+  ibd     -488.7948a
+  vgs      450.5405m
+  vds      800.4053m
+  vbs      -99.9595m
+  vth      443.8269m
+  vdsat     71.1370m
+  vod        6.7137m
+  beta       3.5558m
+  gam eff  510.1733m
+  gm       103.9884u
+  gds        1.3294u
+  gmb       19.3784u
+  cdtot      8.6225f
+  cgtot     20.8472f
+  cstot     23.3439f
+  cbtot     19.4938f
+  cgs       14.6282f
+  cgd        2.4745f
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vin                              =   -5.0138 
+      input resistance at             vin      =  1.000e+20
+      output resistance at v(vout)             =  168.4622k
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+  Command Line Threads Count:                      0
+  Available CPU Count:                             8
+  Actual Model Evaluation(Load) Threads Count:     1
+  Actual Solver Threads Count:                     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7  # elements   =       5
+  # resistors   =       2  # capacitors =       0  # inductors   =       0
+  # mutual_inds =       0  # vccs       =       0  # vcvs        =       0
+  # cccs        =       0  # ccvs       =       0  # volt_srcs   =       2
+  # curr_srcs   =       0  # diodes     =       0  # bjts        =       0
+  # jfets       =       0  # mosfets    =       1  # U elements  =       0
+  # T elements  =       0  # W elements =       0  # B elements  =       0
+  # S elements  =       0  # P elements =       0  # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           6
+  ac analysis        0.04       10000       10000
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           total memory used          350  kbytes
+           total cpu time            0.07 seconds
+           total elapsed time        0.39 seconds
+           job started at     15:56:36 04/13/2016
+           job ended   at     15:56:36 04/13/2016
+
+
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ lic: Release hspice token(s) 

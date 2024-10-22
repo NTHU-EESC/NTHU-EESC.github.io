@@ -1,0 +1,76 @@
+*105060012, 105060026
+*only bw<30M failed
+*vdd=1.4 iref=55u
+
+.param Mm0=200 Mm11=100 Mm12=90 Mm13=140 Mm14=10
++Mmc1=19 Mmc2=5 Mmc3=5
++Mm21=20 Mm22=10 Mm31=10 MM32=10 Mm33=250 Mm34=250
+
+.subckt  AICOP iref vdd vinn vinp vocm von vop vss
+
+*STAGE I*
+M0 net1 Iref vss vss n_18 W=1u L=1u m=Mm0 
+M11a net2 vinn net1 vss n_18 W=1u L=0.5u m=Mm11 
+M11b net3 vinp net1 vss n_18 W=1u L=0.5u m=Mm11 
+M12a net2 Vcmc vdd vdd p_18 W=1u L=1u m=Mm12 
+M12b net3 Vcmc vdd vdd p_18 W=1u L=1u m=Mm12 
+M13a net4 Vb2 net2 net2 p_18 W=1u L=1.3u m=Mm13 
+M13b net5 Vb2 net3 net3 p_18 W=1u L=1.3u m=Mm13
+M14a net4 Iref vss vss n_18 W=1u L=0.7u m=Mm14
+M14b net5 Iref vss vss n_18 W=1u L=0.7u m=Mm14
+
+*COMPENSATION*
+Mc1a net4 Iref vss vss n_18 W=0.8u L=0.8u m=Mmc1
+Mc1b net5 Iref vss vss n_18 W=0.8u L=0.8u m=Mmc1
+Mc2a net4 vss net6 net6 p_18 W=1u L=1.8u m=Mmc2
+Mc2b net5 vss net7 net7 p_18 W=1u L=1.8u m=Mmc2
+Mc3a net6 Vb3 vdd vdd p_18 W=1u L=1.8u m=Mmc3
+Mc3b net7 Vb3 vdd vdd p_18 W=1u L=1.8u m=Mmc3
+
+*STAGE II*
+M21a net8 net4 vss vss n_18 W=1.2u L=0.8u m=Mm21
+M21b net9 net5 vss vss n_18 W=1.2u L=0.8u m=Mm21
+M22a net8 Vb3 vdd vdd p_18 W=1u L=2.2u m=Mm22
+M22b net9 Vb3 vdd vdd p_18 W=1u L=2.2u m=Mm22
+
+*STAGE III*
+M31a net10 net8 vss vss n_18 W=1u L=0.8u m=Mm31
+M31b net11 net9 vss vss n_18 W=1u L=0.8u m=Mm31
+M32a net10 net10 vdd vdd p_18 W=1u L=1u m=Mm32
+M32b net11 net11 vdd vdd p_18 W=1u L=1u m=Mm32
+M33a Von net10 vdd vdd p_18 W=0.9u L=0.7u m=Mm33
+M33b Vop net11 vdd vdd p_18 W=0.9u L=0.7u m=Mm33
+M34a Von net4 vss vss n_18 W=0.9u L=0.7u m=Mm34
+M34b Vop net5 vss vss n_18 W=0.9u L=0.7u m=Mm34
+
+C1 net8 net6 0.01p
+C2 net6 Von 0.5p 
+C3 net9 net7 0.01p 
+C4 net7 Vop 0.5p
+
+*Biasing_Circuit*
+Mb0 Iref Iref vss vss N_18 W=1.2u L=1u m=40
+Mb1 Vb2 Vb2 vdd vdd P_18 W=1u L=1u m=30
+Mb2 Vb2 Iref vss vss N_18 W=1.2u L=1u m=200
+Mb3 Vb3 Vb3 vdd vdd P_18 W=1u L=1u m=50
+Mb4 Vb3 Iref vss vss N_18 W=1.2u L=1u m=200 
+
+*Common_Mode_Feedback*
+Mcm1 net25 net21 vdd vdd P_18 W=1u L=0.8u m=4
+Mcm2 net21 Vb2 net25 net25 P_18 W=1u L=0.8u m=30
+Mcm3 net21 Vb3 vss vss N_18 W=1u L=1u m=4
+Mcm4 net30 net21 vdd vdd P_18 W=2u L=0.8u m=8
+Mcm5 Vcmc Vb2 net30 net30 P_18 W=1u L=0.8u m=50
+Mcm6 Vcmc Vb3 vss vss N_18 W=1u L=1u m=8
+Mcm7 net26 Vcmc vdd vdd P_18 W=1u L=1u m=22
+Mcm8 Vcmc Vb2 net26 net26 P_18 W=1u L=1u m=90
+Mcm9 Vcmc Vb3 vss vss N_18 W=1u L=1u m=40
+
+Ro_cm net30 Vocm 15K 
+Rn_cm Von net25 10K 
+Rp_cm Vop net25 10K
+ 
+.ends
+
+
+

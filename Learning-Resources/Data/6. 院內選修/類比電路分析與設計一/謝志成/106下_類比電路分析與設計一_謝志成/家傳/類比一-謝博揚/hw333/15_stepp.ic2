@@ -1,0 +1,43 @@
+* "simulator" "HSPICE" 
+* "version" "B-2008.09-SP1 32-BIT"
+* "format" "HSP"
+* "rundate" "15:34:34 06/25/2016 "
+* "netlist" "15_stepp.sp "
+* "runtitle" "closed-loop step response+"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ iref = 560.1723m       
++ test1 = 650.0000m       
++ test2 =   1.1500        
++ vdd =   1.8000        
++ vinn = 770.5560m       
++ vinp = 770.5433m       
++ vocm = 900.0000m       
++ von = 891.0865m       
++ vop = 391.1120m       
++ vss =   0.            
++ xop.net102 = 549.3431m       
++ xop.net102r = 545.3784m       
++ xop.net110 = 549.3431m       
++ xop.net110r = 545.3784m       
++ xop.net15 =   1.2532        
++ xop.net28 =   1.2077        
++ xop.net32 =   1.2531        
++ xop.net34 =   1.0827        
++ xop.net34r = 642.4788m       
++ xop.net36 =   1.3106        
++ xop.net39 = 221.8530m       
++ xop.net47 = 438.2181m       
++ xop.net9 =   1.2492        
++ xop.vb1 = 481.0753m       
++ xop.vcmc = 888.2628m       
++ xop.vcmcb =   1.0639        
++ xop.vol = 549.3431m       
++ xop.vol2 = 539.4543m       
++ xop.vor = 545.3784m       
++ xop.vor2 = 786.0420m       
+***   END: Saved Operating Point ***                     

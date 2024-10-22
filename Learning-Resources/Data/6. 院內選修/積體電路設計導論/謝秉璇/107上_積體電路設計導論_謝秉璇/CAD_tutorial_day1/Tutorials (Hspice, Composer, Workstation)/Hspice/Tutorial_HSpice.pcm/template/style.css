@@ -1,0 +1,16 @@
+A:link { text-decoration: none }
+A:visited { text-decoration: none }
+A:hover 
+{
+    background-color: #dddddd;
+    color: red;
+    text-decoration: none
+}
+.highlight  {color:white; background-color: #ff8080;}
+.normal {}
+.subject {font-family: arial; color: #000088; font-size: 26px}
+.info {font-family: arial; color: #2C2B2B; font-size: 10px}
+.subject1280 {font-family: arial; color: #000088; font-size: 30px}
+.info1280 {font-family: arial; color: #2C2B2B; font-size: 12px}
+.status {font-family: arial; color: #2C2B2B; font-size:10px}
+.outline {font-family: arial; font-size:12px}

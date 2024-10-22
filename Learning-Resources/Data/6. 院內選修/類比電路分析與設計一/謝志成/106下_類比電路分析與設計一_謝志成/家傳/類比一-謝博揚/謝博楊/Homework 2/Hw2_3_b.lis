@@ -1,0 +1,339 @@
+Using: /usr/bin/time -p /usr/cad/synopsys/hspice/cur/hspice/linux/hspice Hw2_3_b.sp
+ ****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: Hw2_3_b.sp                                                        
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   u102061146           HOSTNAME: ws38 
+ lic: HOSTID: e41f1366e298         PID:      2567 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jun-2015/2014.09 
+ lic: FLOATING license(s) on SERVER lsnctu 
+ lic:   
+ Init: read install configuration file: /usr/cad/synopsys/hspice/cur/hspice/meta.cfg
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ .option runlvl
+ .temp 25
+ .option post dccap=1 acout=0 acct
+ .inc 'hw2_3_b.spi'
+ ************************************************************************
+ * aucdl netlist:
+ * 
+ * library name:  hw2_3_a
+ * top cell name: source_follower
+ * view name:     schematic
+ * netlisted on:  apr  7 01:49:30 2015
+ ************************************************************************
+
+ *.bipolar
+ *.resi = 2000 
+ *.resval
+ *.capval
+ *.dioperi
+ *.dioarea
+ *.equation
+ *.scale meter
+ *.mega
+ .param
+
+
+
+ ************************************************************************
+ * library name: hw2_3_a
+ * cell name:    source_follower
+ * view name:    schematic
+ ************************************************************************
+
+ .subckt source_follower gnd vdd vb vin vout
+ *.pininfo gnd:i vdd:i vb:i vin:i vout:o
+ mm0 vout vb gnd gnd n_18 w=5u l=1u m=1
+ mm1 vdd vin vout vout n_18 w=5u l=1.2u m=1
+ .ends
+
+
+ x0 gnd vdd vb vin vout source_follower
+
+ vi vin gnd dc=1.3 
+ vdd vdd gnd 1.8
+ vbias vb gnd dc=450m
+
+ .op
+ .dc vi 0.5 1.8 0.01
+ .tf v(vout) vi
+ .end
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.3.b
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x0.                             source_follower    1.00 
+ 
+
+ 
+      
+  Opening plot unit= 15
+ file=Hw2_3_b.pa0                                                              
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+         vi        input resistance at vi        output resistance at v(vout)     v(vout)/vi       
+
+     500.0000m           1.000e+20                      10.1100k                  756.9707m
+     510.0000m           1.000e+20                      10.4017k                  799.6587m
+     520.0000m           1.000e+20                      10.6763k                  838.2033m
+     530.0000m           1.000e+20                      10.9140k                  871.0459m
+     540.0000m           1.000e+20                      11.1032k                  897.4697m
+     550.0000m           1.000e+20                      11.2429k                  917.7302m
+     560.0000m           1.000e+20                      11.3396k                  932.7526m
+     570.0000m           1.000e+20                      11.4026k                  943.6926m
+     580.0000m           1.000e+20                      11.4412k                  951.6225m
+     590.0000m           1.000e+20                      11.4626k                  957.3994m
+     600.0000m           1.000e+20                      11.4724k                  961.6557m
+     610.0000m           1.000e+20                      11.4742k                  964.8384m
+     620.0000m           1.000e+20                      11.4706k                  967.2580m
+     630.0000m           1.000e+20                      11.4634k                  969.1287m
+     640.0000m           1.000e+20                      11.4537k                  970.5991m
+     650.0000m           1.000e+20                      11.4423k                  971.7732m
+     660.0000m           1.000e+20                      11.4297k                  972.7245m
+     670.0000m           1.000e+20                      11.4162k                  973.5059m
+     680.0000m           1.000e+20                      11.4023k                  974.1556m
+     690.0000m           1.000e+20                      11.3879k                  974.7021m
+     700.0000m           1.000e+20                      11.3733k                  975.1665m
+     710.0000m           1.000e+20                      11.3585k                  975.5648m
+     720.0000m           1.000e+20                      11.3437k                  975.9094m
+     730.0000m           1.000e+20                      11.3288k                  976.2097m
+     740.0000m           1.000e+20                      11.3138k                  976.4734m
+     750.0000m           1.000e+20                      11.2989k                  976.7063m
+     760.0000m           1.000e+20                      11.2840k                  976.9132m
+     770.0000m           1.000e+20                      11.2692k                  977.0980m
+     780.0000m           1.000e+20                      11.2544k                  977.2638m
+     790.0000m           1.000e+20                      11.2396k                  977.4133m
+     800.0000m           1.000e+20                      11.2249k                  977.5485m
+     810.0000m           1.000e+20                      11.2103k                  977.6714m
+     820.0000m           1.000e+20                      11.1958k                  977.7833m
+     830.0000m           1.000e+20                      11.1813k                  977.8857m
+     840.0000m           1.000e+20                      11.1669k                  977.9795m
+     850.0000m           1.000e+20                      11.1525k                  978.0657m
+     860.0000m           1.000e+20                      11.1382k                  978.1451m
+     870.0000m           1.000e+20                      11.1240k                  978.2185m
+     880.0000m           1.000e+20                      11.1099k                  978.2864m
+     890.0000m           1.000e+20                      11.0958k                  978.3493m
+     900.0000m           1.000e+20                      11.0818k                  978.4077m
+     910.0000m           1.000e+20                      11.0678k                  978.4621m
+     920.0000m           1.000e+20                      11.0539k                  978.5127m
+     930.0000m           1.000e+20                      11.0401k                  978.5600m
+     940.0000m           1.000e+20                      11.0263k                  978.6041m
+     950.0000m           1.000e+20                      11.0126k                  978.6453m
+     960.0000m           1.000e+20                      10.9989k                  978.6839m
+     970.0000m           1.000e+20                      10.9853k                  978.7201m
+     980.0000m           1.000e+20                      10.9718k                  978.7540m
+     990.0000m           1.000e+20                      10.9583k                  978.7858m
+       1.0000            1.000e+20                      10.9449k                  978.8157m
+       1.0100            1.000e+20                      10.9315k                  978.8438m
+       1.0200            1.000e+20                      10.9181k                  978.8702m
+       1.0300            1.000e+20                      10.9049k                  978.8950m
+       1.0400            1.000e+20                      10.8916k                  978.9183m
+       1.0500            1.000e+20                      10.8784k                  978.9403m
+       1.0600            1.000e+20                      10.8653k                  978.9610m
+       1.0700            1.000e+20                      10.8522k                  978.9804m
+       1.0800            1.000e+20                      10.8392k                  978.9987m
+       1.0900            1.000e+20                      10.8262k                  979.0159m
+       1.1000            1.000e+20                      10.8132k                  979.0320m
+       1.1100            1.000e+20                      10.8003k                  979.0472m
+       1.1200            1.000e+20                      10.7875k                  979.0615m
+       1.1300            1.000e+20                      10.7746k                  979.0749m
+       1.1400            1.000e+20                      10.7619k                  979.0874m
+       1.1500            1.000e+20                      10.7491k                  979.0991m
+       1.1600            1.000e+20                      10.7365k                  979.1101m
+       1.1700            1.000e+20                      10.7238k                  979.1203m
+       1.1800            1.000e+20                      10.7112k                  979.1298m
+       1.1900            1.000e+20                      10.6986k                  979.1387m
+       1.2000            1.000e+20                      10.6861k                  979.1469m
+       1.2100            1.000e+20                      10.6736k                  979.1544m
+       1.2200            1.000e+20                      10.6612k                  979.1614m
+       1.2300            1.000e+20                      10.6488k                  979.1677m
+       1.2400            1.000e+20                      10.6364k                  979.1735m
+       1.2500            1.000e+20                      10.6241k                  979.1787m
+       1.2600            1.000e+20                      10.6118k                  979.1834m
+       1.2700            1.000e+20                      10.5996k                  979.1876m
+       1.2800            1.000e+20                      10.5874k                  979.1912m
+       1.2900            1.000e+20                      10.5752k                  979.1943m
+       1.3000            1.000e+20                      10.5631k                  979.1969m
+       1.3100            1.000e+20                      10.5510k                  979.1990m
+       1.3200            1.000e+20                      10.5389k                  979.2006m
+       1.3300            1.000e+20                      10.5269k                  979.2017m
+       1.3400            1.000e+20                      10.5149k                  979.2024m
+       1.3500            1.000e+20                      10.5030k                  979.2025m
+       1.3600            1.000e+20                      10.4911k                  979.2022m
+       1.3700            1.000e+20                      10.4792k                  979.2014m
+       1.3800            1.000e+20                      10.4673k                  979.2001m
+       1.3900            1.000e+20                      10.4555k                  979.1983m
+       1.4000            1.000e+20                      10.4438k                  979.1961m
+       1.4100            1.000e+20                      10.4320k                  979.1933m
+       1.4200            1.000e+20                      10.4203k                  979.1900m
+       1.4300            1.000e+20                      10.4087k                  979.1863m
+       1.4400            1.000e+20                      10.3971k                  979.1820m
+       1.4500            1.000e+20                      10.3855k                  979.1771m
+       1.4600            1.000e+20                      10.3739k                  979.1718m
+       1.4700            1.000e+20                      10.3624k                  979.1659m
+       1.4800            1.000e+20                      10.3509k                  979.1594m
+       1.4900            1.000e+20                      10.3395k                  979.1523m
+       1.5000            1.000e+20                      10.3281k                  979.1446m
+       1.5100            1.000e+20                      10.3167k                  979.1363m
+       1.5200            1.000e+20                      10.3054k                  979.1273m
+       1.5300            1.000e+20                      10.2941k                  979.1176m
+       1.5400            1.000e+20                      10.2828k                  979.1073m
+       1.5500            1.000e+20                      10.2716k                  979.0962m
+       1.5600            1.000e+20                      10.2604k                  979.0843m
+       1.5700            1.000e+20                      10.2492k                  979.0717m
+       1.5800            1.000e+20                      10.2381k                  979.0581m
+       1.5900            1.000e+20                      10.2270k                  979.0437m
+       1.6000            1.000e+20                      10.2160k                  979.0284m
+       1.6100            1.000e+20                      10.2049k                  979.0121m
+       1.6200            1.000e+20                      10.1940k                  978.9947m
+       1.6300            1.000e+20                      10.1830k                  978.9762m
+       1.6400            1.000e+20                      10.1721k                  978.9566m
+       1.6500            1.000e+20                      10.1613k                  978.9357m
+       1.6600            1.000e+20                      10.1505k                  978.9134m
+       1.6700            1.000e+20                      10.1397k                  978.8898m
+       1.6800            1.000e+20                      10.1289k                  978.8646m
+       1.6900            1.000e+20                      10.1182k                  978.8377m
+       1.7000            1.000e+20                      10.1076k                  978.8092m
+       1.7100            1.000e+20                      10.0970k                  978.7787m
+       1.7200            1.000e+20                      10.0864k                  978.7462m
+       1.7300            1.000e+20                      10.0758k                  978.7114m
+       1.7400            1.000e+20                      10.0654k                  978.6743m
+       1.7500            1.000e+20                      10.0549k                  978.6346m
+       1.7600            1.000e+20                      10.0445k                  978.5920m
+       1.7700            1.000e+20                      10.0341k                  978.5464m
+       1.7800            1.000e+20                      10.0238k                  978.4973m
+       1.7900            1.000e+20                      10.0136k                  978.4446m
+       1.8000            1.000e+20                      10.0033k                  978.3877m
+  
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.3.b
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vb      = 450.0000m 0:vdd     =   1.8000  0:vin     =   1.3000 
+ +0:vout    = 849.2287m
+
+
+ ****  voltage sources
+
+ subckt                                   
+ element  0:vi       0:vdd      0:vbias   
+  volts      1.3000     1.8000   450.0000m
+  current    0.        -5.9431u    0.     
+  power      0.        10.6976u    0.     
+
+     total voltage source power dissipation=   10.6976u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt   x0         x0        
+ element  1:mm0      1:mm1     
+ model    0:n_18.1   0:n_18.1  
+ region     Saturati   Saturati
+  id         5.9431u    5.9431u
+  ibs     -1.052e-21 -1.052e-21
+  ibd     -361.2608a -404.4571a
+  vgs      450.0000m  450.7713m
+  vds      849.2287m  950.7713m
+  vbs        0.         0.     
+  vth      385.4017m  373.4576m
+  vdsat     95.1082m  101.2749m
+  vod       64.5983m   77.3137m
+  beta       1.5529m    1.2846m
+  gam eff  507.4460m  507.4460m
+  gm        98.3043u   92.7043u
+  gds        1.0486u  920.9204n
+  gmb       19.9911u   18.7707u
+  cdtot      6.5491f    6.4494f
+  cgtot     32.5788f   39.5257f
+  cstot     36.1958f   43.3508f
+  cbtot     18.6734f   20.3047f
+  cgs       27.6521f   34.1394f
+  cgd        1.7840f    1.7670f
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vi                               =  979.1969m
+      input resistance at             vi       =  1.000e+20
+      output resistance at v(vout)             =   10.5631k
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.3.b
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+  Command Line Threads Count:                      0
+  Available CPU Count:                             8
+  Actual Model Evaluation(Load) Threads Count:     1
+  Actual Solver Threads Count:                     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       9  # elements   =       5
+  # resistors   =       0  # capacitors =       0  # inductors   =       0
+  # mutual_inds =       0  # vccs       =       0  # vcvs        =       0
+  # cccs        =       0  # ccvs       =       0  # volt_srcs   =       3
+  # curr_srcs   =       0  # diodes     =       0  # bjts        =       0
+  # jfets       =       0  # mosfets    =       2  # U elements  =       0
+  # T elements  =       0  # W elements =       0  # B elements  =       0
+  # S elements  =       0  # P elements =       0  # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           5
+  dc sweep           0.00         131         271
+  readin             0.01
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           total memory used          194  kbytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.18 seconds
+           job started at     01:58:21 04/08/2015
+           job ended   at     01:58:21 04/08/2015
+
+
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ lic: Release hspice token(s) 

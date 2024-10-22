@@ -1,0 +1,41 @@
+* "simulator" "HSPICE" 
+* "version" "B-2008.09-SP1 32-BIT"
+* "format" "HSP"
+* "rundate" "22:16:26 06/25/2016 "
+* "netlist" "11_ac.sp "
+* "runtitle" "ac response"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ iref = 455.2851m       
++ vdd =   1.8000        
++ vinn = 900.0000m       
++ vinp = 900.0000m       
++ vocm = 900.0000m       
++ von =   1.0836        
++ vop =   1.0836        
++ vss =   0.            
++ xop.net102 = 462.6038m       
++ xop.net102r = 462.6038m       
++ xop.net110 = 462.6038m       
++ xop.net110r = 462.6038m       
++ xop.net15 =   1.3275        
++ xop.net28 =   1.3518        
++ xop.net32 =   1.3275        
++ xop.net34 = 885.1066m       
++ xop.net34r = 885.1064m       
++ xop.net36 =   1.2891        
++ xop.net39 = 416.7382m       
++ xop.net47 = 888.0264m       
++ xop.net9 =   1.3237        
++ xop.vb1 = 679.8640m       
++ xop.vcmc =   1.0090        
++ xop.vcmcb =   1.1700        
++ xop.vol = 462.6038m       
++ xop.vol2 = 673.1923m       
++ xop.vor = 462.6038m       
++ xop.vor2 = 673.1924m       
+***   END: Saved Operating Point ***                     

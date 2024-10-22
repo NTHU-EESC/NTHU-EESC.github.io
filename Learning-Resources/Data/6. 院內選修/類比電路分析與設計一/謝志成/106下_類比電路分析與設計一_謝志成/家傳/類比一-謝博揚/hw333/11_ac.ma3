@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='B-2008.09-SP1 32-BIT'
+.TITLE 'ac response'
+ dcgain_in_db     dcgain           unity_frequency  phase             
+ phase_margin     temper           alter#            
+   92.5175         4.225e+04        2.134e+07       -115.5734         
+   64.4266          25.0000           4.0000         
