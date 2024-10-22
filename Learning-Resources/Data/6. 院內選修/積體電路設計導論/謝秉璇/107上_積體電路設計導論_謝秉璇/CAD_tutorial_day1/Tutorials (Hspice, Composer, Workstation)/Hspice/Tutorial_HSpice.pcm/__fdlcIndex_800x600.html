@@ -1,0 +1,110 @@
+<html>
+
+<head>
+    <script src='ver.js'></script>
+    <script src='abstract.js'></script>
+    <script src='ctrl_ui.js' language="JScript.Encode"></script>
+    <script src='ctrl_pptsld.js' language="JScript.Encode"></script>
+    <title>PowerCam Player</title>
+    <style> @import URL("template/style.css"); </style>
+    <bgsound id=bgs loop=-1>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
+</head>
+
+<body topmargin="0" leftmargin="0" scroll=no oncontextmenu="return false">
+<table border=0 cellspacing=0 cellpadding=0 background='template/mainBG_800x600.gif' width="790" height="507"><tr><td></td></tr></table>
+
+
+<!-- video area -->
+<img id=pic_logo src='icons/pic_logo.gif' style="position:absolute; left:27px; top:305px; width:160px; height:120px; z-index:100"> 
+<object id="pptPlayer" style="position:absolute; left:27px; top:305px; width:160px; height:120px; z-index:50"
+    classid="clsid:22D6F312-B0F6-11D0-94AB-0080C74C7E95"
+	codebase="http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701"
+	standby="Loading Microsoft Windows Media Player components..."
+	type="application/x-oleobject"
+	width="160px"
+	height="120px">
+  <param name="ShowAudioControls" value="false">
+  <param name="ShowControls" value="false">
+  <param name="ShowPositionControls" value="false">
+  <param name="ShowDisplay" value="false">
+  <param name="ShowTracker" value="false">
+  <param name="ShowStatusBar" value="false">
+  <param name="AutoStart" value="false">
+  <param name="FileName" value="">
+</object>
+<script for="pptPlayer" event="EndOfStream(lResult)" language="Jscript">
+    window.setTimeout("WMPlayerFinish()", 100);
+</script>
+
+
+<!-- powerpoint title, writen by outline-->
+<span id=fdlcTitle class=subject style="position:absolute; left:71px; top:16px;"></span> 
+<span id=fdlcInfo class=info style="position:absolute; left:71px; top:48px;"></span> 
+<span id=seektips style="position:absolute; font-size:10px; color:red; border: 1px groove black; background-color:white; font-family: arial; visibility:hidden; left:0px; top:0px; z-index:99"></span>
+
+<!-- status & progress bar, optional -->
+<span id=fdlcStatus class=status style="font-face:'Arial'; position:absolute; left:15px; top:446px; width:160px"></span> 
+<span id=fdlcProgbar style="position:absolute; left:14px; top:462px; width:185px; height:5px"></span> 
+<img id=ctrlBar src='template/progbarBG.gif' style="position:absolute; left:14px; top:460px; width:185px; z-index:99; height:9px;"> 
+
+<!-- vcr control -->
+<img id=btnPrev src='template/prev.gif' style="position:absolute; left:9px;  top:474px;"> 
+<img id=btnPlay src='template/play.gif' style="position:absolute; left:37px; top:472px;"> 
+<img id=btnStop src='template/stop.gif' style="position:absolute; left:69px; top:472px;"> 
+<img id=btnNext src='template/next.gif' style="position:absolute; left:102px; top:474px;"> 
+<img id=ctrlAuto src='template/autoChecked.gif' style="position:absolute; left:130px; top:478px;"> 
+
+
+ 
+<!-- sound on/off control -->
+<img id=soundon src='template/sound_on.gif' style="position:absolute; left:175px; top:478px;"> 
+
+<!-- logo -->
+<img id=logo src='template/logo.gif' style="position:absolute; left:640px; top:8px;"> 
+
+<!-- window control -->
+<img id=btnFullscreen src='template/fullscreen.gif' style="position:absolute; left:750px; top:8px;"> 
+
+
+<!-- presentation area-->
+<script>
+    document.write(" \
+        <OBJECT ID=SCPlayer style='position:absolute; left:218px; top:70px' \
+            CLASSID='CLSID:DFA7638A-E3B5-4B30-9F4A-F18C38F13640' width=560px height=420px \
+            CODEBASE='player.cab#version=" + gPlayerVer + "'> \
+            <param name='Cursor' value='template/pen0.gif'> \
+        </OBJECT>");
+
+    // only for (old) ezLMS server
+    document.write(" \
+        <table border=0 bgcolor=#ff8800 style='position:absolute; left:0px; top:510px'><tr><td> \
+        <font color=white style='font-size:15px'> \
+            由於新版的 PowerCam 為  XP/SP2 作介面的修正, 請通知系統管理者更新網站, \
+            <a href='javascript: ExitClick()'>按這裡關閉播放視窗</a>. \
+        </font> \
+        </td></tr></table> \
+    ");
+</script>
+<script for="SCPlayer" event="OnMenuClick(lResult)" language="Jscript">
+    mnuClick(lResult);
+</script>
+
+<script for="SCPlayer" event="OnDownloadFinish(dst)" language="Jscript">
+    OnDownloadFinish(dst);
+</script>
+
+<script for="SCPlayer" event="OnSeekFinish()" language="Jscript">
+    OnSeekFinish();
+</script>
+
+<script for="SCPlayer" event="OnResizeFinish()" language="Jscript">
+    OnResizeFinish();
+</script>
+
+
+<!-- ouline area -->
+<iframe name="Outline" border="0" frameborder="0" style="position:absolute; left:1px; top:89px; z-index:2; width:203px; height:188px" src="outline_800x600.html" id="Outline"> 
+
+</body>
+</html>

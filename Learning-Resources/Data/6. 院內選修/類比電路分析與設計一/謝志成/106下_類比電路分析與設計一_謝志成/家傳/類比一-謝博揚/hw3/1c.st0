@@ -1,0 +1,2105 @@
+***** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******
+ Input File: 1c.sp
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   u102061112           HOSTNAME: ws36
+ lic: HOSTID: e41f1366b708         PID:      9468
+ lic: Using FLEXlm license file:
+ lic: 26585@lsnctu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 14-may-2016/2015.06
+ lic: FLOATING license(s) on SERVER lsnctu
+ lic:
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.in
+ init: begin read circuit files,  cpu clock=  2.00E-02
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/ad
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/behave
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/bjt
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/burr_b
+                         rn
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/comlin
+                         ear
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/dio
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/fet
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/lin_te
+                         ch
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/pci
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/signet
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/ti
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/tline
+       option search   = /usr/cad/synopsys/hspice/cur/hspice/parts/xilinx
+       option runlvl
+       option post     =     1.00
+       option acct
+       option captab
+       option acout    =     0.00
+ init: end read circuit files,  cpu clock=  2.00E-02 memory=    150 kb
+ init: begin check errors,  cpu clock=  2.00E-02
+ init: end check errors,  cpu clock=  2.00E-02 memory=    195 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  2.00E-02
+       establish matrix -- done,  cpu clock=  2.00E-02 memory=    198 kb
+       re-order matrix -- done,  cpu clock=  2.00E-02 memory=    199 kb
+ init: end setup matrix,  cpu clock=  2.00E-02 memory=    212 kb
+ dcop: begin dcop,  cpu clock=  2.00E-02
+ dcop: end dcop,  cpu clock=  2.00E-02 memory=    212 kb  tot_iter=       7
+ sweep: voltage         voltage1         begin, #sweeps = 121
+ voltage: vcm             =    3.00E-01
+ dcop: begin dcop,  cpu clock=  2.00E-02
+ dcop: end dcop,  cpu clock=  2.00E-02 memory=    212 kb  tot_iter=      18
+ output: 1c.ac0
+ sweep: ac ac1    begin, #sweeps=1001 cpu clock=  2.00E-02
+ ac: frequency=    1.02E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac1    end,  cpu clock=  3.00E-02 memory=    229 kb
+ voltage: vcm             =    3.10E-01
+ dcop: begin dcop,  cpu clock=  3.00E-02
+ dcop: end dcop,  cpu clock=  3.00E-02 memory=    212 kb  tot_iter=      23
+ output: 1c.ac0
+ sweep: ac ac2    begin, #sweeps=1001 cpu clock=  3.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac2    end,  cpu clock=  4.00E-02 memory=    229 kb
+ voltage: vcm             =    3.20E-01
+ dcop: begin dcop,  cpu clock=  4.00E-02
+ dcop: end dcop,  cpu clock=  4.00E-02 memory=    212 kb  tot_iter=      28
+ output: 1c.ac0
+ sweep: ac ac3    begin, #sweeps=1001 cpu clock=  4.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac3    end,  cpu clock=  4.00E-02 memory=    229 kb
+ voltage: vcm             =    3.30E-01
+ dcop: begin dcop,  cpu clock=  5.00E-02
+ dcop: end dcop,  cpu clock=  5.00E-02 memory=    212 kb  tot_iter=      33
+ output: 1c.ac0
+ sweep: ac ac4    begin, #sweeps=1001 cpu clock=  5.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac4    end,  cpu clock=  5.00E-02 memory=    229 kb
+ voltage: vcm             =    3.40E-01
+ dcop: begin dcop,  cpu clock=  5.00E-02
+ dcop: end dcop,  cpu clock=  5.00E-02 memory=    212 kb  tot_iter=      38
+ output: 1c.ac0
+ sweep: ac ac5    begin, #sweeps=1001 cpu clock=  5.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac5    end,  cpu clock=  6.00E-02 memory=    229 kb
+ voltage: vcm             =    3.50E-01
+ dcop: begin dcop,  cpu clock=  6.00E-02
+ dcop: end dcop,  cpu clock=  6.00E-02 memory=    212 kb  tot_iter=      43
+ output: 1c.ac0
+ sweep: ac ac6    begin, #sweeps=1001 cpu clock=  6.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac6    end,  cpu clock=  7.00E-02 memory=    229 kb
+ voltage: vcm             =    3.60E-01
+ dcop: begin dcop,  cpu clock=  7.00E-02
+ dcop: end dcop,  cpu clock=  7.00E-02 memory=    212 kb  tot_iter=      48
+ output: 1c.ac0
+ sweep: ac ac7    begin, #sweeps=1001 cpu clock=  7.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac7    end,  cpu clock=  7.00E-02 memory=    229 kb
+ voltage: vcm             =    3.70E-01
+ dcop: begin dcop,  cpu clock=  7.00E-02
+ dcop: end dcop,  cpu clock=  7.00E-02 memory=    212 kb  tot_iter=      53
+ output: 1c.ac0
+ sweep: ac ac8    begin, #sweeps=1001 cpu clock=  7.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac8    end,  cpu clock=  8.00E-02 memory=    229 kb
+ voltage: vcm             =    3.80E-01
+ dcop: begin dcop,  cpu clock=  8.00E-02
+ dcop: end dcop,  cpu clock=  8.00E-02 memory=    212 kb  tot_iter=      58
+ output: 1c.ac0
+ sweep: ac ac9    begin, #sweeps=1001 cpu clock=  8.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac9    end,  cpu clock=  9.00E-02 memory=    229 kb
+ voltage: vcm             =    3.90E-01
+ dcop: begin dcop,  cpu clock=  9.00E-02
+ dcop: end dcop,  cpu clock=  9.00E-02 memory=    212 kb  tot_iter=      63
+ output: 1c.ac0
+ sweep: ac ac10   begin, #sweeps=1001 cpu clock=  9.00E-02
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac10   end,  cpu clock=  9.00E-02 memory=    229 kb
+ voltage: vcm             =    4.00E-01
+ dcop: begin dcop,  cpu clock=  9.00E-02
+ dcop: end dcop,  cpu clock=  1.00E-01 memory=    212 kb  tot_iter=      68
+ output: 1c.ac0
+ sweep: ac ac11   begin, #sweeps=1001 cpu clock=  1.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac11   end,  cpu clock=  1.00E-01 memory=    229 kb
+ voltage: vcm             =    4.10E-01
+ dcop: begin dcop,  cpu clock=  1.00E-01
+ dcop: end dcop,  cpu clock=  1.00E-01 memory=    212 kb  tot_iter=      73
+ output: 1c.ac0
+ sweep: ac ac12   begin, #sweeps=1001 cpu clock=  1.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac12   end,  cpu clock=  1.10E-01 memory=    229 kb
+ voltage: vcm             =    4.20E-01
+ dcop: begin dcop,  cpu clock=  1.10E-01
+ dcop: end dcop,  cpu clock=  1.10E-01 memory=    212 kb  tot_iter=      78
+ output: 1c.ac0
+ sweep: ac ac13   begin, #sweeps=1001 cpu clock=  1.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac13   end,  cpu clock=  1.10E-01 memory=    229 kb
+ voltage: vcm             =    4.30E-01
+ dcop: begin dcop,  cpu clock=  1.20E-01
+ dcop: end dcop,  cpu clock=  1.20E-01 memory=    212 kb  tot_iter=      83
+ output: 1c.ac0
+ sweep: ac ac14   begin, #sweeps=1001 cpu clock=  1.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac14   end,  cpu clock=  1.20E-01 memory=    229 kb
+ voltage: vcm             =    4.40E-01
+ dcop: begin dcop,  cpu clock=  1.20E-01
+ dcop: end dcop,  cpu clock=  1.20E-01 memory=    212 kb  tot_iter=      88
+ output: 1c.ac0
+ sweep: ac ac15   begin, #sweeps=1001 cpu clock=  1.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac15   end,  cpu clock=  1.30E-01 memory=    229 kb
+ voltage: vcm             =    4.50E-01
+ dcop: begin dcop,  cpu clock=  1.30E-01
+ dcop: end dcop,  cpu clock=  1.30E-01 memory=    212 kb  tot_iter=      93
+ output: 1c.ac0
+ sweep: ac ac16   begin, #sweeps=1001 cpu clock=  1.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac16   end,  cpu clock=  1.40E-01 memory=    229 kb
+ voltage: vcm             =    4.60E-01
+ dcop: begin dcop,  cpu clock=  1.40E-01
+ dcop: end dcop,  cpu clock=  1.40E-01 memory=    212 kb  tot_iter=      98
+ output: 1c.ac0
+ sweep: ac ac17   begin, #sweeps=1001 cpu clock=  1.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac17   end,  cpu clock=  1.40E-01 memory=    229 kb
+ voltage: vcm             =    4.70E-01
+ dcop: begin dcop,  cpu clock=  1.40E-01
+ dcop: end dcop,  cpu clock=  1.40E-01 memory=    212 kb  tot_iter=     103
+ output: 1c.ac0
+ sweep: ac ac18   begin, #sweeps=1001 cpu clock=  1.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac18   end,  cpu clock=  1.50E-01 memory=    229 kb
+ voltage: vcm             =    4.80E-01
+ dcop: begin dcop,  cpu clock=  1.50E-01
+ dcop: end dcop,  cpu clock=  1.50E-01 memory=    212 kb  tot_iter=     108
+ output: 1c.ac0
+ sweep: ac ac19   begin, #sweeps=1001 cpu clock=  1.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac19   end,  cpu clock=  1.60E-01 memory=    229 kb
+ voltage: vcm             =    4.90E-01
+ dcop: begin dcop,  cpu clock=  1.60E-01
+ dcop: end dcop,  cpu clock=  1.60E-01 memory=    212 kb  tot_iter=     113
+ output: 1c.ac0
+ sweep: ac ac20   begin, #sweeps=1001 cpu clock=  1.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac20   end,  cpu clock=  1.60E-01 memory=    229 kb
+ voltage: vcm             =    5.00E-01
+ dcop: begin dcop,  cpu clock=  1.70E-01
+ dcop: end dcop,  cpu clock=  1.70E-01 memory=    212 kb  tot_iter=     118
+ output: 1c.ac0
+ sweep: ac ac21   begin, #sweeps=1001 cpu clock=  1.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac21   end,  cpu clock=  1.70E-01 memory=    229 kb
+ voltage: vcm             =    5.10E-01
+ dcop: begin dcop,  cpu clock=  1.70E-01
+ dcop: end dcop,  cpu clock=  1.70E-01 memory=    212 kb  tot_iter=     123
+ output: 1c.ac0
+ sweep: ac ac22   begin, #sweeps=1001 cpu clock=  1.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac22   end,  cpu clock=  1.80E-01 memory=    229 kb
+ voltage: vcm             =    5.20E-01
+ dcop: begin dcop,  cpu clock=  1.80E-01
+ dcop: end dcop,  cpu clock=  1.80E-01 memory=    212 kb  tot_iter=     128
+ output: 1c.ac0
+ sweep: ac ac23   begin, #sweeps=1001 cpu clock=  1.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac23   end,  cpu clock=  1.90E-01 memory=    229 kb
+ voltage: vcm             =    5.30E-01
+ dcop: begin dcop,  cpu clock=  1.90E-01
+ dcop: end dcop,  cpu clock=  1.90E-01 memory=    212 kb  tot_iter=     133
+ output: 1c.ac0
+ sweep: ac ac24   begin, #sweeps=1001 cpu clock=  1.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac24   end,  cpu clock=  1.90E-01 memory=    229 kb
+ voltage: vcm             =    5.40E-01
+ dcop: begin dcop,  cpu clock=  1.90E-01
+ dcop: end dcop,  cpu clock=  1.90E-01 memory=    212 kb  tot_iter=     138
+ output: 1c.ac0
+ sweep: ac ac25   begin, #sweeps=1001 cpu clock=  1.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac25   end,  cpu clock=  2.00E-01 memory=    229 kb
+ voltage: vcm             =    5.50E-01
+ dcop: begin dcop,  cpu clock=  2.00E-01
+ dcop: end dcop,  cpu clock=  2.00E-01 memory=    212 kb  tot_iter=     143
+ output: 1c.ac0
+ sweep: ac ac26   begin, #sweeps=1001 cpu clock=  2.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac26   end,  cpu clock=  2.10E-01 memory=    229 kb
+ voltage: vcm             =    5.60E-01
+ dcop: begin dcop,  cpu clock=  2.10E-01
+ dcop: end dcop,  cpu clock=  2.10E-01 memory=    212 kb  tot_iter=     148
+ output: 1c.ac0
+ sweep: ac ac27   begin, #sweeps=1001 cpu clock=  2.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac27   end,  cpu clock=  2.10E-01 memory=    229 kb
+ voltage: vcm             =    5.70E-01
+ dcop: begin dcop,  cpu clock=  2.20E-01
+ dcop: end dcop,  cpu clock=  2.20E-01 memory=    212 kb  tot_iter=     153
+ output: 1c.ac0
+ sweep: ac ac28   begin, #sweeps=1001 cpu clock=  2.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac28   end,  cpu clock=  2.20E-01 memory=    229 kb
+ voltage: vcm             =    5.80E-01
+ dcop: begin dcop,  cpu clock=  2.20E-01
+ dcop: end dcop,  cpu clock=  2.20E-01 memory=    212 kb  tot_iter=     158
+ output: 1c.ac0
+ sweep: ac ac29   begin, #sweeps=1001 cpu clock=  2.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac29   end,  cpu clock=  2.30E-01 memory=    229 kb
+ voltage: vcm             =    5.90E-01
+ dcop: begin dcop,  cpu clock=  2.30E-01
+ dcop: end dcop,  cpu clock=  2.30E-01 memory=    212 kb  tot_iter=     163
+ output: 1c.ac0
+ sweep: ac ac30   begin, #sweeps=1001 cpu clock=  2.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac30   end,  cpu clock=  2.40E-01 memory=    229 kb
+ voltage: vcm             =    6.00E-01
+ dcop: begin dcop,  cpu clock=  2.40E-01
+ dcop: end dcop,  cpu clock=  2.40E-01 memory=    212 kb  tot_iter=     168
+ output: 1c.ac0
+ sweep: ac ac31   begin, #sweeps=1001 cpu clock=  2.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac31   end,  cpu clock=  2.40E-01 memory=    229 kb
+ voltage: vcm             =    6.10E-01
+ dcop: begin dcop,  cpu clock=  2.40E-01
+ dcop: end dcop,  cpu clock=  2.40E-01 memory=    212 kb  tot_iter=     173
+ output: 1c.ac0
+ sweep: ac ac32   begin, #sweeps=1001 cpu clock=  2.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac32   end,  cpu clock=  2.50E-01 memory=    229 kb
+ voltage: vcm             =    6.20E-01
+ dcop: begin dcop,  cpu clock=  2.50E-01
+ dcop: end dcop,  cpu clock=  2.50E-01 memory=    212 kb  tot_iter=     178
+ output: 1c.ac0
+ sweep: ac ac33   begin, #sweeps=1001 cpu clock=  2.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac33   end,  cpu clock=  2.60E-01 memory=    229 kb
+ voltage: vcm             =    6.30E-01
+ dcop: begin dcop,  cpu clock=  2.60E-01
+ dcop: end dcop,  cpu clock=  2.60E-01 memory=    212 kb  tot_iter=     183
+ output: 1c.ac0
+ sweep: ac ac34   begin, #sweeps=1001 cpu clock=  2.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac34   end,  cpu clock=  2.60E-01 memory=    229 kb
+ voltage: vcm             =    6.40E-01
+ dcop: begin dcop,  cpu clock=  2.70E-01
+ dcop: end dcop,  cpu clock=  2.70E-01 memory=    212 kb  tot_iter=     188
+ output: 1c.ac0
+ sweep: ac ac35   begin, #sweeps=1001 cpu clock=  2.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac35   end,  cpu clock=  2.70E-01 memory=    229 kb
+ voltage: vcm             =    6.50E-01
+ dcop: begin dcop,  cpu clock=  2.70E-01
+ dcop: end dcop,  cpu clock=  2.70E-01 memory=    212 kb  tot_iter=     193
+ output: 1c.ac0
+ sweep: ac ac36   begin, #sweeps=1001 cpu clock=  2.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac36   end,  cpu clock=  2.80E-01 memory=    229 kb
+ voltage: vcm             =    6.60E-01
+ dcop: begin dcop,  cpu clock=  2.80E-01
+ dcop: end dcop,  cpu clock=  2.80E-01 memory=    212 kb  tot_iter=     198
+ output: 1c.ac0
+ sweep: ac ac37   begin, #sweeps=1001 cpu clock=  2.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac37   end,  cpu clock=  2.90E-01 memory=    229 kb
+ voltage: vcm             =    6.70E-01
+ dcop: begin dcop,  cpu clock=  2.90E-01
+ dcop: end dcop,  cpu clock=  2.90E-01 memory=    212 kb  tot_iter=     203
+ output: 1c.ac0
+ sweep: ac ac38   begin, #sweeps=1001 cpu clock=  2.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac38   end,  cpu clock=  2.90E-01 memory=    229 kb
+ voltage: vcm             =    6.80E-01
+ dcop: begin dcop,  cpu clock=  3.00E-01
+ dcop: end dcop,  cpu clock=  3.00E-01 memory=    212 kb  tot_iter=     208
+ output: 1c.ac0
+ sweep: ac ac39   begin, #sweeps=1001 cpu clock=  3.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac39   end,  cpu clock=  3.00E-01 memory=    229 kb
+ voltage: vcm             =    6.90E-01
+ dcop: begin dcop,  cpu clock=  3.00E-01
+ dcop: end dcop,  cpu clock=  3.00E-01 memory=    212 kb  tot_iter=     213
+ output: 1c.ac0
+ sweep: ac ac40   begin, #sweeps=1001 cpu clock=  3.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac40   end,  cpu clock=  3.10E-01 memory=    229 kb
+ voltage: vcm             =    7.00E-01
+ dcop: begin dcop,  cpu clock=  3.10E-01
+ dcop: end dcop,  cpu clock=  3.10E-01 memory=    212 kb  tot_iter=     218
+ output: 1c.ac0
+ sweep: ac ac41   begin, #sweeps=1001 cpu clock=  3.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac41   end,  cpu clock=  3.10E-01 memory=    229 kb
+ voltage: vcm             =    7.10E-01
+ dcop: begin dcop,  cpu clock=  3.20E-01
+ dcop: end dcop,  cpu clock=  3.20E-01 memory=    212 kb  tot_iter=     223
+ output: 1c.ac0
+ sweep: ac ac42   begin, #sweeps=1001 cpu clock=  3.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac42   end,  cpu clock=  3.20E-01 memory=    229 kb
+ voltage: vcm             =    7.20E-01
+ dcop: begin dcop,  cpu clock=  3.30E-01
+ dcop: end dcop,  cpu clock=  3.30E-01 memory=    212 kb  tot_iter=     228
+ output: 1c.ac0
+ sweep: ac ac43   begin, #sweeps=1001 cpu clock=  3.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac43   end,  cpu clock=  3.30E-01 memory=    229 kb
+ voltage: vcm             =    7.30E-01
+ dcop: begin dcop,  cpu clock=  3.30E-01
+ dcop: end dcop,  cpu clock=  3.30E-01 memory=    212 kb  tot_iter=     233
+ output: 1c.ac0
+ sweep: ac ac44   begin, #sweeps=1001 cpu clock=  3.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac44   end,  cpu clock=  3.40E-01 memory=    229 kb
+ voltage: vcm             =    7.40E-01
+ dcop: begin dcop,  cpu clock=  3.40E-01
+ dcop: end dcop,  cpu clock=  3.40E-01 memory=    212 kb  tot_iter=     238
+ output: 1c.ac0
+ sweep: ac ac45   begin, #sweeps=1001 cpu clock=  3.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac45   end,  cpu clock=  3.50E-01 memory=    229 kb
+ voltage: vcm             =    7.50E-01
+ dcop: begin dcop,  cpu clock=  3.50E-01
+ dcop: end dcop,  cpu clock=  3.50E-01 memory=    212 kb  tot_iter=     243
+ output: 1c.ac0
+ sweep: ac ac46   begin, #sweeps=1001 cpu clock=  3.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac46   end,  cpu clock=  3.60E-01 memory=    229 kb
+ voltage: vcm             =    7.60E-01
+ dcop: begin dcop,  cpu clock=  3.60E-01
+ dcop: end dcop,  cpu clock=  3.60E-01 memory=    212 kb  tot_iter=     248
+ output: 1c.ac0
+ sweep: ac ac47   begin, #sweeps=1001 cpu clock=  3.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac47   end,  cpu clock=  3.60E-01 memory=    229 kb
+ voltage: vcm             =    7.70E-01
+ dcop: begin dcop,  cpu clock=  3.60E-01
+ dcop: end dcop,  cpu clock=  3.60E-01 memory=    212 kb  tot_iter=     253
+ output: 1c.ac0
+ sweep: ac ac48   begin, #sweeps=1001 cpu clock=  3.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac48   end,  cpu clock=  3.70E-01 memory=    229 kb
+ voltage: vcm             =    7.80E-01
+ dcop: begin dcop,  cpu clock=  3.70E-01
+ dcop: end dcop,  cpu clock=  3.70E-01 memory=    212 kb  tot_iter=     258
+ output: 1c.ac0
+ sweep: ac ac49   begin, #sweeps=1001 cpu clock=  3.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac49   end,  cpu clock=  3.80E-01 memory=    229 kb
+ voltage: vcm             =    7.90E-01
+ dcop: begin dcop,  cpu clock=  3.80E-01
+ dcop: end dcop,  cpu clock=  3.80E-01 memory=    212 kb  tot_iter=     263
+ output: 1c.ac0
+ sweep: ac ac50   begin, #sweeps=1001 cpu clock=  3.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac50   end,  cpu clock=  3.80E-01 memory=    229 kb
+ voltage: vcm             =    8.00E-01
+ dcop: begin dcop,  cpu clock=  3.90E-01
+ dcop: end dcop,  cpu clock=  3.90E-01 memory=    212 kb  tot_iter=     268
+ output: 1c.ac0
+ sweep: ac ac51   begin, #sweeps=1001 cpu clock=  3.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac51   end,  cpu clock=  3.90E-01 memory=    229 kb
+ voltage: vcm             =    8.10E-01
+ dcop: begin dcop,  cpu clock=  3.90E-01
+ dcop: end dcop,  cpu clock=  3.90E-01 memory=    212 kb  tot_iter=     273
+ output: 1c.ac0
+ sweep: ac ac52   begin, #sweeps=1001 cpu clock=  3.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac52   end,  cpu clock=  4.00E-01 memory=    229 kb
+ voltage: vcm             =    8.20E-01
+ dcop: begin dcop,  cpu clock=  4.00E-01
+ dcop: end dcop,  cpu clock=  4.00E-01 memory=    212 kb  tot_iter=     278
+ output: 1c.ac0
+ sweep: ac ac53   begin, #sweeps=1001 cpu clock=  4.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac53   end,  cpu clock=  4.10E-01 memory=    229 kb
+ voltage: vcm             =    8.30E-01
+ dcop: begin dcop,  cpu clock=  4.10E-01
+ dcop: end dcop,  cpu clock=  4.10E-01 memory=    212 kb  tot_iter=     283
+ output: 1c.ac0
+ sweep: ac ac54   begin, #sweeps=1001 cpu clock=  4.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac54   end,  cpu clock=  4.10E-01 memory=    229 kb
+ voltage: vcm             =    8.40E-01
+ dcop: begin dcop,  cpu clock=  4.20E-01
+ dcop: end dcop,  cpu clock=  4.20E-01 memory=    212 kb  tot_iter=     288
+ output: 1c.ac0
+ sweep: ac ac55   begin, #sweeps=1001 cpu clock=  4.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac55   end,  cpu clock=  4.20E-01 memory=    229 kb
+ voltage: vcm             =    8.50E-01
+ dcop: begin dcop,  cpu clock=  4.30E-01
+ dcop: end dcop,  cpu clock=  4.30E-01 memory=    212 kb  tot_iter=     293
+ output: 1c.ac0
+ sweep: ac ac56   begin, #sweeps=1001 cpu clock=  4.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac56   end,  cpu clock=  4.30E-01 memory=    229 kb
+ voltage: vcm             =    8.60E-01
+ dcop: begin dcop,  cpu clock=  4.30E-01
+ dcop: end dcop,  cpu clock=  4.30E-01 memory=    212 kb  tot_iter=     298
+ output: 1c.ac0
+ sweep: ac ac57   begin, #sweeps=1001 cpu clock=  4.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac57   end,  cpu clock=  4.40E-01 memory=    229 kb
+ voltage: vcm             =    8.70E-01
+ dcop: begin dcop,  cpu clock=  4.40E-01
+ dcop: end dcop,  cpu clock=  4.40E-01 memory=    212 kb  tot_iter=     303
+ output: 1c.ac0
+ sweep: ac ac58   begin, #sweeps=1001 cpu clock=  4.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac58   end,  cpu clock=  4.40E-01 memory=    229 kb
+ voltage: vcm             =    8.80E-01
+ dcop: begin dcop,  cpu clock=  4.50E-01
+ dcop: end dcop,  cpu clock=  4.50E-01 memory=    212 kb  tot_iter=     308
+ output: 1c.ac0
+ sweep: ac ac59   begin, #sweeps=1001 cpu clock=  4.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac59   end,  cpu clock=  4.50E-01 memory=    229 kb
+ voltage: vcm             =    8.90E-01
+ dcop: begin dcop,  cpu clock=  4.50E-01
+ dcop: end dcop,  cpu clock=  4.50E-01 memory=    212 kb  tot_iter=     313
+ output: 1c.ac0
+ sweep: ac ac60   begin, #sweeps=1001 cpu clock=  4.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac60   end,  cpu clock=  4.60E-01 memory=    229 kb
+ voltage: vcm             =    9.00E-01
+ dcop: begin dcop,  cpu clock=  4.60E-01
+ dcop: end dcop,  cpu clock=  4.60E-01 memory=    212 kb  tot_iter=     318
+ output: 1c.ac0
+ sweep: ac ac61   begin, #sweeps=1001 cpu clock=  4.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac61   end,  cpu clock=  4.70E-01 memory=    229 kb
+ voltage: vcm             =    9.10E-01
+ dcop: begin dcop,  cpu clock=  4.70E-01
+ dcop: end dcop,  cpu clock=  4.70E-01 memory=    212 kb  tot_iter=     323
+ output: 1c.ac0
+ sweep: ac ac62   begin, #sweeps=1001 cpu clock=  4.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac62   end,  cpu clock=  4.70E-01 memory=    229 kb
+ voltage: vcm             =    9.20E-01
+ dcop: begin dcop,  cpu clock=  4.70E-01
+ dcop: end dcop,  cpu clock=  4.70E-01 memory=    212 kb  tot_iter=     328
+ output: 1c.ac0
+ sweep: ac ac63   begin, #sweeps=1001 cpu clock=  4.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac63   end,  cpu clock=  4.80E-01 memory=    229 kb
+ voltage: vcm             =    9.30E-01
+ dcop: begin dcop,  cpu clock=  4.80E-01
+ dcop: end dcop,  cpu clock=  4.80E-01 memory=    212 kb  tot_iter=     333
+ output: 1c.ac0
+ sweep: ac ac64   begin, #sweeps=1001 cpu clock=  4.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac64   end,  cpu clock=  4.90E-01 memory=    229 kb
+ voltage: vcm             =    9.40E-01
+ dcop: begin dcop,  cpu clock=  4.90E-01
+ dcop: end dcop,  cpu clock=  4.90E-01 memory=    212 kb  tot_iter=     338
+ output: 1c.ac0
+ sweep: ac ac65   begin, #sweeps=1001 cpu clock=  4.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac65   end,  cpu clock=  4.90E-01 memory=    229 kb
+ voltage: vcm             =    9.50E-01
+ dcop: begin dcop,  cpu clock=  5.00E-01
+ dcop: end dcop,  cpu clock=  5.00E-01 memory=    212 kb  tot_iter=     343
+ output: 1c.ac0
+ sweep: ac ac66   begin, #sweeps=1001 cpu clock=  5.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac66   end,  cpu clock=  5.00E-01 memory=    229 kb
+ voltage: vcm             =    9.60E-01
+ dcop: begin dcop,  cpu clock=  5.00E-01
+ dcop: end dcop,  cpu clock=  5.00E-01 memory=    212 kb  tot_iter=     348
+ output: 1c.ac0
+ sweep: ac ac67   begin, #sweeps=1001 cpu clock=  5.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac67   end,  cpu clock=  5.10E-01 memory=    229 kb
+ voltage: vcm             =    9.70E-01
+ dcop: begin dcop,  cpu clock=  5.10E-01
+ dcop: end dcop,  cpu clock=  5.10E-01 memory=    212 kb  tot_iter=     353
+ output: 1c.ac0
+ sweep: ac ac68   begin, #sweeps=1001 cpu clock=  5.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac68   end,  cpu clock=  5.20E-01 memory=    229 kb
+ voltage: vcm             =    9.80E-01
+ dcop: begin dcop,  cpu clock=  5.20E-01
+ dcop: end dcop,  cpu clock=  5.20E-01 memory=    212 kb  tot_iter=     358
+ output: 1c.ac0
+ sweep: ac ac69   begin, #sweeps=1001 cpu clock=  5.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac69   end,  cpu clock=  5.20E-01 memory=    229 kb
+ voltage: vcm             =    9.90E-01
+ dcop: begin dcop,  cpu clock=  5.20E-01
+ dcop: end dcop,  cpu clock=  5.20E-01 memory=    212 kb  tot_iter=     363
+ output: 1c.ac0
+ sweep: ac ac70   begin, #sweeps=1001 cpu clock=  5.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac70   end,  cpu clock=  5.30E-01 memory=    229 kb
+ voltage: vcm             =    1.00E+00
+ dcop: begin dcop,  cpu clock=  5.30E-01
+ dcop: end dcop,  cpu clock=  5.30E-01 memory=    212 kb  tot_iter=     368
+ output: 1c.ac0
+ sweep: ac ac71   begin, #sweeps=1001 cpu clock=  5.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac71   end,  cpu clock=  5.40E-01 memory=    229 kb
+ voltage: vcm             =    1.01E+00
+ dcop: begin dcop,  cpu clock=  5.40E-01
+ dcop: end dcop,  cpu clock=  5.40E-01 memory=    212 kb  tot_iter=     373
+ output: 1c.ac0
+ sweep: ac ac72   begin, #sweeps=1001 cpu clock=  5.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac72   end,  cpu clock=  5.40E-01 memory=    229 kb
+ voltage: vcm             =    1.02E+00
+ dcop: begin dcop,  cpu clock=  5.50E-01
+ dcop: end dcop,  cpu clock=  5.50E-01 memory=    212 kb  tot_iter=     378
+ output: 1c.ac0
+ sweep: ac ac73   begin, #sweeps=1001 cpu clock=  5.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac73   end,  cpu clock=  5.50E-01 memory=    229 kb
+ voltage: vcm             =    1.03E+00
+ dcop: begin dcop,  cpu clock=  5.50E-01
+ dcop: end dcop,  cpu clock=  5.50E-01 memory=    212 kb  tot_iter=     383
+ output: 1c.ac0
+ sweep: ac ac74   begin, #sweeps=1001 cpu clock=  5.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac74   end,  cpu clock=  5.60E-01 memory=    229 kb
+ voltage: vcm             =    1.04E+00
+ dcop: begin dcop,  cpu clock=  5.60E-01
+ dcop: end dcop,  cpu clock=  5.60E-01 memory=    212 kb  tot_iter=     388
+ output: 1c.ac0
+ sweep: ac ac75   begin, #sweeps=1001 cpu clock=  5.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac75   end,  cpu clock=  5.70E-01 memory=    229 kb
+ voltage: vcm             =    1.05E+00
+ dcop: begin dcop,  cpu clock=  5.70E-01
+ dcop: end dcop,  cpu clock=  5.70E-01 memory=    212 kb  tot_iter=     393
+ output: 1c.ac0
+ sweep: ac ac76   begin, #sweeps=1001 cpu clock=  5.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac76   end,  cpu clock=  5.70E-01 memory=    229 kb
+ voltage: vcm             =    1.06E+00
+ dcop: begin dcop,  cpu clock=  5.80E-01
+ dcop: end dcop,  cpu clock=  5.80E-01 memory=    212 kb  tot_iter=     398
+ output: 1c.ac0
+ sweep: ac ac77   begin, #sweeps=1001 cpu clock=  5.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac77   end,  cpu clock=  5.80E-01 memory=    229 kb
+ voltage: vcm             =    1.07E+00
+ dcop: begin dcop,  cpu clock=  5.80E-01
+ dcop: end dcop,  cpu clock=  5.80E-01 memory=    212 kb  tot_iter=     403
+ output: 1c.ac0
+ sweep: ac ac78   begin, #sweeps=1001 cpu clock=  5.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac78   end,  cpu clock=  5.90E-01 memory=    229 kb
+ voltage: vcm             =    1.08E+00
+ dcop: begin dcop,  cpu clock=  5.90E-01
+ dcop: end dcop,  cpu clock=  5.90E-01 memory=    212 kb  tot_iter=     408
+ output: 1c.ac0
+ sweep: ac ac79   begin, #sweeps=1001 cpu clock=  5.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac79   end,  cpu clock=  6.00E-01 memory=    229 kb
+ voltage: vcm             =    1.09E+00
+ dcop: begin dcop,  cpu clock=  6.00E-01
+ dcop: end dcop,  cpu clock=  6.00E-01 memory=    212 kb  tot_iter=     412
+ output: 1c.ac0
+ sweep: ac ac80   begin, #sweeps=1001 cpu clock=  6.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac80   end,  cpu clock=  6.00E-01 memory=    229 kb
+ voltage: vcm             =    1.10E+00
+ dcop: begin dcop,  cpu clock=  6.10E-01
+ dcop: end dcop,  cpu clock=  6.10E-01 memory=    212 kb  tot_iter=     416
+ output: 1c.ac0
+ sweep: ac ac81   begin, #sweeps=1001 cpu clock=  6.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac81   end,  cpu clock=  6.10E-01 memory=    229 kb
+ voltage: vcm             =    1.11E+00
+ dcop: begin dcop,  cpu clock=  6.10E-01
+ dcop: end dcop,  cpu clock=  6.10E-01 memory=    212 kb  tot_iter=     420
+ output: 1c.ac0
+ sweep: ac ac82   begin, #sweeps=1001 cpu clock=  6.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac82   end,  cpu clock=  6.20E-01 memory=    229 kb
+ voltage: vcm             =    1.12E+00
+ dcop: begin dcop,  cpu clock=  6.20E-01
+ dcop: end dcop,  cpu clock=  6.20E-01 memory=    212 kb  tot_iter=     424
+ output: 1c.ac0
+ sweep: ac ac83   begin, #sweeps=1001 cpu clock=  6.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac83   end,  cpu clock=  6.30E-01 memory=    229 kb
+ voltage: vcm             =    1.13E+00
+ dcop: begin dcop,  cpu clock=  6.30E-01
+ dcop: end dcop,  cpu clock=  6.30E-01 memory=    212 kb  tot_iter=     428
+ output: 1c.ac0
+ sweep: ac ac84   begin, #sweeps=1001 cpu clock=  6.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac84   end,  cpu clock=  6.30E-01 memory=    229 kb
+ voltage: vcm             =    1.14E+00
+ dcop: begin dcop,  cpu clock=  6.30E-01
+ dcop: end dcop,  cpu clock=  6.30E-01 memory=    212 kb  tot_iter=     432
+ output: 1c.ac0
+ sweep: ac ac85   begin, #sweeps=1001 cpu clock=  6.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac85   end,  cpu clock=  6.40E-01 memory=    229 kb
+ voltage: vcm             =    1.15E+00
+ dcop: begin dcop,  cpu clock=  6.40E-01
+ dcop: end dcop,  cpu clock=  6.40E-01 memory=    212 kb  tot_iter=     436
+ output: 1c.ac0
+ sweep: ac ac86   begin, #sweeps=1001 cpu clock=  6.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac86   end,  cpu clock=  6.50E-01 memory=    229 kb
+ voltage: vcm             =    1.16E+00
+ dcop: begin dcop,  cpu clock=  6.50E-01
+ dcop: end dcop,  cpu clock=  6.50E-01 memory=    212 kb  tot_iter=     440
+ output: 1c.ac0
+ sweep: ac ac87   begin, #sweeps=1001 cpu clock=  6.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac87   end,  cpu clock=  6.50E-01 memory=    229 kb
+ voltage: vcm             =    1.17E+00
+ dcop: begin dcop,  cpu clock=  6.50E-01
+ dcop: end dcop,  cpu clock=  6.50E-01 memory=    212 kb  tot_iter=     444
+ output: 1c.ac0
+ sweep: ac ac88   begin, #sweeps=1001 cpu clock=  6.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac88   end,  cpu clock=  6.60E-01 memory=    229 kb
+ voltage: vcm             =    1.18E+00
+ dcop: begin dcop,  cpu clock=  6.60E-01
+ dcop: end dcop,  cpu clock=  6.60E-01 memory=    212 kb  tot_iter=     448
+ output: 1c.ac0
+ sweep: ac ac89   begin, #sweeps=1001 cpu clock=  6.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac89   end,  cpu clock=  6.70E-01 memory=    229 kb
+ voltage: vcm             =    1.19E+00
+ dcop: begin dcop,  cpu clock=  6.70E-01
+ dcop: end dcop,  cpu clock=  6.70E-01 memory=    212 kb  tot_iter=     452
+ output: 1c.ac0
+ sweep: ac ac90   begin, #sweeps=1001 cpu clock=  6.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac90   end,  cpu clock=  6.80E-01 memory=    229 kb
+ voltage: vcm             =    1.20E+00
+ dcop: begin dcop,  cpu clock=  6.80E-01
+ dcop: end dcop,  cpu clock=  6.80E-01 memory=    212 kb  tot_iter=     456
+ output: 1c.ac0
+ sweep: ac ac91   begin, #sweeps=1001 cpu clock=  6.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac91   end,  cpu clock=  6.80E-01 memory=    229 kb
+ voltage: vcm             =    1.21E+00
+ dcop: begin dcop,  cpu clock=  6.90E-01
+ dcop: end dcop,  cpu clock=  6.90E-01 memory=    212 kb  tot_iter=     460
+ output: 1c.ac0
+ sweep: ac ac92   begin, #sweeps=1001 cpu clock=  6.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac92   end,  cpu clock=  6.90E-01 memory=    229 kb
+ voltage: vcm             =    1.22E+00
+ dcop: begin dcop,  cpu clock=  6.90E-01
+ dcop: end dcop,  cpu clock=  6.90E-01 memory=    212 kb  tot_iter=     464
+ output: 1c.ac0
+ sweep: ac ac93   begin, #sweeps=1001 cpu clock=  6.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac93   end,  cpu clock=  7.00E-01 memory=    229 kb
+ voltage: vcm             =    1.23E+00
+ dcop: begin dcop,  cpu clock=  7.00E-01
+ dcop: end dcop,  cpu clock=  7.00E-01 memory=    212 kb  tot_iter=     468
+ output: 1c.ac0
+ sweep: ac ac94   begin, #sweeps=1001 cpu clock=  7.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac94   end,  cpu clock=  7.10E-01 memory=    229 kb
+ voltage: vcm             =    1.24E+00
+ dcop: begin dcop,  cpu clock=  7.10E-01
+ dcop: end dcop,  cpu clock=  7.10E-01 memory=    212 kb  tot_iter=     472
+ output: 1c.ac0
+ sweep: ac ac95   begin, #sweeps=1001 cpu clock=  7.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac95   end,  cpu clock=  7.10E-01 memory=    229 kb
+ voltage: vcm             =    1.25E+00
+ dcop: begin dcop,  cpu clock=  7.10E-01
+ dcop: end dcop,  cpu clock=  7.10E-01 memory=    212 kb  tot_iter=     476
+ output: 1c.ac0
+ sweep: ac ac96   begin, #sweeps=1001 cpu clock=  7.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac96   end,  cpu clock=  7.20E-01 memory=    229 kb
+ voltage: vcm             =    1.26E+00
+ dcop: begin dcop,  cpu clock=  7.20E-01
+ dcop: end dcop,  cpu clock=  7.20E-01 memory=    212 kb  tot_iter=     480
+ output: 1c.ac0
+ sweep: ac ac97   begin, #sweeps=1001 cpu clock=  7.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac97   end,  cpu clock=  7.20E-01 memory=    229 kb
+ voltage: vcm             =    1.27E+00
+ dcop: begin dcop,  cpu clock=  7.30E-01
+ dcop: end dcop,  cpu clock=  7.30E-01 memory=    212 kb  tot_iter=     484
+ output: 1c.ac0
+ sweep: ac ac98   begin, #sweeps=1001 cpu clock=  7.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac98   end,  cpu clock=  7.30E-01 memory=    229 kb
+ voltage: vcm             =    1.28E+00
+ dcop: begin dcop,  cpu clock=  7.30E-01
+ dcop: end dcop,  cpu clock=  7.30E-01 memory=    212 kb  tot_iter=     488
+ output: 1c.ac0
+ sweep: ac ac99   begin, #sweeps=1001 cpu clock=  7.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac99   end,  cpu clock=  7.40E-01 memory=    229 kb
+ voltage: vcm             =    1.29E+00
+ dcop: begin dcop,  cpu clock=  7.40E-01
+ dcop: end dcop,  cpu clock=  7.40E-01 memory=    212 kb  tot_iter=     492
+ output: 1c.ac0
+ sweep: ac ac100  begin, #sweeps=1001 cpu clock=  7.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac100  end,  cpu clock=  7.50E-01 memory=    229 kb
+ voltage: vcm             =    1.30E+00
+ dcop: begin dcop,  cpu clock=  7.50E-01
+ dcop: end dcop,  cpu clock=  7.50E-01 memory=    212 kb  tot_iter=     495
+ output: 1c.ac0
+ sweep: ac ac101  begin, #sweeps=1001 cpu clock=  7.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac101  end,  cpu clock=  7.60E-01 memory=    229 kb
+ voltage: vcm             =    1.31E+00
+ dcop: begin dcop,  cpu clock=  7.60E-01
+ dcop: end dcop,  cpu clock=  7.60E-01 memory=    212 kb  tot_iter=     498
+ output: 1c.ac0
+ sweep: ac ac102  begin, #sweeps=1001 cpu clock=  7.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac102  end,  cpu clock=  7.60E-01 memory=    229 kb
+ voltage: vcm             =    1.32E+00
+ dcop: begin dcop,  cpu clock=  7.70E-01
+ dcop: end dcop,  cpu clock=  7.70E-01 memory=    212 kb  tot_iter=     501
+ output: 1c.ac0
+ sweep: ac ac103  begin, #sweeps=1001 cpu clock=  7.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac103  end,  cpu clock=  7.70E-01 memory=    229 kb
+ voltage: vcm             =    1.33E+00
+ dcop: begin dcop,  cpu clock=  7.70E-01
+ dcop: end dcop,  cpu clock=  7.70E-01 memory=    212 kb  tot_iter=     504
+ output: 1c.ac0
+ sweep: ac ac104  begin, #sweeps=1001 cpu clock=  7.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac104  end,  cpu clock=  7.80E-01 memory=    229 kb
+ voltage: vcm             =    1.34E+00
+ dcop: begin dcop,  cpu clock=  7.80E-01
+ dcop: end dcop,  cpu clock=  7.80E-01 memory=    212 kb  tot_iter=     507
+ output: 1c.ac0
+ sweep: ac ac105  begin, #sweeps=1001 cpu clock=  7.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac105  end,  cpu clock=  7.80E-01 memory=    229 kb
+ voltage: vcm             =    1.35E+00
+ dcop: begin dcop,  cpu clock=  7.90E-01
+ dcop: end dcop,  cpu clock=  7.90E-01 memory=    212 kb  tot_iter=     510
+ output: 1c.ac0
+ sweep: ac ac106  begin, #sweeps=1001 cpu clock=  7.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac106  end,  cpu clock=  7.90E-01 memory=    229 kb
+ voltage: vcm             =    1.36E+00
+ dcop: begin dcop,  cpu clock=  8.00E-01
+ dcop: end dcop,  cpu clock=  8.00E-01 memory=    212 kb  tot_iter=     513
+ output: 1c.ac0
+ sweep: ac ac107  begin, #sweeps=1001 cpu clock=  8.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac107  end,  cpu clock=  8.00E-01 memory=    229 kb
+ voltage: vcm             =    1.37E+00
+ dcop: begin dcop,  cpu clock=  8.00E-01
+ dcop: end dcop,  cpu clock=  8.00E-01 memory=    212 kb  tot_iter=     516
+ output: 1c.ac0
+ sweep: ac ac108  begin, #sweeps=1001 cpu clock=  8.00E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac108  end,  cpu clock=  8.10E-01 memory=    229 kb
+ voltage: vcm             =    1.38E+00
+ dcop: begin dcop,  cpu clock=  8.10E-01
+ dcop: end dcop,  cpu clock=  8.10E-01 memory=    212 kb  tot_iter=     519
+ output: 1c.ac0
+ sweep: ac ac109  begin, #sweeps=1001 cpu clock=  8.10E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac109  end,  cpu clock=  8.10E-01 memory=    229 kb
+ voltage: vcm             =    1.39E+00
+ dcop: begin dcop,  cpu clock=  8.20E-01
+ dcop: end dcop,  cpu clock=  8.20E-01 memory=    212 kb  tot_iter=     522
+ output: 1c.ac0
+ sweep: ac ac110  begin, #sweeps=1001 cpu clock=  8.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac110  end,  cpu clock=  8.20E-01 memory=    229 kb
+ voltage: vcm             =    1.40E+00
+ dcop: begin dcop,  cpu clock=  8.20E-01
+ dcop: end dcop,  cpu clock=  8.20E-01 memory=    212 kb  tot_iter=     525
+ output: 1c.ac0
+ sweep: ac ac111  begin, #sweeps=1001 cpu clock=  8.20E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac111  end,  cpu clock=  8.30E-01 memory=    229 kb
+ voltage: vcm             =    1.41E+00
+ dcop: begin dcop,  cpu clock=  8.30E-01
+ dcop: end dcop,  cpu clock=  8.30E-01 memory=    212 kb  tot_iter=     528
+ output: 1c.ac0
+ sweep: ac ac112  begin, #sweeps=1001 cpu clock=  8.30E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac112  end,  cpu clock=  8.30E-01 memory=    229 kb
+ voltage: vcm             =    1.42E+00
+ dcop: begin dcop,  cpu clock=  8.40E-01
+ dcop: end dcop,  cpu clock=  8.40E-01 memory=    212 kb  tot_iter=     531
+ output: 1c.ac0
+ sweep: ac ac113  begin, #sweeps=1001 cpu clock=  8.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac113  end,  cpu clock=  8.40E-01 memory=    229 kb
+ voltage: vcm             =    1.43E+00
+ dcop: begin dcop,  cpu clock=  8.40E-01
+ dcop: end dcop,  cpu clock=  8.40E-01 memory=    212 kb  tot_iter=     534
+ output: 1c.ac0
+ sweep: ac ac114  begin, #sweeps=1001 cpu clock=  8.40E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac114  end,  cpu clock=  8.50E-01 memory=    229 kb
+ voltage: vcm             =    1.44E+00
+ dcop: begin dcop,  cpu clock=  8.50E-01
+ dcop: end dcop,  cpu clock=  8.50E-01 memory=    212 kb  tot_iter=     537
+ output: 1c.ac0
+ sweep: ac ac115  begin, #sweeps=1001 cpu clock=  8.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac115  end,  cpu clock=  8.50E-01 memory=    229 kb
+ voltage: vcm             =    1.45E+00
+ dcop: begin dcop,  cpu clock=  8.50E-01
+ dcop: end dcop,  cpu clock=  8.50E-01 memory=    212 kb  tot_iter=     540
+ output: 1c.ac0
+ sweep: ac ac116  begin, #sweeps=1001 cpu clock=  8.50E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac116  end,  cpu clock=  8.60E-01 memory=    229 kb
+ voltage: vcm             =    1.46E+00
+ dcop: begin dcop,  cpu clock=  8.60E-01
+ dcop: end dcop,  cpu clock=  8.60E-01 memory=    212 kb  tot_iter=     543
+ output: 1c.ac0
+ sweep: ac ac117  begin, #sweeps=1001 cpu clock=  8.60E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac117  end,  cpu clock=  8.70E-01 memory=    229 kb
+ voltage: vcm             =    1.47E+00
+ dcop: begin dcop,  cpu clock=  8.70E-01
+ dcop: end dcop,  cpu clock=  8.70E-01 memory=    212 kb  tot_iter=     546
+ output: 1c.ac0
+ sweep: ac ac118  begin, #sweeps=1001 cpu clock=  8.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac118  end,  cpu clock=  8.70E-01 memory=    229 kb
+ voltage: vcm             =    1.48E+00
+ dcop: begin dcop,  cpu clock=  8.70E-01
+ dcop: end dcop,  cpu clock=  8.70E-01 memory=    212 kb  tot_iter=     549
+ output: 1c.ac0
+ sweep: ac ac119  begin, #sweeps=1001 cpu clock=  8.70E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac119  end,  cpu clock=  8.80E-01 memory=    229 kb
+ voltage: vcm             =    1.49E+00
+ dcop: begin dcop,  cpu clock=  8.80E-01
+ dcop: end dcop,  cpu clock=  8.80E-01 memory=    212 kb  tot_iter=     552
+ output: 1c.ac0
+ sweep: ac ac120  begin, #sweeps=1001 cpu clock=  8.80E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac120  end,  cpu clock=  8.90E-01 memory=    229 kb
+ voltage: vcm             =    1.50E+00
+ dcop: begin dcop,  cpu clock=  8.90E-01
+ dcop: end dcop,  cpu clock=  8.90E-01 memory=    212 kb  tot_iter=     555
+ output: 1c.ac0
+ sweep: ac ac121  begin, #sweeps=1001 cpu clock=  8.90E-01
+ ac: frequency=    1.00E-02
+ ac: frequency=    1.00E-01
+ ac: frequency=    1.00E+00
+ ac: frequency=    1.00E+01
+ ac: frequency=    1.00E+02
+ ac: frequency=    1.00E+03
+ ac: frequency=    1.00E+04
+ ac: frequency=    1.00E+05
+ ac: frequency=    1.00E+06
+ ac: frequency=    1.00E+07
+ ac: frequency=    1.00E+08
+ sweep: ac ac121  end,  cpu clock=  8.90E-01 memory=    229 kb
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.in
+ lic: Release hspice token(s)

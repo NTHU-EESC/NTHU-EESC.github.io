@@ -1,0 +1,36 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Hw2_2_a
+* Top Cell Name: cascode
+* View Name:     schematic
+* Netlisted on:  Apr  8 00:22:30 2015
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Hw2_2_a
+* Cell Name:    cascode
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT cascode GND VDD Vb1 Vb2 Vb3 Vin Vout
+*.PININFO GND:I VDD:I Vb1:I Vb2:I Vb3:I Vin:I Vout:O
+MM1 Vx1 Vin GND GND N_18 W=25u L=855n m=1
+MM2 Vout Vb1 Vx1 GND N_18 W=9u L=600n m=1
+MM3 Vout Vb2 Vx2 VDD P_18 W=6.5u L=180n m=1
+MM4 Vx2 Vb3 VDD VDD P_18 W=6.5u L=180n m=1
+.ENDS
+

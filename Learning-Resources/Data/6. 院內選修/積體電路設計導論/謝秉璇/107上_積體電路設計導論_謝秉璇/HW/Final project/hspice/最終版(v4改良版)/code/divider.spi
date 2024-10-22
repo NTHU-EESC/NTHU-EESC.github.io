@@ -1,0 +1,27 @@
+************************************************************************
+* Library Name: Lab1
+* Cell Name:    divider
+* View Name:    schematic
+************************************************************************
+
+$$$$$ FF vdd vss PRE CLK D CLR Q Qt $$$$$
+.include './FF.spi'
+
+.subckt div vdd vss clk s1b s2b s3b s4b s5b s6b s7b s8b qr
+X8 vdd vss s8b clk  vdd CLR q8 q8t FF
+X7 vdd vss s7b clk  q8  CLR q7 q7t FF
+X6 vdd vss s6b clk  q7  CLR q6 q6t FF
+X5 vdd vss s5b clk  q6  CLR q5 q5t FF
+X4 vdd vss s4b clk  q5  CLR q4 q4t FF
+X3 vdd vss s3b clk  q4  CLR q3 q3t FF
+X2 vdd vss s2b clk  q3  CLR q2 q2t FF
+X1 vdd vss s1b clk  q2  CLR q1 q1t FF
+
+Xr vdd vss vdd clkt q1  vdd qr CLR FF
+
+Mn clkt clk vss vss n_18 W=1u L=0.18u m=1
+Mp clkt clk vdd vdd p_18 W=2u L=0.18u m=1
+
+.ends
+
+

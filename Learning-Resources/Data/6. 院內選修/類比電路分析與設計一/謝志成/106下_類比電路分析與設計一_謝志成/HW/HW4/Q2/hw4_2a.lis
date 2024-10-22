@@ -1,0 +1,186 @@
+ ****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+  Copyright (c) 1986 - 2018 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw4_2a.sp                                                         
+  Command line options: /usr/cad/synopsys/hspice/2016.06-sp2/hspice/linux64/hspice -i hw4_2a.sp -o hw4_2a.lis
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   u105060012           HOSTNAME: ws40 
+ lic: HOSTID: "6cae8b50b632"       PID:      9109 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-may-2019/2017.12 
+ lic: 52(in_use)/90(total) FLOATING license(s) on SERVER 26585@lsnctu 
+ lic:   
+ 
+
+  **warning** (hw4_2a.sp:28) Unable to find referenced node vin1; Output variable ignored. Specify a valid node.
+  **warning** (hw4_2a.sp:28) .print/.probe statement contains unused output; the unused output is ignored.
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+ ******  
+ hw4_2a
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:net16   =   1.0659  0:net19   = 391.8290m 0:vb      = 500.0000m
+ +0:vdd     =   1.8000  0:vin+    = 900.0000m 0:vin-    = 900.0000m
+ +0:vout    =   1.0659 
+
+
+ maximum nodal capacitance=   3.025E-12         on node     0:vout            
+
+    nodal  capacitance table 
+
+    node    =    cap      node    =    cap      node    =    cap
+
+ +0:net16   =   1.5558p 0:net19   =   1.5665p 0:vb      = 785.9233f
+ +0:vdd     =   2.2719p 0:vin+    = 764.7052f 0:vin-    = 764.7052f
+ +0:vout    =   3.0254p
+
+ 
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vin+     0:vb       0:vdd      0:vin-    
+  volts    900.0000m  500.0000m    1.8000   900.0000m
+  current    0.         0.        -3.7930u    0.     
+  power      0.         0.         6.8275u    0.     
+
+     total voltage source power dissipation=    6.8275u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                         
+ element  0:m0       0:m1       0:m2       0:m3       0:m4      
+ model    0:n_18.1   0:n_18.1   0:n_18.1   0:p_18.1   0:p_18.1  
+ region     Saturati   Saturati   Saturati   Saturati   Saturati
+  id         3.7930u    1.8965u    1.8965u   -1.8965u   -1.8965u
+  ibs     -6.138e-22 -304.8433a -304.8433a  1.899e-22  1.899e-22
+  ibd     -304.8424a -829.2956a -829.2956a  353.4442a  353.4442a
+  vgs      500.0000m  508.1710m  508.1710m -734.0669m -734.0669m
+  vds      391.8290m  674.1040m  674.1040m -734.0669m -734.0669m
+  vbs        0.      -391.8290m -391.8290m    0.         0.     
+  vth      316.2203m  391.2768m  391.2768m -461.1448m -461.1448m
+  vdsat    164.6968m  124.4757m  124.4757m -240.8060m -240.8060m
+  vod      183.7797m  116.8941m  116.8941m -272.9221m -272.9221m
+  beta     249.1578u  250.9764u  250.9764u   57.7247u   57.7247u
+  gam eff  507.4459m  517.4270m  517.4270m  557.0847m  557.0847m
+  gm        36.5785u   24.9879u   24.9879u   12.5077u   12.5077u
+  gds      173.0278n  101.6442n  101.6442n   10.7816n   10.7816n
+  gmb        7.1970u    4.1550u    4.1550u    3.9420u    3.9420u
+  cdtot     18.7717f   12.9431f   12.9431f   12.4626f   12.4626f
+  cgtot    785.9233f  764.7052f  764.7052f  765.1800f  765.1800f
+  cstot    808.6181f  773.8813f  773.8813f  861.4278f  861.4278f
+  cbtot    229.4802f  196.1299f  196.1299f  274.5269f  274.5269f
+  cgs      715.4331f  697.9644f  697.9644f  703.1946f  703.1946f
+  cgd        4.7792f    2.3749f    2.3749f    4.0704f    4.0704f
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(net19)/vin+                            =  810.7162m
+      input resistance at             vin+     =  1.000e+20
+      output resistance at v(net19)            =   17.1849k
+
+
+
+ ***************************************************
+   ******   pole/zero analysis  
+  
+  
+    input =  0:vin-          output = v(vout)
+  
+       poles (rad/sec)                 poles ( hertz)
+ real            imag            real            imag            
+ -37.0372k       0.              -5.89465k       0.              
+ -8.11930x       0.              -1.29223x       0.              
+ -37.4646x       0.              -5.96268x       0.              
+  
+       zeros (rad/sec)                 zeros ( hertz)
+ real            imag            real            imag            
+ -16.4867x       0.              -2.62395x       0.              
+ -35.7263x       0.              -5.68601x       0.              
+ 2.75627g        0.              438.674x        0.              
+  
+  ***** constant factor = 1.52584m
+
+          ***** job concluded
+ ******  
+ hw4_2a
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+ cpu MHz	: 2001.000
+  
+ OS:
+ Linux version 2.6.18-371.9.1.el5 (mockbuild@builder17.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Tue Jun 10 17:49:56 EDT 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    12
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      18 # elements   =      10
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       5 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          12
+  ac analysis        0.00          71          71
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.01
+
+
+           peak memory used        201.30 megabytes
+           total cpu time            0.04 seconds
+           total elapsed time        0.66 seconds
+           job started at     12:32:06 05/25/2018
+           job ended   at     12:32:07 05/25/2018
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.63(s)

@@ -1,0 +1,37 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Hw3_3_c
+* Top Cell Name: Voltage_generator
+* View Name:     schematic
+* Netlisted on:  Apr 22 20:06:01 2015
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Hw3_3_c
+* Cell Name:    Voltage_generator
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT Voltage_generator GND VDD Vout Vy Vin
+*.PININFO GND:I VDD:I Vout:O
+MP2 Vout Vx VDD VDD P_18 W=11u L=2u m=1
+MP1 Vx Vx VDD VDD P_18 W=11u L=2u m=1
+MM3 Vout Vin GND GND N_18 W=12.5u L=3.05u m=1
+MM2 Vx Vy GND GND N_18 W=12.5u L=3.05u m=1
+MM1 Vy Vy GND GND N_18 W=12.5u L=3.05u m=1
+.ENDS
+

@@ -1,0 +1,269 @@
+Using: /usr/bin/time -p /usr/cad/synopsys/hspice/cur/hspice/linux/hspice Hw2_1_e.sp
+ ****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: Hw2_1_e.sp                                                        
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   u102061146           HOSTNAME: ws38 
+ lic: HOSTID: e41f1366e298         PID:      20431 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jun-2015/2014.09 
+ lic: FLOATING license(s) on SERVER lsnctu 
+ lic:   
+ Init: read install configuration file: /usr/cad/synopsys/hspice/cur/hspice/meta.cfg
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ .option runlvl
+ .temp 25
+ .option post dccap=1 acout=0 acct
+ .inc 'hw2_1_a.spi'
+ ************************************************************************
+ * aucdl netlist:
+ * 
+ * library name:  hw2_1_a
+ * top cell name: common_source
+ * view name:     schematic
+ * netlisted on:  apr  1 19:49:28 2015
+ ************************************************************************
+
+ *.bipolar
+ *.resi = 2000 
+ *.resval
+ *.capval
+ *.dioperi
+ *.dioarea
+ *.equation
+ *.scale meter
+ *.mega
+ .param
+
+
+
+ ************************************************************************
+ * library name: hw2_1_a
+ * cell name:    common_source
+ * view name:    schematic
+ ************************************************************************
+
+ .subckt common_source gnd vin vout
+ *.pininfo gnd:i vin:i vout:o
+ mm1 vout vin gnd gnd n_18 w=7.5u l=3u m=1
+ .ends
+
+ .inc 'hw2_1_c.spi'
+ ************************************************************************
+ * aucdl netlist:
+ * 
+ * library name:  hw2_1_c
+ * top cell name: common_gate
+ * view name:     schematic
+ * netlisted on:  apr  3 22:20:19 2015
+ ************************************************************************
+
+ *.bipolar
+ *.resi = 2000 
+ *.resval
+ *.capval
+ *.dioperi
+ *.dioarea
+ *.equation
+ *.scale meter
+ *.mega
+ .param
+
+
+
+ ************************************************************************
+ * library name: hw2_1_c
+ * cell name:    common_gate
+ * view name:    schematic
+ ************************************************************************
+
+ .subckt common_gate gnd vb vin vout
+ *.pininfo gnd:i vb:i vin:i vout:o
+ mm1 vout vb vin gnd n_18 w=7.826u l=525n m=1
+ .ends
+
+
+ x0 gnd_1 vin_1 vx common_source
+ x1 gnd_2 vb vx vout common_gate
+
+ vi vin_1 gnd_1 dc=387.232m ac=1
+ vdd_1 vdd_1 gnd_1 1.8
+ iin_1 vdd_1 vx 2u
+
+ vg vb gnd_2 dc=1.1346
+ vdd_2 vdd_2 gnd_2 1.8
+ rd vdd_2 vout 20k
+ iin_2 vx gnd_2 40u
+
+ .op
+ .ac dec 100 100 1g
+ .tf v(vout) vi
+ .end
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.1.e
+
+  ******  circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x0.                             common_source      1.00 
+        2 x1.                             common_gate        1.00 
+ 
+
+ 
+
+ **warning**  associated with encrypted block(s) were suppressed due to encrypted content
+
+
+ ***warning** no connections on node        0:0                defined in subckt 0                ignored
+ **warning**  no dc path to ground from node        0:gnd_1            defined in subckt 0               now it is connected with gdcpath
+
+
+      
+  Opening plot unit= 15
+ file=Hw2_1_e.pa0                                                              
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.1.e
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:gnd_1   =-826.3585m 0:gnd_2   =-828.7459m 0:vb      = 305.8541m
+ +0:vdd_1   = 973.6415m 0:vdd_2   = 971.2541m 0:vin_1   =-439.1265m
+ +0:vout    = 171.2541m 0:vx      =-327.9404m
+
+
+ ****  voltage sources
+
+ subckt                                              
+ element  0:vi       0:vdd_1    0:vg       0:vdd_2   
+  volts    387.2320m    1.8000     1.1346     1.8000 
+  current  439.1265f   -2.0000u -305.8541f  -40.0000u
+  power   -170.0438f    3.6000u  347.0221f   72.0000u
+
+     total voltage source power dissipation=   75.6000u       watts
+
+
+
+ ***** current sources
+
+ subckt                        
+ element  0:iin_1    0:iin_2   
+  volts      1.3016   500.8055m
+  current    2.0000u   40.0000u
+  power     -2.6032u  -20.0322u
+
+
+     total current source power dissipation= -22.6354u       watts
+
+ **** resistors
+
+ subckt             
+ element  0:rd      
+  r value   20.0000k
+  v drop   800.0000m
+  current   40.0000u
+  power     32.0000u
+
+
+
+ **** mosfets
+
+
+ subckt   x0         x1        
+ element  1:mm1      2:mm1     
+ model    0:n_18.1   0:n_18.1  
+ region     Saturati   Saturati
+  id         2.0000u   40.0000u
+  ibs     -3.337e-22 -312.8546a
+  ibd     -299.8978a -624.6829a
+  vgs      387.2320m  633.7945m
+  vds      498.4181m  499.1944m
+  vbs        0.      -500.8055m
+  vth      337.2165m  524.4310m
+  vdsat     81.2639m  136.7172m
+  vod       50.0155m  109.3635m
+  beta     751.6091u    4.8328m
+  gam eff  507.4459m  519.9188m
+  gm        36.1793u  517.1860u
+  gds      242.4680n   10.1110u
+  gmb        7.4356u   72.0287u
+  cdtot     10.4520f    9.9815f
+  cgtot    135.3216f   29.3002f
+  cstot    138.0392f   33.3151f
+  cbtot     54.8594f   19.7812f
+  cgs      116.7255f   24.2577f
+  cgd        2.5686f    2.7843f
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vi                               =  -56.0765 
+      input resistance at             vi       =   10.6232g
+      output resistance at v(vout)             =  125.0156g
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ *homework 2.1.e
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+  Command Line Threads Count:                      0
+  Available CPU Count:                             8
+  Actual Model Evaluation(Load) Threads Count:     1
+  Actual Solver Threads Count:                     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      13  # elements   =       9
+  # resistors   =       1  # capacitors =       0  # inductors   =       0
+  # mutual_inds =       0  # vccs       =       0  # vcvs        =       0
+  # cccs        =       0  # ccvs       =       0  # volt_srcs   =       4
+  # curr_srcs   =       2  # diodes     =       0  # bjts        =       0
+  # jfets       =       0  # mosfets    =       2  # U elements  =       0
+  # T elements  =       0  # W elements =       0  # B elements  =       0
+  # S elements  =       0  # P elements =       0  # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           7
+  ac analysis        0.01         701         701
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           total memory used          207  kbytes
+           total cpu time            0.02 seconds
+           total elapsed time        0.16 seconds
+           job started at     01:33:22 04/07/2015
+           job ended   at     01:33:22 04/07/2015
+
+
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ lic: Release hspice token(s) 

@@ -1,0 +1,34 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  Hw2_3_a
+* Top Cell Name: source_follower
+* View Name:     schematic
+* Netlisted on:  Apr  7 01:49:30 2015
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+
+
+************************************************************************
+* Library Name: Hw2_3_a
+* Cell Name:    source_follower
+* View Name:    schematic
+************************************************************************
+
+.SUBCKT source_follower GND VDD Vb Vin Vout
+*.PININFO GND:I VDD:I Vb:I Vin:I Vout:O
+MM0 Vout Vb GND GND N_18 W=5u L=1u m=1
+MM1 VDD Vin Vout Vout N_18 W=5u L=1.2u m=1
+.ENDS
+

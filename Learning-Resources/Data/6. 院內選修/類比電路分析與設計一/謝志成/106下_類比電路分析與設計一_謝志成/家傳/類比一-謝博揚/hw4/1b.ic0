@@ -1,0 +1,17 @@
+* "simulator" "HSPICE" 
+* "version" "B-2008.09-SP1 32-BIT"
+* "format" "HSP"
+* "rundate" "22:17:08 05/24/2016 "
+* "netlist" "1b.sp "
+* "runtitle" "*1b"
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vb = 450.0000m       
++ vdd =   1.8000        
++ vin =   1.0000        
++ vout = 472.5766m       
+***   END: Saved Operating Point ***                     

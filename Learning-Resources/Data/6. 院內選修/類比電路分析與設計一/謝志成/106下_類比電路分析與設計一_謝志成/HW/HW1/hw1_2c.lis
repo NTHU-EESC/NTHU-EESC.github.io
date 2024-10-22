@@ -1,0 +1,108 @@
+ ****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+  Copyright (c) 1986 - 2018 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw1_2c.sp                                                         
+  Command line options: /usr/cad/synopsys/hspice/2016.06-sp2/hspice/linux64/hspice -i hw1_2c.sp -o hw1_2c.lis
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   u105060012           HOSTNAME: ws40 
+ lic: HOSTID: "6eae8b50b631"       PID:      5524 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jun-2018/2017.03 
+ lic: 90(in_use)/90(total) FLOATING license(s) on SERVER 26585@lsnctu 
+ lic:   
+ 
+
+  **warning** (hw1_2c.sp:18) Unable to find referenced node lx18(m1); Output variable ignored. Specify a valid node.
+  **warning** (hw1_2c.sp:18) .print/.probe statement contains unused output; the unused output is ignored.
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+ ******  
+ hw1_2c
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is voltage   simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vdd     =   1.8000  0:vin     = 370.0000m 0:vout    = 899.0571m
+ +0:vss     =   0.     
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vin                              =  -13.2920 
+      input resistance at             vin      =  1.000e+20
+      output resistance at v(vout)             =    5.8910k
+
+
+
+
+          ***** job concluded
+ ******  
+ hw1_2c
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+ cpu MHz	: 1200.000
+  
+ OS:
+ Linux version 2.6.18-371.9.1.el5 (mockbuild@builder17.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Tue Jun 10 17:49:56 EDT 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    12
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7 # elements   =       5
+  # resistors   =       1 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       1 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           5
+  readin             0.01
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        195.39 megabytes
+           total cpu time            0.02 seconds
+           total elapsed time        1.56 seconds
+           job started at     16:25:49 03/28/2018
+           job ended   at     16:25:50 03/28/2018
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        1.53(s)

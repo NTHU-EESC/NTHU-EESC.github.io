@@ -1,0 +1,860 @@
+Using: /usr/bin/time -p /usr/cad/synopsys/hspice/cur/hspice/linux/hspice hw4_1g.sp
+ ****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement from Synopsys.
+  Use of this program is your acceptance to be bound by the 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: hw4_1g.sp                                                         
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   u102061219           HOSTNAME: ws44 
+ lic: HOSTID: e41f13bf3ba4         PID:      31736 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jun-2017/2016.03 
+ lic: FLOATING license(s) on SERVER lsnctu 
+ lic:   
+ Init: read install configuration file: /usr/cad/synopsys/hspice/cur/hspice/meta.cfg
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ .option runlvl
+ .option post
+ .option acout=0
+
+ m1 vx vb1 gnd gnd n_18 w=5u l=2u
+ m2 vdd vin vx gnd n_18 w=5u l=2u
+ m3 vout vx gnd gnd n_18 w=2u l=4u
+ m4 vout vb2 vdd vdd p_18 w=2u l=4u
+
+ vdd vdd gnd dc=1.8
+ vin vin gnd dc=1 ac=1
+ vb1 vb1 gnd dc=0.4177
+ vb2 vb2 gnd dc=0.96126
+
+ .op
+ .tf v(vout) vin
+ .ac dec 10000 10 1g
+ .noise v(vout) vin 10000
+
+ .end
+ 
+
+ 
+      
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  operating point information tnom=  25.000 temp=  25.000 *****
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:vb1     = 417.7000m 0:vb2     = 961.2600m 0:vdd     =   1.8000 
+ +0:vin     =   1.0000  0:vout    =   1.0035  0:vx      = 499.9775m
+
+
+ ****  voltage sources
+
+ subckt                                              
+ element  0:vdd      0:vin      0:vb1      0:vb2     
+  volts      1.8000     1.0000   417.7000m  961.2600m
+  current   -4.6822u    0.         0.         0.     
+  power      8.4280u    0.         0.         0.     
+
+     total voltage source power dissipation=    8.4280u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                              
+ element  0:m1       0:m2       0:m3       0:m4      
+ model    0:n_18.1   0:n_18.1   0:n_18.1   0:p_18.1  
+ region     Saturati   Saturati   Saturati   Saturati
+  id         2.7283u    2.7283u    1.9540u   -1.9540u
+  ibs     -4.828e-22 -212.6909a -4.345e-22  2.670e-22
+  ibd     -212.6900a -765.7195a -214.5980a  104.6601a
+  vgs      417.7000m  500.0225m  499.9775m -838.7400m
+  vds      499.9775m    1.3000     1.0035  -796.4535m
+  vbs        0.      -499.9775m    0.         0.     
+  vth      351.6622m  439.9023m  335.1716m -472.0090m
+  vdsat     91.4804m   92.7491m  152.7300m -324.5807m
+  vod       66.0378m   60.1202m  164.8060m -366.7310m
+  beta     758.1741u  767.0696u  149.8845u   32.6789u
+  gam eff  507.4459m  519.9001m  507.4460m  557.0846m
+  gm        45.5749u   46.8565u   20.3113u    9.6564u
+  gds      380.3453n  462.7264n  127.5278n   26.3192n
+  gmb        9.3302u    7.3956u    3.9692u    3.1250u
+  cdtot      7.0002f    5.8373f    2.6342f    2.4601f
+  cgtot     63.4757f   61.6372f   52.9191f   50.9522f
+  cstot     66.8522f   62.9382f   55.2974f   58.0482f
+  cbtot     27.8332f   22.5580f   17.8926f   20.3331f
+  cgs       55.3534f   54.1687f   47.8184f   46.5346f
+  cgd        1.7418f    1.6347f  648.3854a  758.5996a
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vin                              = -112.2777 
+      input resistance at             vin      =  1.000e+20
+      output resistance at v(vout)             =    6.4999x
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency =  10.0000       hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  2.474e-21    
+       rs  120.2141a    
+       id    3.4847p    
+       rx    2.3963x    
+       fn  497.2003p    
+    total  500.6851p    
+
+
+
+
+ element     0:m2
+       rd  8.421e-21    
+       rs  117.5627a    
+       id    3.4487p    
+       rx    2.3963x    
+       fn  497.2004p    
+    total  500.6493p    
+
+
+
+
+ element     0:m3
+       rd  1.583e-20    
+       rs  431.0111a    
+       id   11.3196p    
+       rx    6.5000x    
+       fn  641.8211p    
+    total  653.1411p    
+
+
+
+
+ element     0:m4
+       rd    0.         
+       rs  118.6794a    
+       id    5.9399p    
+       rx    6.5000x    
+       fn  622.6459p    
+    total  628.5859p    
+
+
+
+
+ **** total output noise voltage         =   2.2831n       sq v/hz
+                                         =  47.7814u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 112.2806       
+      equivalent input noise at vin                           
+                                         = 425.5534n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto   10.0000       hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =    0.            volts
+ **** total equivalent input noise =    0.           
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency = 100.0000       hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  2.474e-21    
+       rs  120.2141a    
+       id    3.4847p    
+       rx    2.3963x    
+       fn   49.7200p    
+    total   53.2048p    
+
+
+
+
+ element     0:m2
+       rd  8.421e-21    
+       rs  117.5627a    
+       id    3.4487p    
+       rx    2.3963x    
+       fn   49.7200p    
+    total   53.1688p    
+
+
+
+
+ element     0:m3
+       rd  1.583e-20    
+       rs  431.0111a    
+       id   11.3196p    
+       rx    6.5000x    
+       fn   64.1821p    
+    total   75.5021p    
+
+
+
+
+ element     0:m4
+       rd    0.         
+       rs  118.6794a    
+       id    5.9399p    
+       rx    6.5000x    
+       fn   62.2646p    
+    total   68.2046p    
+
+
+
+
+ **** total output noise voltage         = 250.0804p       sq v/hz
+                                         =  15.8139u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 112.2806       
+      equivalent input noise at vin                           
+                                         = 140.8429n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto  100.0000       hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =  232.7870u       volts
+ **** total equivalent input noise =    2.0733u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency =   1.0000k      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  9.895e-21    
+       rs  120.2141a    
+       id    3.4847p    
+       rx    2.3963x    
+       fn    4.9720p    
+    total    8.4568p    
+
+
+
+
+ element     0:m2
+       rd  8.421e-21    
+       rs  117.5627a    
+       id    3.4487p    
+       rx    2.3963x    
+       fn    4.9720p    
+    total    8.4208p    
+
+
+
+
+ element     0:m3
+       rd  3.958e-21    
+       rs  431.0110a    
+       id   11.3196p    
+       rx    6.5000x    
+       fn    6.4182p    
+    total   17.7382p    
+
+
+
+
+ element     0:m4
+       rd  2.359e-28    
+       rs  118.6794a    
+       id    5.9399p    
+       rx    6.5000x    
+       fn    6.2265p    
+    total   12.1665p    
+
+
+
+
+ **** total output noise voltage         =  46.7823p       sq v/hz
+                                         =   6.8398u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 112.2806       
+      equivalent input noise at vin                           
+                                         =  60.9167n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto    1.0000k      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =  357.7379u       volts
+ **** total equivalent input noise =    3.1861u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency =  10.0000k      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  9.895e-21    
+       rs  120.2136a    
+       id    3.4846p    
+       rx    2.3963x    
+       fn  497.1979f    
+    total    3.9820p    
+
+
+
+
+ element     0:m2
+       rd  8.421e-21    
+       rs  117.5633a    
+       id    3.4487p    
+       rx    2.3963x    
+       fn  497.1981f    
+    total    3.9460p    
+
+
+
+
+ element     0:m3
+       rd  1.583e-20    
+       rs  431.0090a    
+       id   11.3195p    
+       rx    6.4999x    
+       fn  641.8179f    
+    total   11.9618p    
+
+
+
+
+ element     0:m4
+       rd    0.         
+       rs  118.6788a    
+       id    5.9399p    
+       rx    6.5000x    
+       fn  622.6429f    
+    total    6.5626p    
+
+
+
+
+ **** total output noise voltage         =  26.4524p       sq v/hz
+                                         =   5.1432u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 112.2803       
+      equivalent input noise at vin                           
+                                         =  45.8067n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto   10.0000k      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =  630.6593u       volts
+ **** total equivalent input noise =    5.6168u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency = 100.0000k      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  9.896e-21    
+       rs  120.1566a    
+       id    3.4830p    
+       rx    2.3957x    
+       fn   49.6962f    
+    total    3.5328p    
+
+
+
+
+ element     0:m2
+       rd  8.417e-21    
+       rs  117.6222a    
+       id    3.4470p    
+       rx    2.3957x    
+       fn   49.6962f    
+    total    3.4968p    
+
+
+
+
+ element     0:m3
+       rd  1.584e-20    
+       rs  430.8050a    
+       id   11.3142p    
+       rx    6.4984x    
+       fn   64.1515f    
+    total   11.3788p    
+
+
+
+
+ element     0:m4
+       rd  3.958e-21    
+       rs  118.6228a    
+       id    5.9371p    
+       rx    6.4985x    
+       fn   62.2349f    
+    total    5.9994p    
+
+
+
+
+ **** total output noise voltage         =  24.4079p       sq v/hz
+                                         =   4.9404u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 112.2537       
+      equivalent input noise at vin                           
+                                         =  44.0113n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto  100.0000k      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =    1.6207m       volts
+ **** total equivalent input noise =   14.4358u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency =   1.0000x      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  1.005e-20    
+       rs  114.7159a    
+       id    3.3253p    
+       rx    2.3408x    
+       fn    4.7446f    
+    total    3.3301p    
+
+
+
+
+ element     0:m2
+       rd  8.036e-21    
+       rs  112.4310a    
+       id    3.2910p    
+       rx    2.3408x    
+       fn    4.7446f    
+    total    3.2958p    
+
+
+
+
+ element     0:m3
+       rd  4.205e-21    
+       rs  411.3338a    
+       id   10.8040p    
+       rx    6.3502x    
+       fn    6.1259f    
+    total   10.8105p    
+
+
+
+
+ element     0:m4
+       rd    0.         
+       rs  113.2736a    
+       id    5.6693p    
+       rx    6.3503x    
+       fn    5.9428f    
+    total    5.6754p    
+
+
+
+
+ **** total output noise voltage         =  23.1119p       sq v/hz
+                                         =   4.8075u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 109.6853       
+      equivalent input noise at vin                           
+                                         =  43.8298n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto    1.0000x      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =    4.9070m       volts
+ **** total equivalent input noise =   44.0425u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency =  10.0000x      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  2.512e-21    
+       rs   20.4554a    
+       id  592.9403f    
+       rx  988.4633k    
+       fn   84.6024a    
+    total  593.0454f    
+
+
+
+
+ element     0:m2
+       rd  1.436e-21    
+       rs   20.1317a    
+       id  586.8202f    
+       rx  988.4635k    
+       fn   84.6025a    
+    total  586.9249f    
+
+
+
+
+ element     0:m3
+       rd  6.184e-21    
+       rs   73.9813a    
+       id    1.9639p    
+       rx    2.7074x    
+       fn  111.3540a    
+    total    1.9641p    
+
+
+
+
+ element     0:m4
+       rd  3.216e-21    
+       rs   20.5905a    
+       id    1.0306p    
+       rx    2.7075x    
+       fn  108.0271a    
+    total    1.0307p    
+
+
+
+
+ **** total output noise voltage         =   4.1748p       sq v/hz
+                                         =   2.0432u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      =  46.4190       
+      equivalent input noise at vin                           
+                                         =  44.0169n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto   10.0000x      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =   11.2518m       volts
+ **** total equivalent input noise =  138.8394u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency = 100.0000x      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  5.629e-22    
+       rs  9.054e-20    
+       id    2.6245f    
+       rx   65.7627k    
+       fn  3.745e-20    
+    total    2.6246f    
+
+
+
+
+ element     0:m2
+       rd  7.622e-24    
+       rs  1.348e-19    
+       id    2.5974f    
+       rx   65.7627k    
+       fn  3.745e-20    
+    total    2.5976f    
+
+
+
+
+ element     0:m3
+       rd  4.750e-21    
+       rs  6.084e-19    
+       id   25.2461f    
+       rx  306.9672k    
+       fn  1.431e-19    
+    total   25.2469f    
+
+
+
+
+ element     0:m4
+       rd  3.851e-21    
+       rs  2.647e-19    
+       id   13.2477f    
+       rx  306.9693k    
+       fn  1.389e-19    
+    total   13.2481f    
+
+
+
+
+ **** total output noise voltage         =  43.7172f       sq v/hz
+                                         = 209.0866n       v/rt hz
+      transfer function value:
+        v(vout)/vin                      =   3.7049       
+      equivalent input noise at vin                           
+                                         =  56.4358n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto  100.0000x      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =   12.9599m       volts
+ **** total equivalent input noise =  490.4237u      
+
+
+
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  noise analysis tnom=  25.000 temp=  25.000 *****
+
+     frequency =   1.0000g      hz
+
+
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+
+
+
+
+ element     0:m1
+       rd  9.496e-24    
+       rs  1.499e-23    
+       id  4.343e-19    
+       rx  845.9688     
+       fn  6.197e-25    
+    total  4.343e-19    
+
+
+
+
+ element     0:m2
+       rd  2.222e-26    
+       rs  7.815e-22    
+       id  4.298e-19    
+       rx  845.9690     
+       fn  6.197e-25    
+    total  4.306e-19    
+
+
+
+
+ element     0:m3
+       rd  4.574e-21    
+       rs  4.525e-21    
+       id  261.7923a    
+       rx   31.2588k    
+       fn  1.484e-22    
+    total  261.8016a    
+
+
+
+
+ element     0:m4
+       rd  3.998e-21    
+       rs  2.749e-21    
+       id  137.3721a    
+       rx   31.2590k    
+       fn  1.440e-22    
+    total  137.3790a    
+
+
+
+
+ **** total output noise voltage         = 400.0455a       sq v/hz
+                                         =  20.0011n       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 267.5537m      
+      equivalent input noise at vin                           
+                                         =  74.7556n       /rt hz
+
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto    1.0000g      hz. using more freq points
+      results in more accurate total noise values.
+
+ **** total output noise voltage   =   13.1035m       volts
+ **** total equivalent input noise =    2.2445m      
+
+
+
+
+          ***** job concluded
+1****** HSPICE -- B-2008.09-SP1 32-BIT (Nov 24 2008) linux ******               
+ ******  
+ 
+
+  ******  job statistics summary tnom=  25.000 temp=  25.000 *****
+
+  ******  HSPICE Threads Information  ******
+  Command Line Threads Count:                      0
+  Available CPU Count:                             8
+  Actual Model Evaluation(Load) Threads Count:     1
+  Actual Solver Threads Count:                     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      15  # elements   =       8
+  # resistors   =       0  # capacitors =       0  # inductors   =       0
+  # mutual_inds =       0  # vccs       =       0  # vcvs        =       0
+  # cccs        =       0  # ccvs       =       0  # volt_srcs   =       4
+  # curr_srcs   =       0  # diodes     =       0  # bjts        =       0
+  # jfets       =       0  # mosfets    =       4  # U elements  =       0
+  # T elements  =       0  # W elements =       0  # B elements  =       0
+  # S elements  =       0  # P elements =       0  # va device   =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1          11
+  ac analysis        0.94       80001       80001
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           total memory used         1479  kbytes
+           total cpu time            0.97 seconds
+           total elapsed time        1.35 seconds
+           job started at     02:22:57 05/24/2016
+           job ended   at     02:22:59 05/24/2016
+
+
+ Init: hspice initialization file: /usr/cad/synopsys/hspice/cur/hspice/hspice.ini
+ lic: Release hspice token(s) 

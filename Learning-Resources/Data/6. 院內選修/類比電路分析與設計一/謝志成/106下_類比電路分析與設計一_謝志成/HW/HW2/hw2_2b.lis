@@ -1,0 +1,151 @@
+ ****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+  Copyright (c) 1986 - 2018 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw2_2b.sp                                                         
+  Command line options: /usr/cad/synopsys/hspice/2016.06-sp2/hspice/linux64/hspice -i hw2_2b.sp -o hw2_2b.lis
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   u105060012           HOSTNAME: ws40 
+ lic: HOSTID: "6eae8b50b631"       PID:      6251 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-jun-2018/2017.03 
+ lic: 23(in_use)/90(total) FLOATING license(s) on SERVER 26585@lsnctu 
+ lic:   
+ 
+
+  
+      
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+ ******  
+ hw2_2a
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:net15   =   1.4522  0:net16   =  82.8543m 0:vb1     = 580.0000m
+ +0:vb2     = 700.0000m 0:vb3     =   1.1500  0:vdd     =   1.8000 
+ +0:vin     = 500.0000m 0:vout    =   1.2510  0:vss     =   0.     
+
+
+ **** voltage sources
+
+ subckt                                                                    
+ element  0:vin      0:vb1      0:vb2      0:vb3      0:vdd      0:vss     
+  volts    500.0000m  580.0000m  700.0000m    1.1500     1.8000     0.     
+  current    0.         0.         0.         0.       -31.5086u   -4.6077f
+  power      0.         0.         0.         0.        56.7155u    0.     
+
+     total voltage source power dissipation=   56.7155u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                              
+ element  0:m1       0:m2       0:m3       0:m4      
+ model    0:n_18.1   0:n_18.1   0:p_18.1   0:p_18.1  
+ region     Saturati   Saturati   Saturati   Saturati
+  id        31.5086u   31.5086u  -31.5086u  -31.5086u
+  ibs     -5.170e-21 -102.0493a  295.3324a  3.195e-21
+  ibd     -113.7247a   -1.5407f  466.1994a  298.3697a
+  vgs      500.0000m  497.1457m -752.2266m -650.0000m
+  vds       82.8543m    1.1682  -201.2170m -347.7734m
+  vbs        0.       -82.8543m  347.7734m    0.     
+  vth      448.7626m  450.8929m -598.7836m -504.3094m
+  vdsat     95.2206m   93.0359m -176.3864m -164.3867m
+  vod       51.2374m   46.2528m -153.4430m -145.6906m
+  beta      11.2756m    9.9879m    2.3793m    2.5675m
+  gam eff  507.4460m  509.7168m  554.7496m  557.0846m
+  gm       488.8716u  555.8784u  312.5380u  338.7263u
+  gds      144.3502u    7.7252u   23.1016u    5.4053u
+  gmb       96.6684u  100.1271u   81.8967u  100.7196u
+  cdtot     30.3400f   18.9583f   22.5332f   22.0165f
+  cgtot     60.5301f   51.2226f   59.8577f   60.1522f
+  cstot     70.7505f   61.0037f   69.8378f   74.4143f
+  cbtot     54.0092f   41.9053f   42.7681f   48.6773f
+  cgs       47.1648f   40.1534f   49.8086f   49.8419f
+  cgd        7.8071f    5.6042f    7.0410f    6.4168f
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vin                              = -239.6931 
+      input resistance at             vin      =  1.000e+20
+      output resistance at v(vout)             =  596.9913k
+
+
+
+
+          ***** job concluded
+ ******  
+ hw2_2a
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+ cpu MHz	: 1200.000
+  
+ OS:
+ Linux version 2.6.18-371.9.1.el5 (mockbuild@builder17.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Tue Jun 10 17:49:56 EDT 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    12
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      18 # elements   =      10
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       6
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       4 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          14
+  readin             0.02
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        201.30 megabytes
+           total cpu time            0.04 seconds
+           total elapsed time        0.53 seconds
+           job started at     01:59:27 04/10/2018
+           job ended   at     01:59:27 04/10/2018
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.50(s)

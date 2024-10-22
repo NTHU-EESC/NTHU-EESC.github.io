@@ -1,0 +1,14 @@
+$DATA1 SOURCE='HSPICE' VERSION='B-2008.09-SP1 32-BIT'
+.TITLE 'closed-loop step response-'
+ final            hlimit           llimit           htime             
+ ltime            pos_settling     final1           hlimit1           
+ llimit1          htime1           ltime1           pos_settling1     
+ final2           hlimit2          llimit2          htime2            
+ ltime2           pos_settling2    srn_time         srn               
+ temper           alter#            
+   -0.5000          -0.5000          -0.4999         8.898e-07        
+  1.207e-06        1.157e-06          1.0986           1.0987         
+    1.0985         8.737e-07        1.244e-06        1.194e-06        
+    1.5985           1.5987           1.5984         8.771e-07        
+  1.238e-06        1.188e-06        7.376e-08        1.084e+07        
+   25.0000           5.0000         

@@ -1,0 +1,229 @@
+ ****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+  Copyright (c) 1986 - 2018 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: hw4_1f.sp                                                         
+  Command line options: /usr/cad/synopsys/hspice/2016.06-sp2/hspice/linux64/hspice -i hw4_1f.sp -o hw4_1f.lis
+ lic:  
+ lic: FLEXlm: v11.2.1 
+ lic: USER:   u105060012           HOSTNAME: ws40 
+ lic: HOSTID: "6cae8b50b632"       PID:      6459 
+ lic: Using FLEXlm license file: 
+ lic: 26585@lsnctu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 14-may-2019/2017.12 
+ lic: 82(in_use)/90(total) FLOATING license(s) on SERVER 26585@lsnctu 
+ lic:   
+ 
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- L-2016.06-SP2 linux64 (Nov 23 2016) ******                    
+ ******  
+ hw4_1f
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:net14   =   1.0002  0:vb1     =   1.2397  0:vb2     = 420.0000m
+ +0:vdd     =   1.8000  0:vin     = 500.0000m 0:vout    = 500.3514m
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vin      0:vb1      0:vb2      0:vdd     
+  volts    500.0000m    1.2397   420.0000m    1.8000 
+  current    0.         0.         0.        -3.4394u
+  power      0.         0.         0.         6.1910u
+
+     total voltage source power dissipation=    6.1910u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                              
+ element  0:m3       0:m2       0:m1       0:m0      
+ model    0:n_18.1   0:n_18.1   0:n_18.1   0:p_18.1  
+ region     Saturati   Saturati   Saturati   Saturati
+  id         3.2489u    3.2489u  190.4918n -190.4922n
+  ibs     -5.750e-22 -212.8501a -6.915e-23  2.603e-23
+  ibd     -212.8489a -765.7194a -122.1942a  105.0938a
+  vgs      420.0000m  499.8965m  500.0000m -560.2570m
+  vds      500.3514m    1.2996     1.0002  -799.7521m
+  vbs        0.      -500.3514m    0.         0.     
+  vth      388.0405m  472.7465m  332.5823m -472.0084m
+  vdsat     77.3402m   78.5436m  152.7538m -111.7565m
+  vod       31.9595m   27.1500m  167.4177m  -88.2486m
+  beta       1.5516m    1.5670m   14.6485u   35.1905u
+  gam eff  507.4460m  519.9085m  507.4459m  557.0847m
+  gm        62.3708u   63.6536u    1.9752u    2.7155u
+  gds      699.5358n  792.3537n    5.5667n    2.3660n
+  gmb       12.8930u    9.8313u  385.7082n  835.9004n
+  cdtot      6.9726f    5.8360f    1.0028f    2.3778f
+  cgtot     29.1476f   27.7925f   63.8668f   48.6526f
+  cstot     31.5858f   28.8383f   65.9235f   54.3516f
+  cbtot     19.0716f   15.4516f   18.6462f   20.8013f
+  cgs       23.4575f   22.4613f   58.0608f   42.9754f
+  cgd        1.8124f    1.7730f  197.5977a  721.9569a
+
+
+
+
+
+
+
+ ****     small-signal transfer characteristics
+
+      v(vout)/vin                              = -211.2860 
+      input resistance at             vin      =  1.000e+20
+      output resistance at v(vout)             =   13.3379k
+
+
+
+ ******  
+ hw4_1f
+
+ ****** noise analysis tnom=  25.000 temp=  25.000 ******
+ 
+     frequency =  10.0000        hz
+
+ 
+
+
+ **** mosfet squared noise voltages (sq v/hz)
+ 
+
+
+
+ element     0:m3
+       rd  5.963e-25    
+       rs  7.031e-21    
+       id  148.3301a    
+       rx   13.3375k    
+       fn   76.4802f    
+    total   76.6286f    
+ 
+
+
+
+ element     0:m2
+       rd  7.650e-25    
+       rs  6.722e-21    
+       id  145.0378a    
+       rx   13.3375k    
+       fn   76.4803f    
+    total   76.6254f    
+ 
+
+
+
+ element     0:m1
+       rd  1.737e-20    
+       rs    3.1383f    
+       id  297.5349p    
+       rx  107.0234x    
+       fn    1.3638n    
+    total    1.6614n    
+ 
+
+
+
+ element     0:m0
+       rd  1.098e-21    
+       rs    2.4771f    
+       id  446.8208p    
+       rx  107.0238x    
+       fn   16.4563n    
+    total   16.9031n    
+ 
+
+
+
+ **** total output noise voltage         =  18.5647n       sq v/hz
+                                         = 136.2522u       v/rt hz
+      transfer function value:
+        v(vout)/vin                      = 211.3925       
+      equivalent input noise at vin                           
+                                         = 644.5459n       /rt hz
+ 
+
+
+ **** the results of the sqrt of integral (v**2 / freq)
+      from fstart upto   10.0000        hz. using more freq points 
+      results in more accurate total noise values.     
+
+ **** total output noise voltage   =    0.            volts         
+ **** total equivalent input noise =    0.                          
+
+
+
+
+          ***** job concluded
+ ******  
+ hw4_1f
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+  
+  
+ ******  Machine Information  ******
+ CPU:
+ model name	: Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+ cpu MHz	: 2001.000
+  
+ OS:
+ Linux version 2.6.18-371.9.1.el5 (mockbuild@builder17.centos.org) (gcc version 4.1.2 20080704 (Red Hat 4.1.2-54)) #1 SMP Tue Jun 10 17:49:56 EDT 2014
+
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :    12
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      15 # elements   =       8
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       4 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.02           1          14
+  ac analysis        0.02         901         901
+  readin             0.03
+  errchk             0.01
+  setup              0.00
+  output             0.00
+
+
+           peak memory used        201.30 megabytes
+           total cpu time            0.07 seconds
+           total elapsed time        0.69 seconds
+           job started at     02:17:19 05/26/2018
+           job ended   at     02:17:20 05/26/2018
+
+
+ lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.63(s)

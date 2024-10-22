@@ -1,0 +1,30 @@
+<HTML>
+<HEAD>
+<TITLE>FormosaSoft PowerCam Player</TITLE>
+<script src='ctrl_pptsld.js' language="JScript.Encode"></script>
+</HEAD>
+<BODY leftmargin=0 topmargin=0 scroll=no>
+
+<script>
+    var top = document.body.clientHeight / 2 - 10;
+    document.write("<table border=0 height=" + top + "><tr><td></td></tr></table>");
+    document.write("<div align=center>Initializing PowerCam Player ...</div>");
+</script>
+
+
+<OBJECT ID="SCPlayer" style="position:absolute; left:0; top:0"
+    CLASSID="CLSID:DFA7638A-E3B5-4B30-9F4A-F18C38F13640"
+    width="0" height="0"
+    CODEBASE="player.cab">
+    <param name="Cursor" value="template/pen0.gif">
+</OBJECT>
+<script for="SCPlayer" event="OnMenuClick(lResult)" language="Jscript">
+    parent.mnuClick(lResult);
+</script>
+
+<script for="SCPlayer" event="OnResizeFinish()" language="Jscript">
+    try { parent.OnResizeFinish(); } catch (e) {}
+</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,1 @@
+Using: /usr/bin/time -p /usr/cad/synopsys/hspice/cur/hspice/linux/hspice 15_stepn.sp
