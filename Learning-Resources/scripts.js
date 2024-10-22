@@ -37,8 +37,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // 移除之前為卡片添加的點擊事件，因為我們現在使用 CSS :active 偽類
 });
 
+// document.getElementById("eeLearningResourcesCard").onclick = function() {
+//     window.open("https://drive.google.com/drive/folders/18lsPnehtjThgx5O8ux0PJnqlMW88mbsC?usp=drive_link");
+// }
+
 document.getElementById("eeLearningResourcesCard").onclick = function() {
-    window.open("https://drive.google.com/drive/folders/18lsPnehtjThgx5O8ux0PJnqlMW88mbsC?usp=drive_link");
+    window.open("https://github.com/NTHU-EESC/NTHU-EESC.github.io/tree/main/Learning-Resources/Data");
 }
 
 document.getElementById("csLearningResourcesCard").onclick = function() {
