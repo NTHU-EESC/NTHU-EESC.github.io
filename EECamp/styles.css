@@ -379,7 +379,7 @@ h1, h2 {
 
     .timeline-dot {
         left: 50%;
-        top: -4px;
+        top: -5px;
         transform: translateX(-50%);
     }
 
@@ -389,9 +389,8 @@ h1, h2 {
         text-align: center;
     }
 
-    /* 連接線不要超出最後一個項目 */
     .timeline-item:last-child::before {
-        width: 0;
+        display: block;
     }
 
     .department:hover {
