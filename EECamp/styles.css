@@ -197,15 +197,21 @@ header.sticky .sliver-title {
     text-decoration: none;
 }
 
-#sidebar ul li a:hover {
-    background-color: var(--nthu-purple);
-    color: white;
+@media (min-width: 768px) {
+    #sidebar ul li a:hover {
+        background-color: var(--nthu-purple);
+        color: white;
+    }
 }
 
 
 @media (max-width: 768px) {
     #sidebar ul li a {
         cursor: none;
+    }
+    #sidebar ul li a:active {
+        background-color: var(--nthu-purple);
+        color: white;
     }
 }
 
