@@ -202,6 +202,13 @@ header.sticky .sliver-title {
     color: white;
 }
 
+
+@media (max-width: 768px) {
+    #sidebar ul li a {
+        cursor: none;
+    }
+}
+
 @keyframes main {
     0% {
         opacity: 0;
