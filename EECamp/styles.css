@@ -449,6 +449,11 @@ h1, h2 {
     position: relative;
 }
 
+.contact-info-title {
+    font-weight: 600;
+    color: var(--nthu-purple);
+}
+
 footer {
     background-color: var(--footer-bg);
     color: var(--footer-text);
