@@ -1,8 +1,7 @@
 :root {
+    /* 原有的變數 */
     --bg-color: #f0f0f0;
     --text-color: #333;
-    /* --header-bg: #333;
-    --header-text: white; */
     --header-bg: rgba(240, 240, 240, 0.7);
     --header-text: black;
     --sidebar-bg: #f1f1f1;
@@ -10,14 +9,19 @@
     --card-bg: white;
     --card-shadow: rgba(0, 0, 0, 0.1);
     --card-hover-bg: #e0e0e0;
-    /* --footer-bg: #333;
-    --footer-text: #929292; */
     --footer-bg: rgb(240, 240, 240);
     --footer-text: #929292;
+
+    /* 清華大學主題色 */
+    --nthu-purple: #7E1083;
+    --nthu-purple-light: #9A3B9E;
+    --nthu-gold: #C89B40;
+    --nthu-gold-light: #D4B26B;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        /* 原有的暗色模式變數 */
         --bg-color: #1a1a1a;
         --text-color: #f0f0f0;
         --header-bg: rgba(26, 26, 26, 0.7);
@@ -27,9 +31,12 @@
         --card-bg: #2a2a2a;
         --card-shadow: rgba(160, 160, 160, 0.1);
         --card-hover-bg: #3a3a3a;
-        /* --footer-bg: #2a2a2a; */
         --footer-bg: #1a1a1a;
         --footer-text: #929292;
+
+        /* 暗色模式下的主題色調整 */
+        --nthu-purple-light: #B15BB5;
+        --nthu-gold-light: #E0C68C;
     }
 }
 
@@ -53,19 +60,19 @@ body {
     background-color: rgba(0, 0, 0, 0);
     z-index: -1;
     -webkit-backdrop-filter: blur(0);
-	backdrop-filter: blur(0);
-    transition: all 0.3s cubic-bezier(.26,.55,.07,.98);
+    backdrop-filter: blur(0);
+    transition: all 0.3s cubic-bezier(.26, .55, .07, .98);
 }
 
 #overlay.showNavigationBar {
     background-color: rgba(0, 0, 0, 0.5);
     -webkit-backdrop-filter: blur(6px);
-	backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
     z-index: 10;
 }
 
 .bodyContent {
-    transition: all 0.3s cubic-bezier(.26,.55,.07,.98);
+    transition: all 0.3s cubic-bezier(.26, .55, .07, .98);
 }
 
 .bodyContent.showNavigationBar {
@@ -84,7 +91,7 @@ header {
     transition: all 0.15s ease;
     z-index: 1;
     -webkit-backdrop-filter: blur(20px);
-	backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
     box-shadow: 0 2px 5px var(--card-shadow);
 }
 
@@ -112,7 +119,8 @@ header.sticky {
 
 header.sticky .sliver-bg {
     height: 70%;
-    opacity: 0; /* 背景圖片在 sticky 時淡出 */
+    opacity: 0;
+    /* 背景圖片在 sticky 時淡出 */
 }
 
 .sliver-title {
@@ -153,6 +161,7 @@ header.sticky .sliver-title {
     color: white;
     transition: all 0.15s ease;
 }
+
 #menu-toggle.sticky {
     color: var(--header-text);
 }
@@ -165,9 +174,9 @@ header.sticky .sliver-title {
     height: 100%;
     left: -250px;
     top: 0;
-    transition: all 0.3s cubic-bezier(.26,.55,.07,.98);
+    transition: all 0.3s cubic-bezier(.26, .55, .07, .98);
     z-index: 1000;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #sidebar.show {
@@ -192,8 +201,15 @@ header.sticky .sliver-title {
 }
 
 @keyframes main {
-	0% {opacity: 0; top: 20px}
-	100% {opacity: 1; top: 0px}
+    0% {
+        opacity: 0;
+        top: 20px
+    }
+
+    100% {
+        opacity: 1;
+        top: 0px
+    }
 }
 
 main {
@@ -247,14 +263,150 @@ h1, h2 {
 }
 
 .timeline {
-    background-color: var(--card-bg);
-    box-shadow: 0 2px 5px var(--card-shadow);
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    animation-name: main;
-    animation-duration: 0.5s;
     position: relative;
+    padding: 20px 0;
+}
+
+/* 基本垂直布局（窄螢幕） */
+.timeline-item {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 32px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: -40px;
+    width: 1px;
+    background-color: var(--text-color);
+    opacity: 0.2;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -4px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #3B82F6;
+}
+
+.timeline-content {
+    margin-left: 16px;
+}
+
+.timeline-time {
+    font-size: 0.875rem;
+    color: #3B82F6;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.timeline-title {
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-color);
+}
+
+.timeline-description {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* 水平布局（寬螢幕） */
+@media (min-width: 768px) {
+    .timeline {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+    }
+
+    .timeline-item {
+        flex: 1;
+        padding-left: 0;
+        padding-top: 24px;
+        margin-bottom: 0;
+        margin-right: 32px;
+    }
+
+    .timeline-item:last-child {
+        margin-right: 0;
+    }
+
+    .timeline-item::before {
+        left: 0;
+        top: 0;
+        bottom: auto;
+        width: 100%;
+        height: 1px;
+    }
+
+    .timeline-dot {
+        left: 50%;
+        top: -4px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-content {
+        margin-left: 0;
+        margin-top: 16px;
+        text-align: center;
+    }
+
+    /* 連接線不要超出最後一個項目 */
+    .timeline-item:last-child::before {
+        width: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .timeline-time {
+        color: #60A5FA;
+    }
+}
+
+/* 動畫效果 */
+.timeline-item {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 為每個項目設置不同的延遲時間 */
+.timeline-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.timeline-item:nth-child(4) {
+    animation-delay: 0.4s;
 }
 
 .contact-info {
@@ -294,7 +446,8 @@ footer {
 }
 
 .fa-instagram {
-    /*color: #E1306C;*/ /* Instagram's brand color */
+    /*color: #E1306C;*/
+    /* Instagram's brand color */
     color: #929292;
 }
 
@@ -302,4 +455,103 @@ footer {
     color: #929292;
     align-items: center;
     align-content: center;
+}
+
+/* 時間軸樣式修改 */
+.timeline-dot {
+    background-color: var(--nthu-purple);
+    border: 2px solid var(--nthu-gold);
+}
+
+.timeline-time {
+    color: var(--nthu-purple);
+    font-weight: 600;
+}
+
+.timeline-item::before {
+    background: linear-gradient(to right, var(--nthu-purple), var(--nthu-gold));
+    opacity: 0.3;
+}
+
+/* 部門卡片樣式修改 */
+.department {
+    border-left: 4px solid var(--nthu-purple);
+    transition: transform 0.3s ease;
+}
+
+.department:hover {
+    transform: translateY(-5px);
+    border-left: 4px solid var(--nthu-gold);
+}
+
+.department h3 {
+    color: var(--nthu-purple);
+}
+
+/* 修改主要按鈕和互動元素的顏色 */
+button,
+.btn {
+    background-color: var(--nthu-purple);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--nthu-purple-light);
+}
+
+/* 連結顏色修改 */
+a {
+    color: var(--nthu-purple);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--nthu-gold);
+}
+
+/* 選單hover效果 */
+#sidebar ul li a:hover {
+    background-color: var(--nthu-purple);
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .timeline {
+        background: linear-gradient(to right, rgba(126, 16, 131, 0.05), rgba(200, 155, 64, 0.05));
+        border-radius: 10px;
+    }
+
+    .timeline-item:hover .timeline-dot {
+        transform: translateX(-50%) scale(1.2);
+        background-color: var(--nthu-gold);
+        border-color: var(--nthu-purple);
+    }
+}
+
+/* 動畫效果加強 */
+.timeline-dot {
+    transition: all 0.3s ease;
+}
+
+.department {
+    position: relative;
+    overflow: hidden;
+}
+
+.department::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(200, 155, 64, 0.1), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.department:hover::after {
+    transform: translateX(100%);
 }
