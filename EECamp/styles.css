@@ -35,8 +35,10 @@
         --footer-text: #929292;
 
         /* 暗色模式下的主題色調整 */
-        --nthu-purple-light: #B15BB5;
-        --nthu-gold-light: #E0C68C;
+        --nthu-purple: hsl(297, 60%, 60%);
+        --nthu-purple-light: hsl(297, 38%, 53%);
+        --nthu-gold: #C89B40;
+        --nthu-gold-light: hsl(41, 58%, 71%);
     }
 }
 
@@ -518,10 +520,10 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-    .timeline {
+    /* .timeline {
         background: linear-gradient(to right, rgba(126, 16, 131, 0.05), rgba(200, 155, 64, 0.05));
         border-radius: 10px;
-    }
+    } */
 
     .timeline-item:hover .timeline-dot {
         transform: translateX(-50%) scale(1.2);
