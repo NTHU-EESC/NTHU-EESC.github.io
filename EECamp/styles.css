@@ -90,7 +90,7 @@ header {
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
-    transition: all 0.15s ease;
+    transition: all 0.15s cubic-bezier(.26, .55, .07, .98);
     z-index: 1;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
@@ -109,7 +109,7 @@ header {
     background-color: var(--header-bg);
     filter: brightness(0.3);
     z-index: -1;
-    transition: all 0.15s ease;
+    transition: all 0.15s cubic-bezier(.26, .55, .07, .98);
 }
 
 header.sticky {
@@ -128,7 +128,7 @@ header.sticky .sliver-bg {
 .sliver-title {
     color: white;
     font-size: 2rem;
-    transition: all 0.15s ease;
+    transition: all 0.15s cubic-bezier(.26, .55, .07, .98);
     margin: 0;
     padding: 20px;
     align-content: center;
@@ -153,7 +153,7 @@ header.sticky .sliver-title {
     height: 50px;
     width: 50px;
     z-index: 2;
-    transition: all 0.15s ease;
+    transition: all 0.15s cubic-bezier(.26, .55, .07, .98);
 }
 
 #menu-toggle {
@@ -161,7 +161,7 @@ header.sticky .sliver-title {
     justify-self: center;
     position: relative;
     color: white;
-    transition: all 0.15s ease;
+    transition: all 0.15s cubic-bezier(.26, .55, .07, .98);
 }
 
 #menu-toggle.sticky {
@@ -277,7 +277,7 @@ h1, h2 {
     position: relative;
     overflow: hidden;
     border-left: 4px solid var(--nthu-purple);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(.26, .55, .07, .98);
 }
 
 .department h3 {
@@ -405,8 +405,8 @@ h1, h2 {
 /* 動畫效果 */
 .timeline-item {
     opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.5s ease forwards;
+    transform: translateY(50px);
+    animation: fadeInUp 0.5s cubic-bezier(.26, .55, .07, .98) forwards;
 }
 
 @keyframes fadeInUp {
@@ -491,7 +491,7 @@ button,
 .btn {
     background-color: var(--nthu-purple);
     color: white;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s cubic-bezier(.26, .55, .07, .98);
 }
 
 button:hover,
@@ -502,7 +502,7 @@ button:hover,
 /* 連結顏色修改 */
 a {
     color: var(--nthu-purple);
-    transition: color 0.3s ease;
+    transition: color 0.3s cubic-bezier(.26, .55, .07, .98);
 }
 
 a:hover {
@@ -518,7 +518,7 @@ a:hover {
 
 /* 動畫效果加強 */
 .timeline-dot {
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(.26, .55, .07, .98);
 }
 
 .department::after {
@@ -530,6 +530,6 @@ a:hover {
     height: 100%;
     background: linear-gradient(45deg, transparent, rgba(200, 155, 64, 0.1), transparent);
     transform: translateX(-100%);
-    transition: transform 0.6s ease;
+    transition: transform 0.6s cubic-bezier(.26, .55, .07, .98);
 }
 
