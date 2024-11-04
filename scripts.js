@@ -40,3 +40,7 @@ document.getElementById("eecampCard").onclick = function() {
 document.getElementById("eeccCard").onclick = function() {
     window.open("https://eecc.nthuee.org", "_self");
 }
+
+document.getElementById("eenightCard").onclick = function() {
+    window.open("./EENight/", "_self");
+}
