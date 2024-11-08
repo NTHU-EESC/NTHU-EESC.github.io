@@ -42,7 +42,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 // }
 
 document.getElementById("eeLearningResourcesCard").onclick = function() {
-    window.open("https://github.com/NTHU-EESC/NTHUEE-Learning-Resources");
+    window.open("https://drive.google.com/drive/folders/18lsPnehtjThgx5O8ux0PJnqlMW88mbsC?usp=drive_link");
+    // window.open("https://github.com/NTHU-EESC/NTHUEE-Learning-Resources");
 }
 
 document.getElementById("csLearningResourcesCard").onclick = function() {
