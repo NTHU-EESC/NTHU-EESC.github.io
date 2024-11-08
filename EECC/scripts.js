@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const sidebar = document.getElementById('sidebar');
     const bodyContent = document.getElementsByClassName('bodyContent');
     const overlay = document.getElementById('overlay');
+    const themeToggle = document.getElementById('theme-toggle');
 
-    // 切換側邊欄的顯示與隱藏
+    // Existing menu toggle functionality
     menuToggle.addEventListener('click', () => {
         sidebar.classList.toggle('show');
         for (let i = 0; i < bodyContent.length; i++) {
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         overlay.classList.toggle('showNavigationBar');
     });
 
-    // 點擊側邊欄外的地方時隱藏側邊欄
+    // Existing overlay click functionality
     document.addEventListener('click', (e) => {
         if (!sidebar.contains(e.target) && e.target !== menuToggle) {
             sidebar.classList.remove('show');
@@ -25,22 +26,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-document.getElementById("projectsInfoCard").onclick = function() {
-    window.open("./Projects-Info/", "_self");
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    const menuToggle = document.getElementById('menu-toggle');
 
-document.getElementById("learningResourcesCard").onclick = function() {
-    window.open("./Learning-Resources/", "_self");
-}
-
-document.getElementById("eecampCard").onclick = function() {
-    window.open("./EECamp/", "_self");
-}
-
-document.getElementById("eeccCard").onclick = function() {
-    window.open("./EECC/", "_self");
-}
-
-document.getElementById("eenightCard").onclick = function() {
-    window.open("./EENight/", "_self");
-}
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 185) {  // 當滾動超過 150px 時，縮小 header
+            header.classList.add('sticky');
+            menuToggle.classList.add('sticky');
+        } else {
+            header.classList.remove('sticky');
+            menuToggle.classList.remove('sticky');
+        }
+        lastScrollY = window.scrollY;
+    });
+});
