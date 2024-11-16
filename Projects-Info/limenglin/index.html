@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<!--<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>楊尚達</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
+</head>-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-wrapper {
+            /* 增加header外部空間 */
+            padding: 30px 40px;
+            background-color: #333;
+        }
+
+        .header {
+            /* 增加header內部空間 */
+            padding: 30px;
+            color: white;
+            font-family: Arial, sans-serif;
+            /* 加上邊框以便於觀察空間 */
+            border: 1px solid #555;
+            border-radius: 8px;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            /* 增加與下方選單的間距 */
+            margin-bottom: 30px;
+        }
+
+        .logo-container {
+            display: flex;
+            /* 增加圓圈之間的間距 */
+            gap: 25px;
+            align-items: center;
+        }
+
+        .circle {
+            width: 50px;
+            height: 50px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-circle {
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.2;
+        }
+
+        .text {
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        .nav-menu {
+            /* 增加選單上方空間 */
+            margin-top: 25px;
+            margin-right: 25px;
+        }
+
+        .nav-row {
+            display: flex;
+            /* 增加選項之間的間距 */
+            gap: 20px;
+            justify-content: flex-end;
+            /* 增加行間距 */
+            margin-bottom: 15px;
+        }
+
+        .nav-row:last-child {
+            margin-bottom: 25px;
+        }
+
+        .nav-item {
+            /* 增加選項內部空間 */
+            padding: 8px 16px;
+            border: 1px solid white;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item:hover {
+            background-color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .header-wrapper {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            .nav-row {
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                gap: 15px;
+            }
+            
+            .nav-item {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+        a {
+            text-decoration: none; /* 移除下劃線 */
+            color: inherit;       /* 繼承父元素顏色 */
+        }
+
+        /* 可選：對連結的 hover 狀態做處理，避免顯示特別效果 */
+        a:hover {
+            color: inherit;
+            cursor: text; /* 將滑鼠指針改為普通文字模式 */
+        }
+    </style>
+</head>
+
+</html>
+<body>
+
+    <div id="overlay"></div>
+
+    <header class="bodyContent">
+        <button id="menu-toggle">☰</button>
+        <button id="menu-toggle-blank">　</button>
+        <div class="logo-container">
+            <div class="circle main-circle">
+                教授的照片
+            </div>
+            <div class="circle"><h1>李</h1></div>
+            <div class="circle"><h1>夢</h1></div>
+            <div class="circle"><h1>麟</h1></div>
+            <span>教授</span>
+        </div>
+
+        <nav class="nav-menu">
+            <div class="nav-row">
+                <div class="nav-item"><a href="#labinfo">實驗室資訊</a></div>
+                <div class="nav-item"><a href="#prerequisite">先備課程</a></div>
+                <div class="nav-item"><a href="#previousworks">歷屆作品</a></div>
+                <div class="nav-item"><a href="#schdule">專題時程</a></div>
+            </div>
+            <div class="nav-row">
+                <div class="nav-item"><a href="#seniorinfo">學長姐資訊</a></div>
+                <div class="nav-item"><a href="#seniorsharing">學長姐分享</a></div>
+                <div class="nav-item"><a href="#officialpartners">合作單位</a></div>
+            </div>
+        </nav>
+        
+    </header>
+    
+    <nav id="sidebar">
+        <ul>
+            <li><a href="../">首頁</a></li>
+            <li><a href="../Projects-Info/">專題資訊</a></li>
+            <li><a href="../Learning-Resources/">系傳</a></li>
+            <li><a href="../EECamp/">電機營招工</a></li>
+            <li><a href="../EECC/">新創營招工</a></li>
+            <li><a href="../EENight">電機之夜招工</a></li>
+        </ul>
+    </nav>
+    
+    <!DOCTYPE html>
+<html>
+<body>
+    <style>
+        .info-section {
+            background-color: white;
+            color: #333;
+            padding: 30px;
+            font-family: Arial, sans-serif;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #555;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: baseline;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+
+        .info-item::before {
+            content: "•";
+            margin-right: 10px;
+            color: #555;
+        }
+
+        .label {
+            min-width: 120px;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .info-section {
+                padding: 20px;
+            }
+
+            .info-item {
+                flex-direction: column;
+            }
+
+            .label {
+                margin-bottom: 5px;
+            }
+        }
+        .table-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: white;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #333;
+        }
+
+        th {
+            background-color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background-color: white;
+        }
+
+        @media (max-width: 768px) {
+            .info-section {
+                padding: 20px;
+            }
+
+            .info-item {
+                flex-direction: column;
+            }
+
+            .label {
+                margin-bottom: 5px;
+            }
+
+            th, td {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+        }
+        .share-card {
+            background-color: #d8d7c491;
+            border-left: 4px solid #555;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</body>
+<body>
+    <div class="info-section" id = "labinfo">
+        <div class="section-header" >
+            <div class="title">實驗室相關資訊</div>
+        </div>
+        
+        <ul class="info-list">
+            <li class="info-item">
+                <span class="label">實驗室位置：</span>
+                <span>資電 822</span>
+            </li>
+            <li class="info-item">
+                <span class="label">實驗室辦公電話：</span>
+                <span>(02) 98765432#111</span>
+            </li>
+            <li class="info-item">
+                <span class="label">實驗室 Mail：</span>
+                <span>～@～</span>
+            </li>
+            <li class="info-item">
+                <span class="label">實驗室網站：</span>
+                <span>https://</span>
+            </li>
+        </ul>
+    </div>
+    <div class="info-section" id = "prerequisite">
+        <div class="section-header">
+            <div class="title">先備課程</div>
+        </div>
+        
+        <ul class="info-list">
+            <li class="info-item">
+                <span class="label">積體電路</span>
+            </li>
+            <li class="info-item">
+                <span class="label">...</span>
+            </li>
+            <li class="info-item">
+                <span class="label">...</span>
+            </li>
+        </ul>
+    </div>
+   
+    <div class="info-section" id = "previousworks">
+        <div class="section-header">
+            <div class="title">歷屆作品</div>
+        </div>
+        
+        <ul class="info-list">
+            <li class="info-item">
+                <span class="label">作品標題-名字</span>
+            </li>
+            <li class="info-item">
+                <span class="label">...</span>
+            </li>
+            <li class="info-item">
+                <span class="label">...</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-section" id = "schdule">
+        <div class="section-header">
+            <div class="title">專題時程</div>
+        </div>
+        
+        <ul class="info-list">
+            <li class="info-item">
+                <span class="label">Meeting頻率</span>
+            </li>
+            <li class="info-item">
+                <span class="label">進行方式</span>
+            </li>
+            <li class="info-item">
+                <span class="label">...</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-section" id = "seniorinfo">
+        <div class="section-header">
+            <div class="title">學長姐聯絡資訊</div>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>姓名</th>
+                        <th>系級</th>
+                        <th>Email</th>
+                        <th>其他聯絡方式</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="info-section">
+        <div class="section-header" id = "seniorsharing">
+            <div class="title">學長姐收穫分享</div>
+        </div>
+        
+        <div class="share-card">
+            <h3>角色轉換，為得出來一區塊</h3>
+            <p>在進入職場後，我們需要從學生的身分轉換為專業人士。這個過程中的收穫與經驗分享：</p>
+            <ul>
+                <li>學會承擔責任與做決定</li>
+                <li>培養專業態度與工作倫理</li>
+                <li>建立良好的團隊合作能力</li>
+                <li>時間管理與優先順序安排</li>
+            </ul>
+        </div>
+    </div>
+    <div class="info-section" id = "officialpartners">
+        <div class="section-header">
+            <div class="title">實驗室合作單位</div>
+        </div>
+        
+        <ul class="info-list">
+            <li class="info-item">
+                <span class="label">台積電/研發科...</span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+    
+    <footer class="bodyContent">
+        <p>Copyright &copy; 2024 NTHU EESC</p>
+        <p>Designed by Utin</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+            
+            

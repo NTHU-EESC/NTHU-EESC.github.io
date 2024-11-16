@@ -36,35 +36,3 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // 移除之前為卡片添加的點擊事件，因為我們現在使用 CSS :active 偽類
 });
-
-document.getElementById("yangshangdaCard").onclick = function() {
-    window.open("./yangshangda/", "_self");
-}
-document.getElementById("leechichunCard").onclick = function() {
-    window.open("./leechichun/", "_self");
-}
-document.getElementById("limenglinCard").onclick = function() {
-    window.open("./limenglin/", "_self");
-}
-document.getElementById("chenborsenCard").onclick = function() {
-    window.open("./chenborsen/", "_self");
-}
-document.getElementById("chichongyungCard").onclick = function() {
-    window.open("./chichongyung/", "_self");
-}
-document.getElementById("wumengchyiCard").onclick = function() {
-    window.open("./wumengchyi/", "_self");
-}
-document.getElementById("wangchinliangCard").onclick = function() {
-    window.open("./wangchinliang/", "_self");
-}
-document.getElementById("wuyushuCard").onclick = function() {
-    window.open("./wuyushu/", "_self");
-}
-document.getElementById("chaochichaoCard").onclick = function() {
-    window.open("./chaochichao/", "_self");
-}
-document.getElementById("changchengshangCard").onclick = function() {
-    window.open("./changchengshang/", "_self");
-}
-
