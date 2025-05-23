@@ -1,55 +1,110 @@
 document.addEventListener('DOMContentLoaded', (event) => {
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar');
-    const bodyContent = document.getElementsByClassName('bodyContent');
-    const overlay = document.getElementById('overlay');
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    const navOverlay = document.getElementById('navOverlay');
 
-    // 切換側邊欄的顯示與隱藏
-    menuToggle.addEventListener('click', () => {
-        sidebar.classList.toggle('show');
-        for (let i = 0; i < bodyContent.length; i++) {
-            bodyContent.item(i).classList.toggle('showNavigationBar');
-        }
-        overlay.classList.toggle('showNavigationBar');
-    });
+    function toggleMenu() {
+        navMenu.classList.toggle('active');
+        navOverlay.classList.toggle('active');
+        // Optional: Toggle body scroll
+        // document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
+    }
 
-    // 點擊側邊欄外的地方時隱藏側邊欄
-    document.addEventListener('click', (e) => {
-        if (!sidebar.contains(e.target) && e.target !== menuToggle) {
-            sidebar.classList.remove('show');
-            for (let i = 0; i < bodyContent.length; i++) {
-                bodyContent.item(i).classList.remove('showNavigationBar');
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        navOverlay.classList.remove('active');
+        // document.body.style.overflow = '';
+    }
+
+    if (menuToggle && navMenu && navOverlay) {
+        menuToggle.addEventListener('click', toggleMenu);
+        navOverlay.addEventListener('click', closeMenu);
+
+        // Close menu when clicking nav links (especially for single-page anchors)
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                // If it's not an anchor link for the current page, or if it is, still close.
+                // For multi-page navigation, this ensures menu closes after selection.
+                 if (!link.getAttribute('href').startsWith('#')) {
+                    closeMenu();
+                 } else {
+                    // If it is an anchor link, smooth scroll might be handled by another function
+                    // but we still want to close the menu.
+                    setTimeout(closeMenu, 100); // Delay to allow scroll to start
+                 }
+            });
+        });
+    }
+
+    // Card click handlers
+    document.querySelectorAll('.card[data-href]').forEach(card => {
+        card.addEventListener('click', () => {
+            const href = card.getAttribute('data-href');
+            if (href) {
+                // Open external links (like Google Drive) in a new tab
+                if (href.startsWith('http')) {
+                    window.open(href, '_blank');
+                } else {
+                    window.location.href = href;
+                }
             }
-            overlay.classList.remove('showNavigationBar');
-        }
+        });
     });
 
-    // 為側邊欄的鏈接添加點擊事件
-    // const sidebarLinks = document.querySelectorAll('#sidebar ul li a');
-    // sidebarLinks.forEach(link => {
-    //     link.addEventListener('click', function(e) {
-    //         e.preventDefault();
-    //         alert(`您點擊了 "${this.textContent}" 鏈接`);
-    //         sidebar.classList.remove('show');
-    //     });
-    // });
+    // Smooth scrolling for anchor links (if any are added later)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
 
-    // 移除之前為卡片添加的點擊事件，因為我們現在使用 CSS :active 偽類
+    // Add scroll effect to header (hide on scroll down, show on scroll up)
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+                // Scroll Down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll Up
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        }, false);
+    }
+
+    // Intersection Observer for card animations
+    const observerOptions = {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+        rootMargin: '0px 0px -50px 0px' // Start animation a bit before it's fully in view
+    };
+
+    const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observerInstance.unobserve(entry.target); // Optional: stop observing after animation
+            }
+        });
+    }, observerOptions);
+
+    // Observe cards for animation
+    document.querySelectorAll('.card').forEach(card => {
+        card.style.opacity = '0'; // Initial state for animation
+        card.style.transform = 'translateY(30px)'; // Initial state for animation
+        observer.observe(card);
+    });
 });
-
-// document.getElementById("eeLearningResourcesCard").onclick = function() {
-//     window.open("https://drive.google.com/drive/folders/18lsPnehtjThgx5O8ux0PJnqlMW88mbsC?usp=drive_link");
-// }
-
-document.getElementById("eeLearningResourcesCard").onclick = function() {
-    window.open("https://drive.google.com/drive/folders/18lsPnehtjThgx5O8ux0PJnqlMW88mbsC?usp=drive_link");
-    // window.open("https://github.com/NTHU-EESC/NTHUEE-Learning-Resources");
-}
-
-document.getElementById("csLearningResourcesCard").onclick = function() {
-    window.open("https://drive.google.com/drive/folders/1zoRayCwbnTJIZ_WJSXRyR0Z5-BThec8X?usp=drive_link");
-}
-
-document.getElementById("eeLearningResourcesUploadCard").onclick = function() {
-    window.open("https://drive.google.com/drive/folders/1VvK-21Defq3rbkgAfrcL-eyn9rxczBla?usp=drive_link");
-}
