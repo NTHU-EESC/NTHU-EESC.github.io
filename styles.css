@@ -12,6 +12,8 @@
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --text-light: #ffffff;
+    --footer-bg: #f1f5f9;
+    --footer-text: #334155;
     --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -27,6 +29,8 @@
         --text-primary: #f1f5f9;
         --text-secondary: #94a3b8;
         --text-light: #ffffff;
+        --footer-bg: #334155;
+        --footer-text: #f1f5f9;
         --bg-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
         --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         --card-hover-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -318,8 +322,8 @@ body {
 
 /* Footer */
 .footer {
-    background: var(--text-primary);
-    color: var(--text-secondary);
+    background: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 3rem 2rem 2rem;
 }
