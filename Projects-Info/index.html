@@ -5,92 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>清大電機專題資訊</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
-    <div id="overlay"></div>
+    <div id="navOverlay"></div>
 
-    <header class="bodyContent">
-        <button id="menu-toggle">☰</button>
-        <div class = "title">專題資訊</div>
-        <button id="menu-toggle-blank">　</button>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="../" class="logo">清大電機系學會</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="https://tangy-earth-436.notion.site/1fc91e111b0480b6a856d5b251f8c7b3?pvs=4" class="nav-link">實習</a>
+                <a href="../Projects-Info/" class="nav-link">專題</a>
+                <a href="../Learning-Resources/" class="nav-link">系傳</a>
+                <a href="../EECamp/" class="nav-link">電機營</a>
+                <a href="../EECC/" class="nav-link">新創營</a>
+                <a href="../EENight/" class="nav-link">電機之夜</a>
+            </nav>
+        </div>
     </header>
-    
-    <nav id="sidebar">
-        <ul>
-            <li><a href="../">首頁</a></li>
-            <li><a href="../Projects-Info/">專題資訊</a></li>
-            <li><a href="../Learning-Resources/">系傳</a></li>
-            <li><a href="../EECamp/">電機營招工</a></li>
-            <li><a href="../EECC/">新創營招工</a></li>
-            <li><a href="../EENight">電機之夜招工</a></li>
-        </ul>
-    </nav>
-    
-    <main class="bodyContent">
-        <div class="card" id = yangshangdaCard>
-            <h2>楊尚達</h2>  
-            <p>歡迎來到我的網站!這裡是一個示例卡片。</p>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>清大電機專題資訊</h1>
+            <p>磨練實作能力的好地方。</p>
+            <a href="#professors" class="cta-button">
+                探索更多
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M7 14l5-5 5 5z"/>
+                </svg>
+            </a>
         </div>
+    </section>
+
+    <main class="main-content" id="professors">
+        <h2 class="section-title">專題教授資訊</h2>
         
-        <div class="card" id = leechichunCard>
-            <h2>李祈均</h2>
-            <p>我們提供各種優質服務。</p>
-        </div>
-        <div class="card" id = limenglinCard>
-            <h2>李夢麟</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = chenborsenCard>
-            <h2>陳博現</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = chichongyungCard>
-            <h2>祁忠勇</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = wumengchyiCard>
-            <h2>吳孟奇</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = wangchinliangCard>
-            <h2>王晉良</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = wuyushuCard>
-            <h2>吳玉書</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = chaochichaoCard>
-            <h2>趙啟超</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card" id = changchengshangCard>
-            <h2>張正尚</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card">
-            <h2>聯繫我們</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card">
-            <h2>聯繫我們</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card">
-            <h2>聯繫我們</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
-        </div>
-        <div class="card">
-            <h2>聯繫我們</h2>
-            <p>有任何問題嗎？隨時與我們聯繫！</p>
+        <div class="cards-grid">
+            <div class="card" data-href="./yangshangda/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>吳尚鴻 教授</h3>
+                <p>
+                    資工系<br/>
+                    人工智慧、深度學習
+                </p>
+            </div>
+
+            <div class="card" data-href="./leechichun/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>洪樂文 教授</h3>
+                <p>
+                    電機系<br/>
+                    通訊工程
+                </p>
+            </div>
+
+            <div class="card" data-href="./limenglin/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>孫民 教授</h3>
+                <p>
+                    電機系<br/>
+                    資訊工程、機器學習
+                </p>
+            </div>
+
+            <div class="card" data-href="./chenborsen/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>翁永祿 教授</h3>
+                <p>
+                    電機系<br/>
+                    數位電路設計
+                </p>
+            </div>
+
+            <div class="card" data-href="./chichongyung/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>馬席彬 教授</h3>
+                <p>
+                    電機系<br/>
+                    機器學習、系統實作
+                </p>
+            </div>
+
+            <div class="card" data-href="./wumengchyi/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>張淵智 教授</h3>
+                <p>
+                    電機系<br/>
+                    電力工程
+                </p>
+            </div>
+
+            <div class="card" data-href="./wangchinliang/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>張鑑元 教授</h3>
+                <p>
+                    電機系<br/>
+                    數位電路設計、通訊工程
+                </p>
+            </div>
+
+            <div class="card" data-href="./wuyushu/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>劉光浩 教授</h3>
+                <p>
+                    電機系<br/>
+                    通訊工程
+                </p>
+            </div>
+
+            <div class="card" data-href="./chaochichao/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>劉奕汶 教授</h3>
+                <p>
+                    電機系<br/>
+                    數位訊號處理
+                </p>
+            </div>
+
+            <div class="card" data-href="./changchengshang/">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>劉靖家 教授</h3>
+                <p>
+                    電機系<br/>
+                    數位電路設計
+                </p>
+            </div>
+            
+            <div class="card" data-href="#"> <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>鄭桂忠 教授</h3>
+                <p>
+                    電機系<br/>
+                    數位電路設計、類比電路設計、機器學習
+                </p>
+            </div>
+             <div class="card" data-href="#">
+                <div class="card-icon">
+                    <span class="material-icons" style="color: white;">person</span>
+                </div>
+                <h3>謝志成 教授</h3>
+                <p>
+                    電機系<br/>
+                    類比電路設計
+                </p>
+            </div>
+
         </div>
     </main>
-    
-    <footer class="bodyContent">
-        <p>Copyright &copy; 2024 NTHU EESC</p>
-        <p>Designed by Utin</p>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Copyright © 2024 NTHU EESC</p>
+            <p>Designed with ❤️ by NTHU EESC Team</p>
+        </div>
     </footer>
 
     <script src="scripts.js"></script>
