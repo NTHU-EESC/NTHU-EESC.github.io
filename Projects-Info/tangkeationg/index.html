@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清大電機系學會 | 專題資訊</title>
+    <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+</head>
+<body>
+    <div id="navOverlay"></div>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="../../" class="logo">清大電機系學會</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="https://tangy-earth-436.notion.site/1fc91e111b0480b6a856d5b251f8c7b3?pvs=4" class="nav-link">實習</a>
+                <a href="../../Projects-Info/" class="nav-link">專題</a>
+                <a href="../../Learning-Resources/" class="nav-link">系傳</a>
+                <a href="../../EECamp/" class="nav-link">電機營</a>
+                <a href="../../EECC/" class="nav-link">新創營</a>
+                <a href="../../EENight/" class="nav-link">電機之夜</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Project List View -->
+    <div id="projectListView" class="view-container">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>鄭桂忠 教授</h1>
+                <p>鄭桂忠 教授</p>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <div class="projects-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card-preview" onclick="showProjectDetail('project1')">
+                    <div class="project-field-tag">機器學習</div>
+                    <h3 class="project-title">電子鼻於系統應用的相關演算法</h3>
+                    <div class="project-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">教授</span>
+                            <span class="summary-value">鄭桂忠</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">程式語言</span>
+                            <span class="summary-value">Python</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Meeting</span>
+                            <span class="summary-value">每週一次</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Loading</span>
+                            <span class="summary-value">輕鬆</span>
+                        </div>
+                    </div>
+                    <div class="rating-display">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">10/10</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card-preview" onclick="showProjectDetail('project2')">
+                    <div class="project-field-tag">電路設計</div>
+                    <h3 class="project-title">低功耗類比積體電路設計</h3>
+                    <div class="project-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">教授</span>
+                            <span class="summary-value">李教授</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">程式語言</span>
+                            <span class="summary-value">Verilog, MATLAB</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Meeting</span>
+                            <span class="summary-value">每週兩次</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Loading</span>
+                            <span class="summary-value">重</span>
+                        </div>
+                    </div>
+                    <div class="rating-display">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star" style="color: #d1d5db;">★</span>
+                        </div>
+                        <span class="rating-text">8/10</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card-preview" onclick="showProjectDetail('project3')">
+                    <div class="project-field-tag">通訊系統</div>
+                    <h3 class="project-title">5G毫米波天線陣列設計</h3>
+                    <div class="project-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">教授</span>
+                            <span class="summary-value">王教授</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">程式語言</span>
+                            <span class="summary-value">MATLAB, CST</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Meeting</span>
+                            <span class="summary-value">雙週一次</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Loading</span>
+                            <span class="summary-value">中等</span>
+                        </div>
+                    </div>
+                    <div class="rating-display">
+                        <div class="stars">
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-text">9/10</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Project Detail View -->
+    <div id="projectDetailView" class="view-container hidden">
+        <section class="hero hero-small">
+            <div class="hero-content">
+                <h1 id="detailTitle">專題資訊</h1>
+                <p id="detailSubtitle">詳細了解專題內容</p>
+            </div>
+        </section>
+
+        <main class="main-content">
+            <div class="project-details-container">
+                <div class="project-card-detail">
+                    <a href="#" class="back-button" onclick="showProjectList()">
+                        <i class="fas fa-arrow-left"></i>
+                        返回專題列表
+                    </a>
+                    
+                    <div id="projectDetailContent">
+                        <!-- Content will be filled by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Copyright © 2024 NTHU EESC</p>
+            <p>Designed with ❤️ by NTHU EESC Team</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
