@@ -1,5 +1,7 @@
 # NTHU EESC Website
 
+- Website: https://nthu-eesc.github.io/
+
 ## Initial Steps
 
 ### Step 1: Clone the repository
