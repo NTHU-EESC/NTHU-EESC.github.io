@@ -1,0 +1,120 @@
+# 基礎資訊
+year: 2025
+activity_name: "清大電機之夜"
+intro_text: >
+  嗨大家！大一過到現在有沒有覺得天天讀書的日子枯燥乏味了？想展現你那無處安放的才華嗎？想要在台上讓底下的觀眾為你放聲尖叫嗎？眾所矚目的電機之夜明年5月要登場啦！不管是有經驗沒經驗都可以上台秀喔！綻放屬於你自己的光芒！那就讓我們一起在這個電機系的夜晚大膽帥一波吧！
+
+# 公告事項 (如果有 link 則顯示)
+announcements:
+  - title: "錄取名單"
+    link: "./admission.jpg"
+    link_text: "點此查看"
+
+# 籌備時程
+timeline_title: "籌備時程規劃"
+timeline_items:
+  - time: "12月2日"
+    title: "線上說明會"
+    description: "19：50開放進入<br/>20：00正式開始<br/><br/><a href='https://meet.google.com/ghr-tcat-jqp' target='_blank'>Google meet link</a>"
+  - time: "12月10日"
+    title: "徵才"
+    description: "填完表單後會分配每個人的時間和地點！我們也不見不散！"
+  - time: "12月12日"
+    title: "公布徵才結果"
+    description: ""
+  - time: "2月27日"
+    title: "一驗"
+    description: ""
+  - time: "3月20日"
+    title: "二驗"
+    description: ""
+  - time: "4月17日"
+    title: "總驗"
+    description: ""
+  - time: "5月8日"
+    title: "彩排"
+    description: ""
+  - time: "5月9日"
+    title: "電機之夜！"
+    description: ""
+
+# 股別介紹
+departments_title: "活動介紹"
+departments:
+  - name: "吉伴股"
+    desc: "我們負責練團、表演、吃宵夜。我們需要男女主唱、木吉他、電吉他、貝斯、木箱鼓、KB。歡迎喜歡舞台、熱愛表演、想發揮無處安放的音樂才華、愛吃宵夜、愛聊天的你。"
+    extra_info:
+      - "股聚時間 (寒假)：先找一些想開的歌"
+      - "股聚時間 (開學後)：每周1次"
+  - name: "女舞股"
+    desc: "我們負責舞室編舞 + 一些kpop + 你想跳的，不管對kpop或跳舞有興趣的，我們都歡迎！但需要有自己扒舞的能力!"
+    extra_info:
+      - "股聚時間 (寒假)：自主練習"
+      - "股聚時間 (開學後)：每周1-2次，每次2小時"
+  - name: "男舞股"
+    desc: "男舞以locking這個舞風為主軸，加上各式的隊形及分布，呈現出多采多姿的表演。只要對跳舞有興趣，不管跳過舞或零基礎想嘗試跳舞都歡迎加入！"
+    extra_info:
+      - "股聚時間 (寒假)：自主練習"
+      - "股聚時間 (開學後)：每周1-2次，每次1-2小時"
+  - name: "魔術股"
+    desc: "我們負責練習魔術，學會表演，上台表演。我們需要喜歡魔術，熱愛表演，並且願意練習的你。"
+    extra_info:
+      - "股聚時間 (寒假)：自主練習 (每兩周拍影片驗收)"
+      - "股聚時間 (開學後)：每周1-2次，每次2小時"
+  - name: "螢光舞股"
+    desc: "我們負責配合音樂的節奏、氛圍，設計燈效，編排舞步，想辦法讓板子動，然後發光和跳舞！我們需要喜歡跳舞，有酷點子，想搞工程的你。"
+    extra_info:
+      - "股聚時間 (寒假)：決定曲目、開始構想以及練舞"
+      - "股聚時間 (開學後)：每周2次，每次1-2小時"
+  - name: "喜劇股"
+    desc: "我們負責演好笑的戲，滑抖音找靈感，開一大堆不用負責的玩笑，在教授臉上給出對於課程的反饋。加入喜劇股你需要：放開來演戲、跟得上時事梗、天馬行空的想像力。"
+    extra_info:
+      - "股聚時間：每週2次，每次2小時"
+  - name: "美宣股"
+    desc: "我們負責做海報、做道具、設計小物和P圖。我們需要不想上台、不用有特殊專長的你！"
+    extra_info:
+      - "股聚時間：每週1-2次，7:00pm ~ 9:00pm"
+      - "做不完不用帶回宿舍做！"
+
+# 負責人聯絡資訊
+section_title: "負責人聯絡資訊"
+contacts:
+  - role: "總召 高君慈"
+    ig: "jenna_kjc29"
+  - role: "男舞股長 曾翊凱"
+    ig: "1__.kai"
+  - role: "男舞股長 張承恩"
+    ig: "c.en_____"
+  - role: "喜劇股長 黃翊宸"
+    ig: "yichen186_"
+  - role: "喜劇股長 劉宇宸"
+    ig: "imperial_BTB"
+  - role: "喜劇股長 李承叡"
+    ig: "ray.94213"
+  - role: "魔術股長 黃振嘉"
+    ig: "oojhenjiaoo54"
+  - role: "螢光舞股長 游雁婷"
+    ig: "tinayou0502"
+  - role: "螢光舞股長 蔡佳真"
+    ig: "jiaz_zhen"
+  - role: "螢光舞股長 鄒承恩"
+  - role: "螢光舞股長 謝妤芊"
+    ig: "yuchien_924"
+  - role: "螢光舞股長 蔡育佳"
+    ig: "yujia_1124"
+  - role: "吉伴股長 史晨妤"
+    ig: "scy.______"
+  - role: "吉伴股長 林軒得"
+    ig: "viclin_0"
+  - role: "吉伴股長 林庭慈"
+    ig: "tingcilin"
+  - role: "美宣股長 張博崴"
+    ig: "weichang0307"
+  - role: "美宣股長 林怡勳"
+    ig: "tw999gd"
+  - role: "美宣股長 涂庭瑄"
+    ig: "shuwa_tyu"
+  - role: "女舞股長 許孟涵"
+    ig: "hy.xxw"
+  - role: "女舞股長 徐緯倫"
+    ig: "w_l_hsu"
