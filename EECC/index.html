@@ -69,15 +69,23 @@ layout: null
                 <p>
                     <span class="contact-info-title">{{ person.role }}</span>
                     <div class="contactDetail">
-                        {% if person.fb and person.fb != "" %}
+                        {% assign has_fb = false %}
+                        {% if person.fb and person.fb != "" %}{% assign has_fb = true %}{% endif %}
+
+                        {% assign has_ig = false %}
+                        {% if person.ig and person.ig != "" %}{% assign has_ig = true %}{% endif %}
+
+                        {% if has_fb %}
                             <i class="fab fa-facebook"></i> {{ person.fb }} &nbsp;
                         {% endif %}
-                        {% if person.ig and person.ig != "" %}
+
+                        {% if has_ig %}
                             <i class="fab fa-instagram"></i> {{ person.ig }}
                         {% endif %}
-                        {% if person.fb == blank and person.ig == blank %}
-                            <span>暫無聯絡資訊</span>
-                        {% endif %}
+
+                        {% unless has_fb or has_ig %}
+                            <i class="fab fa-user-slash"></i> 暫無聯絡資訊
+                        {% endunless %}
                     </div>
                 </p>
             </div>
