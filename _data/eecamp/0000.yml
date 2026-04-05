@@ -1,0 +1,72 @@
+# 基礎資訊
+year: 0000
+activity_name: "清大電機營"
+intro_text: >
+  加入我們的 0000 清大電機營，探索電機工程的奧秘！這是一個為期一週的精彩活動，讓你親身體驗最新的電機技術，結識志同道合的朋友，並在專業導師的指導下完成令人驚嘆的項目。無論你是電機新手還是有經驗的愛愛好者，這裡都有適合你的精彩內容！
+
+# 籌備時程規劃
+timeline_title: "籌備時程規劃"
+timeline_items:
+  - time: "5月1日-5月31日"
+    title: "報名階段"
+    description: "開放活動報名"
+  - time: "6月15日"
+    title: "公布錄取名單"
+    description: "將透過電子郵件通知錄取者"
+  - time: "7月1日-7月7日"
+    title: "電機營活動週"
+    description: "正式活動期間"
+  - time: "7月8日"
+    title: "成果展示會"
+    description: "展示學習成果"
+  # 你可以隨意增加/減少
+  # - time: "X月X日"
+  #   title: "事情標題"
+  #   description: "事情說明"
+
+# 活動介紹 (組別)
+departments_title: "活動介紹"
+departments:
+  - name: "電路設計組"
+    desc: "學習設計和製作各種有趣的電路，從簡單的 LED 閃爍器到複雜的音頻放大器，讓你的創意在電路板上綻放光芒。"
+  - name: "程式設計組"
+    desc: "深入探索 Python 和 C++ 等程式語言，學習如何控制硬體設備，開發智能系統，讓你的程式直接與現實世界互動。"
+  - name: "人工智慧組"
+    desc: "了解 AI 的基本原理，實際操作機器學習模型，參與激動人心的專案，如圖像識別或自然語言處理。"
+  - name: "物聯網組"
+    desc: "探索 IoT 的無限可能，學習如何連接和控制各種智能設備，打造屬於自己的智能家居或環境監測系統。"
+  # 你可以隨意增加/減少
+  # - name: "組別名稱"
+  #   desc: "組別說明"
+
+# 負責人聯絡資訊
+section_title: "負責人聯絡資訊"
+contacts:
+  - role: "總召 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "副召 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "活動 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "場器 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "總務 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "教學 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "美宣 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  - role: "蟑螂 張小明"
+    fb: "張小明"
+    ig: "xiaomin_0709"
+  # 你可以隨意增加/減少，fb跟ig如果可以給就寫，沒有就不用特地寫
+  # - role: "看你想寫啥 推薦 【職位 名字】"
+  #   fb: "fb name"
+  #   ig: "ig id"
