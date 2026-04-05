@@ -6,12 +6,13 @@ layout: null
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>清大電機新創營招工</title>
+    {% assign latest_entry = site.data.eecc | sort | last %}
+    {% assign info = latest_entry[1] %}
+    <title>{{ info.year }} {{ info.activity_name }}招工</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
     <div id="overlay"></div>
 
     <nav id="sidebar">
@@ -31,149 +32,60 @@ layout: null
 
     <header>
         <div class="sliver-bg"></div>
-        <div class="sliver-title">2025 清大電機新創營</div>
+        <div class="sliver-title">{{ info.year }} {{ info.activity_name }}</div>
     </header>
 
     <main class="bodyContent">
-        
-        <!-- <h1>2025 清大電機營</h1> -->
-        <p class="activity-intro">
-            相信許多朋朋去年八月都在新創營玩得很開心！為了將這份特別的體驗延續給下一屆的學弟妹們，我們即將迎來新創營的籌備啦！不管是有當過小隊員的舊朋友，還是想來玩玩營隊的新朋友們，只要抱著一顆愉快的心，都非常歡迎你們的參加！
-        </p>
+        <p class="activity-intro">{{ info.intro_text }}</p>
 
-        <h2>籌備時程規劃</h2>
+        <h2>{{ info.timeline_title }}</h2>
         <div class="timeline">
+            {% for item in info.timeline_items %}
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
-                    <div class="timeline-time">3月11日（二）</div>
-                    <div class="timeline-title">說明會</div>
-                    <div class="timeline-description">
-                        <br/>
-                        19：10 開放進入<br/>
-                        19：30 正式開始<br/>
-                        <br/>
-                        地點：台達 215
-                    </div>
+                    <div class="timeline-time">{{ item.time }}</div>
+                    <div class="timeline-title">{{ item.title }}</div>
+                    <div class="timeline-description">{{ item.description }}</div>
                 </div>
             </div>
-            <!-- <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-time">6月15日</div>
-                    <div class="timeline-title">公布錄取名單</div>
-                    <div class="timeline-description">將透過電子郵件通知錄取者</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-time">7月1日-7月7日</div>
-                    <div class="timeline-title">電機營活動週</div>
-                    <div class="timeline-description">正式活動期間</div>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-time">7月8日</div>
-                    <div class="timeline-title">成果展示會</div>
-                    <div class="timeline-description">展示學習成果</div>
-                </div>
-            </div> -->
+            {% endfor %}
         </div>
 
-        <h2>活動介紹</h2>
+        <h2>{{ info.departments_title }}</h2>
         <div class="departments">
+            {% for dept in info.departments %}
             <div class="department">
-                <h3>電路設計組</h3>
-                <p>學習設計和製作各種有趣的電路，從簡單的 LED 閃爍器到複雜的音頻放大器，讓你的創意在電路板上綻放光芒。</p>
+                <h3>{{ dept.name }}</h3>
+                <p>{{ dept.desc }}</p>
             </div>
-            <div class="department">
-                <h3>程式設計組</h3>
-                <p>深入探索 Python 和 C++ 等程式語言，學習如何控制硬體設備，開發智能系統，讓你的程式直接與現實世界互動。</p>
-            </div>
-            <div class="department">
-                <h3>人工智慧組</h3>
-                <p>了解 AI 的基本原理，實際操作機器學習模型，參與激動人心的專案，如圖像識別或自然語言處理。</p>
-            </div>
-            <div class="department">
-                <h3>物聯網組</h3>
-                <p>探索 IoT 的無限可能，學習如何連接和控制各種智能設備，打造屬於自己的智能家居或環境監測系統。</p>
-            </div>
+            {% endfor %}
         </div>
 
-        <h2>負責人聯絡資訊</h2>
+        <h2>{{ info.section_title }}</h2>
         <div class="contact-info">
+            {% for person in info.contacts %}
             <div class="contactPerson">
                 <p>
-                    <span class="contact-info-title">總召 黃子容</span>
+                    <span class="contact-info-title">{{ person.role }}</span>
                     <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
+                        {% if person.fb and person.fb != "" %}
+                            <i class="fab fa-facebook"></i> {{ person.fb }} &nbsp;
+                        {% endif %}
+                        {% if person.ig and person.ig != "" %}
+                            <i class="fab fa-instagram"></i> {{ person.ig }}
+                        {% endif %}
+                        {% if person.fb == blank and person.ig == blank %}
+                            <span>暫無聯絡資訊</span>
+                        {% endif %}
                     </div>
                 </p>
             </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">副召 謝妤芊 林軒得</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">總務 高君慈</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">專輔股長 焦定平 劉奐均 林庭慈</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">生器股長 郭政翰 郭宣汝 楊仲倫</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">教學股長 蘇勻郁 游雁婷 戴志傑</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">美宣股長 蔡育佳 盛樺 楊翊陞</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
-            <div class="contactPerson">
-                <p>
-                    <span class="contact-info-title">活動股長 邱智煊 劉宇宸 黃于誠</span>
-                    <div class="contactDetail">
-                        <i class="fab fa-facebook"></i> 張小明 <i class="fab fa-instagram"></i> xiaomin_0709
-                    </div>
-                </p>
-            </div>
+            {% endfor %}
         </div>
     </main>
 
     {% include footer.html %}
-
     <script src="scripts.js"></script>
 </body>
 </html>
