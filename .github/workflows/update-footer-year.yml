@@ -1,0 +1,30 @@
+name: Update Footer Copyright Year
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *'
+  workflow_dispatch:
+
+jobs:
+  update-footer:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Update Year in footer.html
+        run: |
+          CURRENT_YEAR=$(date +%Y)
+          sed -i "s/Copyright &copy; [0-9]\{4\}/Copyright \&copy; $CURRENT_YEAR/g" _includes/footer.html          
+      - name: Commit and Push
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'          
+          if git diff --quiet _includes/footer.html; then
+            echo "Year is up to date, no action needed."
+          else
+            git add _includes/footer.html
+            git commit -m "Chore: Auto update footer to $(date +%Y)"
+            git push
+          fi
