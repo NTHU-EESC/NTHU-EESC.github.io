@@ -52,56 +52,28 @@ layout: null
         <section class="section-block">
             <h2 class="section-title">目前實習機會</h2>
             <p class="section-subtitle">最新職缺與資訊整理放在 Notion，建議定期查看更新。</p>
-            <div class="cards-grid">
-                <div class="card" data-href="{{ intern_info.current.notion_url }}">
-                    <div class="card-icon">
-                        <span class="material-icons" style="color: white;">work</span>
-                    </div>
-                    <h3>{{ intern_info.current.notion_title }}</h3>
-                    <p>{{ intern_info.current.notion_description }}</p>
-                </div>
-            </div>
+            <p class="notion-link-wrapper">
+                <a class="notion-inline-link" href="{{ intern_info.current.notion_url }}" target="_blank" rel="noopener noreferrer">{{ intern_info.current.notion_title }}</a>
+            </p>
         </section>
 
         <section class="section-block">
             <h2 class="section-title">實習經驗分享</h2>
             <p class="section-subtitle">供參</p>
 
-            <div class="experience-grid">
-                {% for exp in intern_info.experiences %}
-                <article class="experience-card">
-                    <h3>{{ exp.company }} ｜ {{ exp.position }}</h3>
-                    <p class="experience-subtitle">{{ exp.grade }} · {{ exp.location }}</p>
-
-                    <div class="experience-meta">
-                        <span>薪資：{{ exp.salary }}</span>
-                        <span>時長：{{ exp.duration }}</span>
-                        <span>工時：{{ exp.daily_hours }}</span>
-                        <span>壓力：{{ exp.pressure }}/10</span>
-                        <span>相關度：{{ exp.relevance }}/10</span>
+            <div class="cards-grid work-label-grid">
+                {% if intern_info.work_labels %}
+                {% for label in intern_info.work_labels %}
+                {% assign label_experiences = intern_info.experiences | where: "work_slug", label.slug %}
+                <div class="card work-label-card" data-href="./work-label/?slug={{ label.slug }}">
+                    <div class="card-icon">
+                        <span class="material-icons" style="color: white;">category</span>
                     </div>
-
-                    <div class="experience-details">
-                        <div class="detail-item"><h4>時間戳記</h4><p>{{ exp.timestamp }}</p></div>
-                        <div class="detail-item"><h4>電子郵件地址</h4><p>{{ exp.email }}</p></div>
-                        <div class="detail-item"><h4>得知實習的管道</h4><p>{{ exp.source }}</p></div>
-                        <div class="detail-item"><h4>如何準備申請資料？</h4><p>{{ exp.preparation }}</p></div>
-                        <div class="detail-item"><h4>是否有面試？</h4><p>{{ exp.interview }}</p></div>
-                        <div class="detail-item"><h4>面試內容與準備方向</h4><p>{{ exp.interview_preparation }}</p></div>
-                        <div class="detail-item"><h4>主要工作內容</h4><p>{{ exp.work_content }}</p></div>
-                        <div class="detail-item"><h4>有無需要加班</h4><p>{{ exp.overtime }}</p></div>
-                        <div class="detail-item"><h4>實習結束前，是否有專題/成果發表？</h4><p>{{ exp.final_presentation }}</p></div>
-                        <div class="detail-item"><h4>成果發表形式</h4><p>{{ exp.final_presentation_form }}</p></div>
-                        <div class="detail-item"><h4>先備知識或建議課程</h4><p>{{ exp.prerequisites }}</p></div>
-                        <div class="detail-item"><h4>公司內活動或交流</h4><p>{{ exp.activities }}</p></div>
-                        <div class="detail-item"><h4>推薦與適合對象</h4><p>{{ exp.recommendation }}</p></div>
-                        <div class="detail-item"><h4>是否改變職涯方向看法</h4><p>{{ exp.career_change }}</p></div>
-                        <div class="detail-item"><h4>心得或收穫</h4><p>{{ exp.takeaway }}</p></div>
-                        <div class="detail-item"><h4>可聯絡資訊</h4><p>{{ exp.contact }}</p></div>
-                        <div class="detail-item"><h4>補充</h4><p>{{ exp.extra | default: "無" }}</p></div>
-                    </div>
-                </article>
+                    <h3>{{ label.name }}</h3>
+                    <p>共 {{ label_experiences | size }} 則經驗，點擊查看完整內容。</p>
+                </div>
                 {% endfor %}
+                {% endif %}
             </div>
         </section>
     </main>

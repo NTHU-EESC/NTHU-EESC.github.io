@@ -1,0 +1,116 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實習經驗詳情 | 清大電機實習資訊</title>
+    <link rel="stylesheet" href="../styles.css">
+    <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="navOverlay"></div>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="../../../" class="logo">清大電機系學會</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="../../../Intern-Info/" class="nav-link">實習</a>
+                <a href="../../../Projects-Info/" class="nav-link">專題</a>
+                <a href="../../../Learning-Resources/" class="nav-link">系傳</a>
+                <a href="../../../EECamp/" class="nav-link">電機營</a>
+                <a href="../../../EECC/" class="nav-link">新創營</a>
+                <a href="../../../EENight/" class="nav-link">電機之夜</a>
+            </nav>
+        </div>
+    </header>
+
+    {% assign intern_info = site.data.intern_info["2026"] %}
+    {% if intern_info == nil %}
+        {% assign latest_intern_entry = site.data.intern_info | sort | last %}
+        {% assign intern_info = latest_intern_entry[1] %}
+    {% endif %}
+
+    <script id="labels-data" type="application/json">{{ intern_info.work_labels | jsonify }}</script>
+    <script id="experiences-data" type="application/json">{{ intern_info.experiences | jsonify }}</script>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="detailLabel">實習經驗</h1>
+            <p id="detailTitle">讀取中...</p>
+            <a id="backToLabel" href="../" class="cta-button">返回分類頁面</a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section-block">
+            <article class="experience-detail" id="detailContainer"></article>
+            <div class="empty-state" id="detailEmpty" hidden>找不到此經驗資料，請返回上一頁重新選擇。</div>
+        </section>
+    </main>
+
+    {% include footer.html %}
+    <script src="../../scripts.js"></script>
+    <script>
+        (function () {
+            const labels = JSON.parse(document.getElementById('labels-data').textContent || '[]');
+            const experiences = JSON.parse(document.getElementById('experiences-data').textContent || '[]');
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('slug') || '';
+
+            const exp = experiences.find((item) => item.exp_slug === slug);
+            const label = exp ? labels.find((item) => item.slug === exp.work_slug) : null;
+
+            const detailLabel = document.getElementById('detailLabel');
+            const detailTitle = document.getElementById('detailTitle');
+            const backToLabel = document.getElementById('backToLabel');
+            const detailContainer = document.getElementById('detailContainer');
+            const detailEmpty = document.getElementById('detailEmpty');
+
+            if (!exp) {
+                detailContainer.hidden = true;
+                detailEmpty.hidden = false;
+                detailTitle.textContent = '資料不存在';
+                return;
+            }
+
+            if (label) {
+                detailLabel.textContent = label.name;
+                backToLabel.href = `../?slug=${encodeURIComponent(label.slug)}`;
+            }
+
+            detailTitle.textContent = `${exp.company || ''} ｜ ${exp.position || ''}`;
+
+            detailContainer.innerHTML = `
+                <h2 class="section-title">實習經驗詳情</h2>
+                <p class="item-subtitle">${exp.grade || ''} · ${exp.location || ''} · ${exp.timestamp || ''}</p>
+                <div class="item-meta">
+                    <span>薪資：${exp.salary || ''}</span>
+                    <span>時長：${exp.duration || ''}</span>
+                    <span>工時：${exp.daily_hours || ''}</span>
+                    <span>加班：${exp.overtime || ''}</span>
+                    <span>壓力：${exp.pressure || ''}/10</span>
+                    <span>相關度：${exp.relevance || ''}/10</span>
+                </div>
+                <ul class="item-list">
+                    <li><strong>得知管道：</strong>${exp.source || ''}</li>
+                    <li><strong>申請準備：</strong>${exp.preparation || ''}</li>
+                    <li><strong>面試：</strong>${exp.interview || ''}${exp.interview_preparation ? `，${exp.interview_preparation}` : ''}</li>
+                    <li><strong>工作內容：</strong>${exp.work_content || ''}</li>
+                    <li><strong>成果發表：</strong>${exp.final_presentation || ''}${exp.final_presentation_form ? `，${exp.final_presentation_form}` : ''}</li>
+                    <li><strong>先備知識：</strong>${exp.prerequisites || ''}</li>
+                    <li><strong>公司活動：</strong>${exp.activities || ''}</li>
+                    <li><strong>推薦：</strong>${exp.recommendation || ''}</li>
+                    <li><strong>職涯影響：</strong>${exp.career_change || ''}</li>
+                    <li><strong>心得：</strong>${exp.takeaway || ''}</li>
+                    <li><strong>聯絡方式：</strong>${exp.contact || ''}</li>
+                </ul>
+            `;
+        })();
+    </script>
+</body>
+</html>

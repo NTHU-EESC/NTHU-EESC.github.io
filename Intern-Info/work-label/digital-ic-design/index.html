@@ -1,0 +1,76 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數位IC設計 | 清大電機實習資訊</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d23b082dd5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div id="navOverlay"></div>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="../../../" class="logo">清大電機系學會</a>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+            <nav class="nav-menu" id="navMenu">
+                <a href="../../../Intern-Info/" class="nav-link">實習</a>
+                <a href="../../../Projects-Info/" class="nav-link">專題</a>
+                <a href="../../../Learning-Resources/" class="nav-link">系傳</a>
+                <a href="../../../EECamp/" class="nav-link">電機營</a>
+                <a href="../../../EECC/" class="nav-link">新創營</a>
+                <a href="../../../EENight/" class="nav-link">電機之夜</a>
+            </nav>
+        </div>
+    </header>
+
+    {% assign intern_info = site.data.intern_info["2026"] %}
+    {% if intern_info == nil %}
+        {% assign latest_intern_entry = site.data.intern_info | sort | last %}
+        {% assign intern_info = latest_intern_entry[1] %}
+    {% endif %}
+    {% assign matched_experiences = intern_info.experiences | where: "work_slug", "digital-ic-design" %}
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>數位IC設計</h1>
+            <p>此分類收錄 {{ matched_experiences | size }} 則實習經驗。</p>
+            <a href="../../../Intern-Info/" class="cta-button">
+                返回實習首頁
+            </a>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section-block">
+            <div class="experience-list">
+                {% for exp in matched_experiences %}
+                <a class="experience-link-card" href="./{{ exp.exp_slug }}/">
+                    <article class="experience-item">
+                        <h3>{{ exp.company }} ｜ {{ exp.position }}</h3>
+                        <p class="item-subtitle">{{ exp.grade }} · {{ exp.location }}</p>
+
+                        <div class="item-meta">
+                            <span>薪資：{{ exp.salary }}</span>
+                            <span>時長：{{ exp.duration }}</span>
+                            <span>工時：{{ exp.daily_hours }}</span>
+                            <span>壓力：{{ exp.pressure }}/10</span>
+                            <span>相關度：{{ exp.relevance }}/10</span>
+                        </div>
+                        <p class="expand-hint">點擊進入詳細頁面</p>
+                    </article>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    {% include footer.html %}
+    <script src="../../scripts.js"></script>
+</body>
+</html>

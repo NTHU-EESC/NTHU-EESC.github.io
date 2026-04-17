@@ -1,0 +1,99 @@
+@import url("../styles.css");
+
+.experience-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+.experience-link-card {
+    text-decoration: none;
+}
+
+.experience-item {
+    background: var(--footer-bg);
+    border-radius: 14px;
+    padding: 1rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-link-card:hover .experience-item {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.16);
+}
+
+@media (prefers-color-scheme: dark) {
+    .experience-item,
+    .empty-state,
+    .experience-detail {
+        background: var(--footer-bg);
+        border: 1px solid rgba(51, 65, 85, 0.8);
+    }
+}
+
+.experience-item h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+.item-subtitle {
+    margin: 0.35rem 0 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.item-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.item-meta span {
+    background: rgba(37, 99, 235, 0.12);
+    color: var(--primary-color);
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.expand-hint {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.empty-state {
+    background: var(--footer-bg);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    color: var(--text-secondary);
+}
+
+.experience-detail {
+    background: var(--footer-bg);
+    border-radius: 14px;
+    padding: 1.25rem;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.item-list {
+    margin: 0.5rem 0 0;
+    padding-left: 1rem;
+    display: grid;
+    gap: 0.45rem;
+}
+
+.item-list li {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.45;
+}
