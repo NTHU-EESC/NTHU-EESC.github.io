@@ -32,6 +32,7 @@
     transform: translateY(-50%);
     width: 1.9rem;
     height: 1.9rem;
+    overflow: hidden;
     border-radius: 0.45rem;
     border: 1px solid var(--primary-color);
     background: transparent;
@@ -54,10 +55,10 @@
     outline-offset: 2px;
 }
 
-.notion-mini-link svg {
-    width: 0.95rem;
-    height: 0.95rem;
-    fill: currentColor;
+.notion-mini-icon {
+    font-size: 0.9rem;
+    line-height: 1;
+    font-weight: 700;
     display: block;
 }
 
