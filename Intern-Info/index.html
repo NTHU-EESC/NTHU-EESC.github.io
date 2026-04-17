@@ -50,11 +50,18 @@ layout: null
 
     <main class="main-content" id="intern-content">
         <section class="section-block">
-            <h2 class="section-title">目前實習機會</h2>
+            <h2 class="section-title current-opportunities-title">
+                <span class="current-opportunities-text-wrap">
+                    最新實習機會
+                    <a class="notion-mini-link" href="{{ intern_info.current.notion_url }}" target="_blank" rel="noopener noreferrer" aria-label="開啟 Notion 實習資訊" title="開啟 Notion 實習資訊">
+                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"></path>
+                            <path d="M5 5h6v2H7v10h10v-4h2v6H5V5z"></path>
+                        </svg>
+                    </a>
+                </span>
+            </h2>
             <p class="section-subtitle">最新職缺與資訊整理放在 Notion，建議定期查看更新。</p>
-            <p class="notion-link-wrapper">
-                <a class="notion-inline-link" href="{{ intern_info.current.notion_url }}" target="_blank" rel="noopener noreferrer">{{ intern_info.current.notion_title }}</a>
-            </p>
         </section>
 
         <section class="section-block">
