@@ -161,6 +161,12 @@ header.sticky .sliver-title {
     justify-self: center;
     position: relative;
     color: white;
+    background: transparent;
+    border: none;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
     transition: all 0.15s cubic-bezier(.26, .55, .07, .98);
 }
 
