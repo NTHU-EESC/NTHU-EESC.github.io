@@ -1,6 +1,6 @@
 # NTHU EESC Website
 
-- Website: https://nthu-eesc.github.io/
+- Website: https://eesc.ee.nthu.edu.tw/
 
 ## Initial Steps
 
